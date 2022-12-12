@@ -1,0 +1,17 @@
+name: sbl-spec-json-to-csv
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - sbl-fig-spec.json
+jobs:
+  json-to-csv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: python json_to_csv.py sbl-fig-spec.json sbl-fig-spec.csv
+      - run: cat sbl-fig-spec.csv
