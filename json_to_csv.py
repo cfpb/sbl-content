@@ -59,7 +59,7 @@ for data_point in json_data_points['data_points']:
             'instructions': instructions,
             'rule_section': rule_section,
             'examples': examples,
-            'validations': validations,
+            'validationz': validations,
         }
 
         # Special handling for po_x_* fields, copying po_1 fields to related po_2, po_3, and po_4 fields.
