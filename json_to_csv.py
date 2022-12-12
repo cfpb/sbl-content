@@ -59,7 +59,7 @@ for data_point in json_data_points['data_points']:
             'instructions': instructions,
             'rule_section': rule_section,
             'examples': examples,
-            'validationz': validations,
+            'validations': validations,
         }
 
         # Special handling for po_x_* fields, copying po_1 fields to related po_2, po_3, and po_4 fields.
@@ -72,7 +72,7 @@ for data_point in json_data_points['data_points']:
                 csv_data_point['valid_value_codes'] = po_1_lookup[po_1_short_name]['valid_value_codes']
                 csv_data_point['valid_value_descriptions'] = po_1_lookup[po_1_short_name]['valid_value_descriptions']
                 csv_data_point['examples'] = po_1_lookup[po_1_short_name]['examples']
-                csv_data_point['validationz'] = po_1_lookup[po_1_short_name]['validationz']
+                csv_data_point['validations'] = po_1_lookup[po_1_short_name]['validations']
 
                 po_1_instructions = po_1_lookup[po_1_short_name]['instructions']
                 csv_data_point['instructions'] = po_1_instructions.replace('owner 1', f'owner {po_num}').replace('owner: 1', f'owner: {po_num}')
