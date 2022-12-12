@@ -7,8 +7,8 @@ on:
     #  - sbl-fig-spec.json
     #  - json_to_csv.py
 env:
-  GIT_USERNAME: figbot
-  GIT_EMAIL: figbot@users.noreply.github.com
+  GIT_USERNAME: cfpb-figbot
+  GIT_EMAIL: cfpb-figbot@users.noreply.github.com
   JSON_FILE_PATH: sbl-fig-spec.json
   CSV_FILE_PATH: sbl-fig-spec.csv
 jobs:
