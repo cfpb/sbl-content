@@ -49,9 +49,9 @@ for data_point in json_data_points['data_points']:
         # Row in the CSV
         csv_data_point = {
             'field_number': data_field['field_number'],
-            'field_name': short_name,
-            'field_description': data_field['title'],
             'data_point': data_point_title,
+            'data_field_title': data_field['title'],
+            'column_name': short_name,
             'data_type': data_field['type'],
             'valid_value_codes': valid_value_codes,
             'valid_value_descriptions': valid_value_descriptions,

@@ -150,7 +150,7 @@
 					"citation": "12 CFR 1002.107(a)(5)(i)",
 					"short_name": "ct_credit_product_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if credit type: credit product is code 77. Leave blank if code 77 is not entered.",
+					"conditionality": "Conditionally required if credit product is code 77. Leave blank if code 77 is not entered.",
 					"instruction_text": "Specify in text the other credit product if code 77 is entered.",
 					"examples": [
 					],
@@ -163,7 +163,7 @@
 					"title": "Type of guarantee",
 					"citation": "12 CFR 1002.107(a)(5)(ii)",
 					"short_name": "ct_guarantee",
-					"type": "Multiple response (width up to 300 characters)",
+					"type": "Multiple response",
 					"conditionality": "Required for all application records",
 					"instruction_text": "Indicate the type or types of guarantees by entering up to five of the specified codes. If there is more than one type of guarantee, enter up to five, in any order, separated by semicolons.",
 					"examples": [
@@ -733,7 +733,7 @@
 					"citation": "12 CFR 1002.107(a)(12)(v)",
 					"short_name": "pricing_mca_addcost",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if pricing information: MCA/sales-based: additional cost for merchant cash advances or other sales-based financing is code 0. Leave blank if code 0 is not entered.",
+					"conditionality": "Conditionally required if MCA/sales-based: additional cost for merchant cash advances or other sales-based financing is code 0. Leave blank if code 0 is not entered.",
 					"instruction_text": "For originated credit and credit that is approved but not accepted, if a merchant cash advance or other sales-based financing transaction, enter, in dollars, the difference between the amount advanced and the amount to be repaid.",
 					"examples": [
 						"If $3,500, enter 3500 or 3500.00",
@@ -1308,7 +1308,7 @@
 					"short_name": "po_1_gender_ff",
 					"type": "Text (width up to 300 characters)",
 					"conditionality": "Conditionally required if sex/gender of principal owner 1 is code 1. Report not applicable by leaving blank if code 1 is not entered. ",
-					"instruction_text": "Specify in text principal owner 1's self-identified sex/gender if provided by the applicant. Otherwise, leave this data field blank.",
+					"instruction_text": "Specify in text the principal owner 1's self-identified sex/gender if provided by the applicant. Otherwise, leave this data field blank.",
 					"examples": [
 					],
 					"validations": [
