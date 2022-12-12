@@ -5,6 +5,12 @@ on:
       - main
     paths:
       - sbl-fig-spec.json
+      - json_to_csv.py
+env:
+  GIT_USERNAME: figbot
+  GIT_EMAIL: figbot@users.noreply.github.com
+  JSON_FILE_PATH: sbl-fig-spec.json
+  CSV_FILE_PATH: sbl-fig-spec.csv
 jobs:
   json-to-csv:
     runs-on: ubuntu-latest
@@ -13,5 +19,12 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - run: python json_to_csv.py sbl-fig-spec.json sbl-fig-spec.csv
-      - run: cat sbl-fig-spec.csv
+      - run: python json_to_csv.py $JSON_FILE_PATH $CSV_FILE_PATH
+      - name: View changes to CSV
+        run: git diff $CSV_FILE_PATH
+      - name: Push changes to CSV
+        run: |
+          git config --global user.name $GIT_USERNAME
+          git config --global user.email $GIT_EMAIL
+          git commit -a -m "Update ${CSV_FILE_PATH} with changes from ${{ github.sha }}"
+          git push
