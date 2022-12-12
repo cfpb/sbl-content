@@ -72,7 +72,7 @@ for data_point in json_data_points['data_points']:
                 csv_data_point['valid_value_codes'] = po_1_lookup[po_1_short_name]['valid_value_codes']
                 csv_data_point['valid_value_descriptions'] = po_1_lookup[po_1_short_name]['valid_value_descriptions']
                 csv_data_point['examples'] = po_1_lookup[po_1_short_name]['examples']
-                csv_data_point['validationz'] = po_1_lookup[po_1_short_name]['validations']
+                csv_data_point['validationz'] = po_1_lookup[po_1_short_name]['validationz']
 
                 po_1_instructions = po_1_lookup[po_1_short_name]['instructions']
                 csv_data_point['instructions'] = po_1_instructions.replace('owner 1', f'owner {po_num}').replace('owner: 1', f'owner: {po_num}')
