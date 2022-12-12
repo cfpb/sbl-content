@@ -3,9 +3,9 @@ on:
   push:
     branches-ignore:
       - main
-    paths:
-      - sbl-fig-spec.json
-      - json_to_csv.py
+    #paths:
+    #  - sbl-fig-spec.json
+    #  - json_to_csv.py
 env:
   GIT_USERNAME: figbot
   GIT_EMAIL: figbot@users.noreply.github.com
