@@ -1,0 +1,123 @@
+{
+    "$schema": "https://json-schema.org/draft-06/schema",
+    "$ref": "#/definitions/FIGDataPoints",
+    "definitions": {
+        "FIGDataPoints": {
+            "type": "object",
+            "properties": {
+                "data_points": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DataPoint"
+                    }
+                }
+            },
+            "required": [
+                "data_points"
+            ],
+            "title": "FIGDataPoints"
+        },
+        "DataPoint": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "type": "integer"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "anchor": {
+                    "type": "string"
+                },
+                "rule_section": {
+                    "type": "string"
+                },
+                "intro_text": {
+                    "type": "string"
+                },
+                "data_fields": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DataField"
+                    }
+                }
+            },
+            "required": [
+                "anchor",
+                "data_fields",
+                "number",
+                "rule_section",
+                "title"
+            ],
+            "title": "DataPoint"
+        },
+        "DataField": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field_number": {
+                    "type": "integer"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "citation": {
+                    "type": "string"
+                },
+                "short_name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "conditionality": {
+                    "type": "string"
+                },
+                "instruction_text": {
+                    "type": "string"
+                },
+                "examples": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "validations": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "valid_values": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/ValidValue"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "conditionality",
+                "field_number",
+                "instruction_text",
+                "short_name",
+                "title",
+                "type"
+            ],
+            "title": "DataField"
+        },
+        "ValidValue": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "ValidValue"
+        }
+    }
+}

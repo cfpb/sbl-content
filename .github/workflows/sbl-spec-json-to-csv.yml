@@ -1,0 +1,35 @@
+name: sbl-spec-json-to-csv
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - sbl-fig-spec.json
+      - json_to_csv.py
+env:
+  # HACK: Actions doesn't provide a built-in means of referencing the github-actions
+  #       Git user. There is an open issue to remedy this, but others have found this
+  #       workaround in the meantime.
+  # SEE:  https://github.com/actions/checkout/issues/13
+  # SEE:  https://github.com/orgs/community/discussions/26560#discussioncomment-3252339
+  GIT_USERNAME: github-actions[bot]
+  GIT_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+  JSON_FILE_PATH: sbl-fig-spec.json
+  CSV_FILE_PATH: sbl-fig-spec.csv
+jobs:
+  json-to-csv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: python json_to_csv.py $JSON_FILE_PATH $CSV_FILE_PATH
+      - name: View changes to CSV
+        run: git diff $CSV_FILE_PATH
+      - name: Push changes to CSV
+        run: |
+          git config --global user.name $GIT_USERNAME
+          git config --global user.email $GIT_EMAIL
+          git commit -a -m "Update ${CSV_FILE_PATH} with changes from ${GITHUB_SHA::7}"
+          git push
