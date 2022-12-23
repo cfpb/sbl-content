@@ -7,7 +7,7 @@
 
 This repository is used as a way to support content publication on consumerfinance.gov.
 It is generally not intended as a space for collaboration.
-If you find issues with the SBL content in this repo, please contact [SBL Help](../readme/#getting-help).
+If you find issues with the SBL content in this repo, please contact [SBL Help](/README.md#getting-help).
 
 If you wish to contribute to another part of this repo besides SBL content,
 there are two main ways to do so:
