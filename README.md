@@ -15,7 +15,7 @@ The FIG webpage contains links to the supplemental files contained in this repos
 
 However, you can also use this repository to find all published versions of these files.
 If you want the latest version of the file specification and validation specification for the SBL data collection,
-use the file navigator in this repo to visit `/fig-files/file-spec/`, where you can see the latest file content
+use the file navigator in this repo to visit [`/fig-files/file-spec/`](/fig-files/file-spec), where you can see the latest file content
 and diff between versions of the files.
 
 You can also use this repository to find previously published, outdated versions of these files.
