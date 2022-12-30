@@ -600,7 +600,7 @@
 				{
 					"field_number": 26,
 					"title": "Variable rate transaction: index name",
-					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
+					"citation": "12 CFR 1002.107(a)(12)(i)-2",
 					"short_name": "pricing_var_index",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
