@@ -146,11 +146,11 @@
 				},
 				{
 					"field_number": 6,
-					"title": "Free form fext field for other credit products",
+					"title": "Free form text field for other credit products",
 					"citation": "12 CFR 1002.107(a)(5)(i)",
 					"short_name": "ct_credit_product_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if credit product is code 77. Leave blank if code 77 is not entered.",
+					"conditionality": "Conditionally required if 'credit product' is code 77. Leave blank if code 77 is not entered.",
 					"instruction_text": "Specify in text the other credit product if code 77 is entered.",
 					"examples": [
 					],
@@ -197,7 +197,7 @@
 					"citation": "12 CFR 1002.107(a)(5)(ii)",
 					"short_name": "ct_guarantee_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if type of guarantee contains code 77. Leave blank if code 77 is not entered.",
+					"conditionality": "Conditionally required if 'type of guarantee' contains code 77. Leave blank if code 77 is not entered.",
 					"examples": [
 					],
 					"instruction_text": "Specify in text the other guarantee if code 77 is entered. If there is more than one ther guarantee entered, separate each one by a semicolons.",
@@ -212,13 +212,13 @@
 					"short_name": "ct_loan_term_flag",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
-					"instruction_text": "Indicate whether loan term is applicable for this application for credit by entering a code from the specified list of values.",
+					"instruction_text": "Indicate whether 'loan term' is applicable for this application for credit by entering a code from the specified list of values.",
 					"examples": [
 					],
 					"valid_values": [
 						["Valid values", "Codes", "Instructions"],
-						[0, "Code 0 - Applicable and Provided" ],
-						[88, "Code 88 - Applicable and Not provided by applicant and otherwise undetermined", "Enter code 88 if the product has a loan term, but the application is denied, withdrawn, or determined to be incomplete before a loan term has been identified."],
+						[0, "Code 0 - Applicable and reported" ],
+						[88, "Code 88 - Applicable but not provided by applicant and otherwise undetermined", "Enter code 88 if the product has a loan term, but the application is denied, withdrawn, or determined to be incomplete before a loan term has been identified."],
 						[99, "Code 99 - Not applicable", "Enter code 99 if the product type does not have a loan term, such as a credit card."]
 					],
 					"validations": [
@@ -231,7 +231,7 @@
 					"citation": "12 CFR 1002.107(a)(5)(iii)",
 					"short_name": "ct_loan_term",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if credit type: loan term: NA/NP flag is code 0. Leave blank if code 0 is not entered.",
+					"conditionality": "Conditionally required if 'credit type: loan term: NA/NP flag' is code 0. Leave blank if code 0 is not entered.",
 					"instruction_text": "Enter, in numerical form, the number of months in the loan term for products that have a loan term. If the product has a loan term of less than 1 month, enter 1.",
 					"examples": [
 						"For a loan term of 36 months, enter 36",
@@ -292,7 +292,7 @@
 					"citation": "",
 					"short_name": "credit_purpose_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if credit purpose contains code 77. Leave blank if code 77 is not entered.",
+					"conditionality": "Conditionally required if 'credit purpose' contains code 77. Leave blank if code 77 is not entered.",
 					"instruction_text": "Specify in text the other credit purpose if code 77 is entered. Do not enter more than one other credit purpose.",
 					"examples": [
 					],
@@ -316,14 +316,14 @@
 					"short_name": "amount_applied_for_flag",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
-					"instruction_text": "Indicate whether amount applied for is provided by entering one of the specified codes.",
+					"instruction_text": "Indicate whether 'amount applied for' is provided by entering one of the specified codes.",
 					"examples": [
 					],
 					"valid_values": [
 						["Valid values", "Codes", "Instructions"],
-						[0, "Code 0 - Applicable and Reported", ""],
-						[88, "Code 88 - Applicable but Not provided by applicant and otherwise undetermined", "Enter code 88 if the product applied for does involve a specific amount requested or underwritten, but the amount requested or underwritten is not provided by the applicant and otherwise undetermined."],
-						[99, "Code 99 - Not Applicable", "Enter code 99 if the product applied for does not involve a specific amount requested."]
+						[0, "Code 0 - Applicable and reported", ""],
+						[88, "Code 88 - Applicable but not provided by applicant and otherwise undetermined", "Enter code 88 if the product applied for does involve a specific amount requested or underwritten, but the amount requested or underwritten is not provided by the applicant and otherwise undetermined."],
+						[99, "Code 99 - Not applicable", "Enter code 99 if the product applied for does not involve a specific amount requested."]
 					],
 					"validations": [
 						"Must equal 0, 88 or 99"
@@ -335,7 +335,7 @@
 					"citation": "",
 					"short_name": "amount_applied_for",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if amount applied for: NA/NP flag is code 0. Leave blank if code 0 is not entered.",
+					"conditionality": "Conditionally required if 'amount applied for: NA/NP flag' is code 0. Leave blank if code 0 is not entered.",
 					"instruction_text": "Enter one of the following:<ul><li>The dollar amount for initial amount of credit/credit limit requested by applicant at the application stage or later</li><li>If application is in response to a firm offer that specifies an amount or limit, the dollar amount of the firm offer, unless the applicant requested a different amount</li><li>If application is in response to a firm offer that does not specify an amount or limit and the applicant did not request a specific amount, the dollar amount underwritten</li><li>If application is in response to a firm offer that specifies an amount or limit as a range and the applicant did not request a specific amount, the dollar amount underwritten</li><li>If applicant did not request a particular amount but the financial institution underwrites for a specific amount, the dollar amount underwritten</li><li>If applicant requested a range of dollar amounts, the midpoint of that range</li><li>If application is a request for additional amounts on an existing account, the dollar amount of additional credit requested</li></ul>",
 					"examples": [
 						"For $12,345, enter 12345"
@@ -360,8 +360,8 @@
 					"citation": "",
 					"short_name": "amount_approved",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if action taken is code 1 or 2. Report not applicable by leaving blank if codes 1 or 2 are not entered.",
-					"instruction_text": "Enter one of the following:<ul><li>For a closed-end origination, the amount of the originated loan</li><li>For a closed-end application, the highest amount approved if the application was approved but not accepted</li><li>For an open-end origination, the amount of the credit limit established</li><li>For an open-end application, the highest amount approved if the application was approved but not accepted</li><li>For additional credit amounts that were approved for or originated on an existing account, report the additional credit amount approved or originated, and not any previous amount extended.</li><li>Leave blank if amount approved or originated is not applicable because an application is denied, withdrawn, or incomplete.</li></ul>",
+					"conditionality": "Conditionally required if 'action taken' is code 1 or 2. Report not applicable by leaving blank if codes 1 or 2 are not entered.",
+					"instruction_text": "Enter one of the following:<ul><li>For a closed-end origination, the amount of the originated loan</li><li>For a closed-end application, the highest amount approved if the application was approved but not accepted</li><li>For an open-end origination, the amount of the credit limit established</li><li>For an open-end application, the highest amount approved if the application was approved but not accepted</li><li>For additional credit amounts that were approved for or originated on an existing account, report the additional credit amount approved or originated, and not any previous amount extended</li><li>Leave blank if amount approved or originated is not applicable because an application is denied, withdrawn, or incomplete</li></ul>",
 					"examples": [
 						"For $101.23, enter 101.23"
 					],
@@ -423,7 +423,7 @@
 					],
 					"validations": [
 						"Must be a real calendar date using YYYYMMDD format",
-						"The date indicated must must occur within the current filing period: July 1, 2024 to December 31, 2024."
+						"The date indicated must occur within the current filing period: July 1, 2024 to December 31, 2024"
 					]
 				}
 			]
@@ -451,7 +451,7 @@
 						["Valid values", "Codes", "Instructions"],
 						[1, "Code 1 - Credit characteristics of the business"],
 						[2, "Code 2 - Credit characteristics of the principal owner(s) or guarantor(s)"],
-						[3, "Code 3 - Use of loan proceeds"],
+						[3, "Code 3 - Use of credit proceeds"],
 						[4, "Code 4 - Cashflow"],
 						[6, "Code 6 - Time in business"],
 						[7, "Code 7 - Government loan program criteria "],
@@ -473,8 +473,8 @@
 					"citation": "",
 					"short_name": "denial_reasons_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if denial reason(s) contains code 77. Leave blank if code 77 is not entered.",
-					"instruction_text": "Specify in text the other denial reason(s) if code 77 is entered. If there is more than one other denial reason(s) entered, separate each one by a semicolon.",
+					"conditionality": "Conditionally required if 'denial reason(s)' contains code 77. Leave blank if code 77 is not entered.",
+					"instruction_text": "Specify in text the other denial reason(s) if code 77 is entered. If there is more than one other denial reason entered, separate each one by a semicolon.",
 					"examples": [
 					],
 					"validations": [
@@ -497,7 +497,7 @@
 					"short_name": "pricing_fixed_int_flag",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
-					"instruction_text": "Indicate whether pricing information: fixed rate: interest rate is applicable by entering one of specified codes.",
+					"instruction_text": "Indicate whether 'fixed rate: interest rate' is applicable by entering one of specified codes.",
 					"examples": [
 					],
 					"valid_values": [
@@ -515,7 +515,7 @@
 					"citation": "12 CFR 1002.107(a)(12)(i)(A)",
 					"short_name": "pricing_fixed_int",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if fixed rate: interest rate: NA flag is code 0. Leave blank if code 0 is not entered.",
+					"conditionality": "Conditionally required if 'fixed rate: interest rate: NA flag' is code 0. Leave blank if code 0 is not entered.",
 					"instruction_text": "For originated credit and credit that is approved but not accepted, if a fixed rate transaction, enter, as a percentage, to at least three (3) decimal places, the interest rate. Numbers calculated to beyond three (3) decimal places may either be reported beyond three (3) decimal places or rounded or truncated to three (3) decimal places. Decimal place trailing zeros may be either included or omitted.",
 					"examples": [
 						"If 4.125%, enter 4.125",
@@ -533,7 +533,7 @@
 					"short_name": "pricing_var_margin_flag",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
-					"instruction_text": "Indicate whether variable rate transaction: margin is applicable by entering one of the specified codes.",
+					"instruction_text": "Indicate whether 'variable rate transaction: margin' is applicable by entering one of the specified codes.",
 					"examples": [
 					],
 					"valid_values": [
@@ -551,7 +551,7 @@
 					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
 					"short_name": "pricing_var_margin",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if variable rate transaction: margin: NA flag is code 0. Leave blank if code 0 is not entered.",
+					"conditionality": "Conditionally required if 'variable rate transaction: margin: NA flag' is code 0. Leave blank if code 0 is not entered.",
 					"instruction_text": "For originated credit and credit that is approved but not accepted, if a variable rate transaction, enter, as a percentage, to at least three (3) decimal places, the margin rate. Numbers calculated to beyond three (3) decimal places may either be reported beyond three (3) decimal places or rounded or truncated to three (3) decimal places. Decimal place trailing zeros may be either included or omitted.",
 					"examples": [
 						"If 2.525%, enter 2.525",
@@ -569,7 +569,7 @@
 					"short_name": "pricing_var_init_rate_period_flag",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
-					"instruction_text": "Indicate whether variable rate transaction: initial rate period is applicable by entering one of specified codes.",
+					"instruction_text": "Indicate whether 'variable rate transaction: initial rate period' is applicable by entering one of specified codes.",
 					"examples": [
 					],
 					"valid_values": [
@@ -587,7 +587,7 @@
 					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
 					"short_name": "pricing_var_init_rate_period",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if variable rate transaction: initial rate period: NA flag is code 0. Leave blank if code 0 is not entered.",
+					"conditionality": "Conditionally required if 'variable rate transaction: initial rate period: NA flag' is code 0. Leave blank if code 0 is not entered.",
 					"instruction_text": "For originated credit and credit that is approved but not accepted, if a variable rate transaction, enter, as a whole number, the length of the initial rate period expressed in months.",
 					"examples": [
 						"24"
@@ -632,7 +632,7 @@
 					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
 					"short_name": "pricing_var_index_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if variable rate transaction: index name is code 77. Leave blank if code 77 is not entered.",
+					"conditionality": "Conditionally required if 'variable rate transaction: index name' is code 77. Leave blank if code 77 is not entered.",
 					"instruction_text": "Specify in text the other index name if code 77 is entered.",
 					"examples": [
 					],
@@ -646,7 +646,7 @@
 					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
 					"short_name": "pricing_var_index_value",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if variable rate transaction: index name is NOT code 99 AND variable rate transaction: initial rate period is code 99.",
+					"conditionality": "Conditionally required if 'variable rate transaction: index name' is not code 99 and 'variable rate transaction: initial rate period' is code 99.",
 					"instruction_text": "For originated credit and credit that is approved but not accepted, if a variable rate transaction, enter, as a percentage, to at least three (3) decimal places, the index value used to set the rate that is or would be applicable to the covered transaction. Numbers calculated to beyond three (3) decimal places may either be reported beyond three (3) decimal places or rounded or truncated to three (3) decimal places. Decimal place trailing zeros may be either included or omitted.",
 					"examples": [
 						"If 1.025%, enter 1.025",
@@ -717,7 +717,7 @@
 					"conditionality": "Required for all application records",
 					"examples": [
 					],
-					"instruction_text": "Indicate whether pricing information: MCA/sales-based: additional cost for merchant cash advances or other sales-based financing: NA flag is applicable by entering one of the specified codes.",
+					"instruction_text": "Indicate whether 'MCA/sales-based: additional cost for merchant cash advances or other sales-based financing' is applicable by entering one of the specified codes.",
 					"valid_values": [
 						["Valid values", "Codes", "Instructions"],
 						[0, "Code 0 - Applicable"],
@@ -729,11 +729,11 @@
 				},
 				{
 					"field_number": 33,
-					"title": "MCA/sales-based: additional cost for perchant cash advances or other sales-based financing",
+					"title": "MCA/sales-based: additional cost for merchant cash advances or other sales-based financing",
 					"citation": "12 CFR 1002.107(a)(12)(v)",
 					"short_name": "pricing_mca_addcost",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if MCA/sales-based: additional cost for merchant cash advances or other sales-based financing is code 0. Leave blank if code 0 is not entered.",
+					"conditionality": "Conditionally required if 'MCA/sales-based: additional cost for merchant cash advances or other sales-based financing' is code 0. Leave blank if code 0 is not entered.",
 					"instruction_text": "For originated credit and credit that is approved but not accepted, if a merchant cash advance or other sales-based financing transaction, enter, in dollars, the difference between the amount advanced and the amount to be repaid.",
 					"examples": [
 						"If $3,500, enter 3500 or 3500.00",
@@ -820,15 +820,15 @@
 					"title": "Tract number",
 					"citation": "",
 					"short_name": "census_tract_number",
-					"type": "Special (width equal 11 characters)",
-					"conditionality": "Conditionally required if census tract: type of address is code 1, 2, or 3. Leave blank if code 88 is entered.",
+					"type": "Special (width 11 characters)",
+					"conditionality": "Conditionally required if 'type of address' is code 1, 2, or 3. Leave blank if code 88 is entered.",
 					"instruction_text": "Enter the 11-digit census tract number as defined by the U.S. Census Bureau of the appropriate one of the following:<ul><li>Address where the loan proceeds will principally be applied, if known</li><li>If the proceeds address is not known, location of borrower's main office or headquarters</li><li>If neither of those addresses are known, another address or location associated with the applicant</li></ul>Do not use decimals.",
 					"examples": [
 						"06037264000 (a census tract within Los Angeles County, CA)"
 					],
 					"validations": [
 						"When present, must be a GEOID with exactly 11 digits",
-						"When present, should be a valid census tract GEOID as defined by the U.S. Census Bureau."
+						"When present, should be a valid census tract GEOID as defined by the U.S. Census Bureau"
 					]
 				}
 			]
@@ -847,7 +847,7 @@
 					"short_name": "gross_annual_revenue_flag",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
-					"instruction_text": "Indicate whether gross annual revenue is reported by entering one of specified codes.",
+					"instruction_text": "Indicate whether 'gross annual revenue' is reported by entering one of specified codes.",
 					"examples": [
 					],
 					"valid_values": [
@@ -865,7 +865,7 @@
 					"citation": "",
 					"short_name": "gross_annual_revenue",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if gross annual revenue: NP flag is code 0. Leave blank if code 0 is not entered.",
+					"conditionality": "Conditionally required if 'gross annual revenue: NP flag' is code 0. Leave blank if code 0 is not entered.",
 					"instruction_text": "Enter the dollar amount of the applicant's gross annual revenue for its preceding full fiscal year. A financial institution is permitted, but not required, to report the gross annual revenue for the applicant that includes the revenue of affiliates as well. If a business has no gross annual revenue to report (e.g., a startup, a new line of business, and/or a business with a change in structure or ownership), the financial institution would report that the applicant's gross annual revenue in its preceding full fiscal year is 0.",
 					"examples": [
 						"If $855,430, enter 855430 or 855430.00",
@@ -955,7 +955,7 @@
 					"short_name": "time_in_business_type",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
-					"instruction_text": "Indicate whether the applicant provided information on Time in Business by entering one of the specified codes.",
+					"instruction_text": "Indicate whether the applicant provided information on 'time in business' by entering one of the specified codes.",
 					"examples": [
 					],
 					"valid_values": [
@@ -975,7 +975,7 @@
 					"citation": "",
 					"short_name": "time_in_business",
 					"type": "Numeric",
-					"conditionality": "Conditionally required if time in business: type of response is code 1. Leave blank if code 1 is not entered.",
+					"conditionality": "Conditionally required if 'time in business: type of response' is code 1. Leave blank if code 1 is not entered.",
 					"instruction_text": "Enter the number of years the applicant has been in business, as collected or obtained by the financial institution, rounding down to the nearest whole number of years.",
 					"examples": [
 						"12"
@@ -1096,7 +1096,7 @@
 					],
 					"valid_values": [
 						["Valid values", "Codes"],
-						[0, "Code 0 - Provided"],
+						[0, "Code 0 - Reported"],
 						[88, "Code 88 - Not provided by applicant and otherwise undetermined"]
 					],
 					"validations": [
@@ -1109,7 +1109,7 @@
 					"citation": "",
 					"short_name": "num_principal_owners",
 					"type": "Single response",
-					"conditionality": "Conditionally required if number of principal owners: NP flag is code 0. Leave blank if code 0 is not entered.",
+					"conditionality": "Conditionally required if 'number of principal owners: NP flag' is code 0. Leave blank if code 0 is not entered.",
 					"instruction_text": "Enter the number of the applicant's principal owners. If no principal owner has at least 25% ownership of the business, enter 0.",
 					"examples": [
 					],
@@ -1159,11 +1159,11 @@
 				},
 				{
 					"field_number": 50,
-					"title": "Ethnicity of principal owner 1: Free form text field for other Hispanic or Latino ethnicity",
+					"title": "Ethnicity of principal owner 1: free form text field for other Hispanic or Latino ethnicity",
 					"citation": "",
 					"short_name": "po_1_ethnicity_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if ethnicity of principal owner 1 contains code 77. Report not applicable by leaving blank if code 77 is not entered.",
+					"conditionality": "Conditionally required if 'ethnicity of principal owner 1' contains code 77. Report not applicable by leaving blank if code 77 is not entered.",
 					"instruction_text": "Specify in text the other Hispanic or Latino ethnicity if code 77 is entered. Otherwise, leave this data field blank.",
 					"examples": [
 						"Guatemalan"
@@ -1223,11 +1223,11 @@
 				},
 				{
 					"field_number": 52,
-					"title": "Race of principal owner 1: Free form text field for American Indian or Alaska Native Enrolled or Principal Tribe",
+					"title": "Race of principal owner 1: free form text field for American Indian or Alaska Native Enrolled or Principal Tribe",
 					"citation": "",
 					"short_name": "po_1_race_anai_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 1 contains code 71. Report not applicable by leaving blank if code 71 is not entered",
+					"conditionality": "Conditionally required if 'race of principal owner 1' contains code 71. Report not applicable by leaving blank if code 71 is not entered",
 					"instruction_text": "Specify in text the principal owner 1's American Indian or Alaska Native Enrolled or Principal Tribe if provided by the applicant. Otherwise, leave this data field blank.",
 					"examples": [
 						"Navajo"
@@ -1238,11 +1238,11 @@
 				},
 				{
 					"field_number": 53,
-					"title": "Race of principal owner 1: Free form text field for other Asian race",
+					"title": "Race of principal owner 1: free form text field for other Asian race",
 					"citation": "",
 					"short_name": "po_1_race_asian_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 1 contains code 72. Report not applicable by leaving blank if code 72 is not entered",
+					"conditionality": "Conditionally required if 'race of principal owner 1' contains code 72. Report not applicable by leaving blank if code 72 is not entered",
 					"instruction_text": "Specify in text the principal owner 1's other Asian race(s) if provided by the applicant. Otherwise, leave this data field blank.",
 					"examples": [
 						"Cambodian"
@@ -1253,11 +1253,11 @@
 				},
 				{
 					"field_number": 54,
-					"title": "Race of principal owner 1: Free form text field for other Black or African American race",
+					"title": "Race of principal owner 1: free form text field for other Black or African American race",
 					"citation": "",
 					"short_name": "po_1_race_baa_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 1 contains code 73. Report not applicable by leaving blank if code 73 is not entered",
+					"conditionality": "Conditionally required if 'race of principal owner 1' contains code 73. Report not applicable by leaving blank if code 73 is not entered",
 					"instruction_text": "Specify in text the principal owner 1's other Black or African American race(s) if provided by the applicant. Otherwise, leave this data field blank.",
 					"examples": [
 						"Malawian"
@@ -1268,11 +1268,11 @@
 				},
 				{
 					"field_number": 55,
-					"title": "Race of principal owner 1: Free form text field for other Pacific Islander race",
+					"title": "Race of principal owner 1: free form text field for other Pacific Islander race",
 					"citation": "",
 					"short_name": "po_1_race_pi_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 1 contains code 74. Report not applicable by leaving blank if code 74 is not entered",
+					"conditionality": "Conditionally required if 'race of principal owner 1' contains code 74. Report not applicable by leaving blank if code 74 is not entered",
 					"instruction_text": "Specify in text the principal owner 1's other Pacific Islander race(s) if provided by the applicant. Otherwise, leave this data field blank.",
 					"examples": [
 						"Marshallese"
@@ -1283,7 +1283,7 @@
 				},
 				{
 					"field_number": 56,
-					"title": "Sex/gender of principal owner 1: NP lag",
+					"title": "Sex/gender of principal owner 1: NP flag",
 					"citation": "",
 					"short_name": "po_1_gender_flag",
 					"type": "Single response",
@@ -1303,11 +1303,11 @@
 				},
 				{
 					"field_number": 57,
-					"title": "Sex/gender of principal owner 1: Free form text field for self-identified sex/gender",
+					"title": "Sex/gender of principal owner 1: free form text field for self-identified sex/gender",
 					"citation": "",
 					"short_name": "po_1_gender_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if sex/gender of principal owner 1 is code 1. Report not applicable by leaving blank if code 1 is not entered. ",
+					"conditionality": "Conditionally required if 'sex/gender of principal owner 1' is code 1. Report not applicable by leaving blank if code 1 is not entered. ",
 					"instruction_text": "Specify in text the principal owner 1's self-identified sex/gender if provided by the applicant. Otherwise, leave this data field blank.",
 					"examples": [
 					],
@@ -1341,11 +1341,11 @@
 				},
 				{
 					"field_number": 59,
-					"title": "Ethnicity of principal owner 2: Free form text field for other Hispanic or Latino ethnicity",
+					"title": "Ethnicity of principal owner 2: free form text field for other Hispanic or Latino ethnicity",
 					"citation": "",
 					"short_name": "po_2_ethnicity_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if ethnicity of principal owner 2 contains code 77. Leave blank if code 77 is not entered.",
+					"conditionality": "Conditionally required if 'ethnicity of principal owner 2' contains code 77. Leave blank if code 77 is not entered.",
 					"instruction_text": "<a href='#po_1_ethnicity_ff'>For details, see ethnicity of principal owner 1: free form text field for other Hispanic or Latino ethnicity (Field 50)</a>",
 					"examples": [
 					],
@@ -1369,11 +1369,11 @@
 				},
 				{
 					"field_number": 61,
-					"title": "Race of principal owner 2: Free form text field for American Indian or Alaska Native Enrolled or Principal Tribe",
+					"title": "Race of principal owner 2: free form text field for American Indian or Alaska Native Enrolled or Principal Tribe",
 					"citation": "",
 					"short_name": "po_2_race_anai_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 2 contains code 71. Leave blank if code 71 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 2' contains code 71. Leave blank if code 71 is not entered.",
 					"instruction_text": "<a href='#po_1_race_anai_ff'>For details, see race of principal owner 1: free form text field for American Indian or Alaska Native Enrolled or Principal Tribe (Field 52)</a>",
 					"examples": [
 					],
@@ -1382,11 +1382,11 @@
 				},
 				{
 					"field_number": 62,
-					"title": "Race of principal owner 2: Free form text field for other Asian race",
+					"title": "Race of principal owner 2: free form text field for other Asian race",
 					"citation": "",
 					"short_name": "po_2_race_asian_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 2 contains code 72. Leave blank if code 72 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 2' contains code 72. Leave blank if code 72 is not entered.",
 					"instruction_text": "<a href='#po_1_race_asian_ff'>For details, see race of principal owner 1: free form text field for other Asian race (Field 53)</a>",
 					"examples": [
 					],
@@ -1395,11 +1395,11 @@
 				},
 				{
 					"field_number": 63,
-					"title": "Race of principal owner 2: Free form text field for other Black or African American race",
+					"title": "Race of principal owner 2: free form text field for other Black or African American race",
 					"citation": "",
 					"short_name": "po_2_race_baa_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 2 contains code 73. Leave blank if code 73 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 2' contains code 73. Leave blank if code 73 is not entered.",
 					"instruction_text": "<a href='#po_1_race_baa_ff'>For details, see race of principal owner 1: free form text field for other Black or African American race (Field 54)</a>",
 					"examples": [
 					],
@@ -1408,11 +1408,11 @@
 				},
 				{
 					"field_number": 64,
-					"title": "Race of principal owner 2: Free form text field for other Pacific Islander race",
+					"title": "Race of principal owner 2: free form text field for other Pacific Islander race",
 					"citation": "",
 					"short_name": "po_2_race_pi_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 2 contains code 74. Leave blank if code 74 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 2' contains code 74. Leave blank if code 74 is not entered.",
 					"instruction_text": "<a href='#po_1_race_pi_ff'>For details, see race of principal owner 1: free form text field for other Pacific Islander race (Field 55)</a>",
 					"examples": [
 					],
@@ -1436,11 +1436,11 @@
 				},
 				{
 					"field_number": 66,
-					"title": "Sex/gender of principal owner 2: Free form text field for self-identified sex/gender",
+					"title": "Sex/gender of principal owner 2: free form text field for self-identified sex/gender",
 					"citation": "",
 					"short_name": "po_2_gender_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if sex/gender of principal owner 2 is code 1. Leave blank if code 1 is not entered.",
+					"conditionality": "Conditionally required if 'sex/gender of principal owner 2' is code 1. Leave blank if code 1 is not entered.",
 					"instruction_text": "<a href='#po_1_gender_ff'>For details, see sex/gender of principal owner 1: free form text field for self-identified sex/gender (Field 57)</a>",
 					"examples": [
 					],
@@ -1473,11 +1473,11 @@
 				},
 				{
 					"field_number": 68,
-					"title": "Ethnicity of principal owner 3: Free form text field for other Hispanic or Latino ethnicity",
+					"title": "Ethnicity of principal owner 3: free form text field for other Hispanic or Latino ethnicity",
 					"citation": "",
 					"short_name": "po_3_ethnicity_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if ethnicity of principal owner 3 contains code 77. Leave blank if code 77 is not entered.",
+					"conditionality": "Conditionally required if 'ethnicity of principal owner 3' contains code 77. Leave blank if code 77 is not entered.",
 					"instruction_text": "<a href='#po_1_ethnicity_ff'>For details, see ethnicity of principal owner 1: free form text field for other Hispanic or Latino ethnicity (Field 50)</a>",
 					"examples": [
 					],
@@ -1501,11 +1501,11 @@
 				},
 				{
 					"field_number": 70,
-					"title": "Race of principal owner 3: Free form text field for American Indian or Alaska Native Enrolled or Principal Tribe",
+					"title": "Race of principal owner 3: free form text field for American Indian or Alaska Native Enrolled or Principal Tribe",
 					"citation": "",
 					"short_name": "po_3_race_anai_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 3 contains code 71. Leave blank if code 71 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 3' contains code 71. Leave blank if code 71 is not entered.",
 					"instruction_text": "<a href='#po_1_race_anai_ff'>For details, see race of principal owner 1: free form text field for American Indian or Alaska Native Enrolled or Principal Tribe (Field 52)</a>",
 					"examples": [
 					],
@@ -1514,11 +1514,11 @@
 				},
 				{
 					"field_number": 71,
-					"title": "Race of principal owner 3: Free form text field for other Asian race",
+					"title": "Race of principal owner 3: free form text field for other Asian race",
 					"citation": "",
 					"short_name": "po_3_race_asian_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 3 contains code 72. Leave blank if code 72 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 3' contains code 72. Leave blank if code 72 is not entered.",
 					"instruction_text": "<a href='#po_1_race_asian_ff'>For details, see race of principal owner 1: free form text field for other Asian race (Field 53)</a>",
 					"examples": [
 					],
@@ -1527,11 +1527,11 @@
 				},
 				{
 					"field_number": 72,
-					"title": "Race of principal owner 3: Free form text field for other Black or African American race",
+					"title": "Race of principal owner 3: free form text field for other Black or African American race",
 					"citation": "",
 					"short_name": "po_3_race_baa_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 3 contains code 73. Leave blank if code 73 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 3' contains code 73. Leave blank if code 73 is not entered.",
 					"instruction_text": "<a href='#po_1_race_baa_ff'>For details, see race of principal owner 1: free form text field for other Black or African American race (Field 54)</a>",
 					"examples": [
 					],
@@ -1540,11 +1540,11 @@
 				},
 				{
 					"field_number": 73,
-					"title": "Race of principal owner 3: Free form text field for other Pacific Islander race",
+					"title": "Race of principal owner 3: free form text field for other Pacific Islander race",
 					"citation": "",
 					"short_name": "po_3_race_pi_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 3 contains code 74. Leave blank if code 74 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 3' contains code 74. Leave blank if code 74 is not entered.",
 					"instruction_text": "<a href='#po_1_race_pi_ff'>For details, see race of principal owner 1: free form text field for other Pacific Islander race (Field 55)</a>",
 					"examples": [
 					],
@@ -1568,11 +1568,11 @@
 				},
 				{
 					"field_number": 75,
-					"title": "Sex/gender of principal owner 3: Free form text field for self-identified sex/gender",
+					"title": "Sex/gender of principal owner 3: free form text field for self-identified sex/gender",
 					"citation": "",
 					"short_name": "po_3_gender_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if sex/gender of principal owner 3 is code 1. Leave blank if code 1 is not entered.",
+					"conditionality": "Conditionally required if 'sex/gender of principal owner 3' is code 1. Leave blank if code 1 is not entered.",
 					"instruction_text": "<a href='#po_1_gender_ff'>For details, see sex/gender of principal owner 1: free form text field for self-identified sex/gender (Field 57)</a>",
 					"examples": [
 					],
@@ -1605,11 +1605,11 @@
 				},
 				{
 					"field_number": 77,
-					"title": "Ethnicity of principal owner 4: Free form text field for other Hispanic or Latino ethnicity",
+					"title": "Ethnicity of principal owner 4: free form text field for other Hispanic or Latino ethnicity",
 					"citation": "",
 					"short_name": "po_4_ethnicity_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if ethnicity of principal owner 4 contains code 77. Leave blank if code 77 is not entered.",
+					"conditionality": "Conditionally required if 'ethnicity of principal owner 4' contains code 77. Leave blank if code 77 is not entered.",
 					"instruction_text": "<a href='#po_1_ethnicity_ff'>For details, see ethnicity of principal owner 1: free form text field for other Hispanic or Latino ethnicity (Field 50)</a>",
 					"examples": [
 					],
@@ -1633,11 +1633,11 @@
 				},
 				{
 					"field_number": 79,
-					"title": "Race of principal owner 4: Free form text field for American Indian or Alaska Native Enrolled or Principal Tribe",
+					"title": "Race of principal owner 4: free form text field for American Indian or Alaska Native Enrolled or Principal Tribe",
 					"citation": "",
 					"short_name": "po_4_race_anai_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 4 contains code 71. Leave blank if code 71 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 4' contains code 71. Leave blank if code 71 is not entered.",
 					"instruction_text": "<a href='#po_1_race_anai_ff'>For details, see race of principal owner 1: free form text field for American Indian or Alaska Native Enrolled or Principal Tribe (Field 52)</a>",
 					"examples": [
 					],
@@ -1646,11 +1646,11 @@
 				},
 				{
 					"field_number": 80,
-					"title": "Race of principal owner 4: Free form text field for other Asian race",
+					"title": "Race of principal owner 4: free form text field for other Asian race",
 					"citation": "",
 					"short_name": "po_4_race_asian_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 4 contains code 72. Leave blank if code 72 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 4' contains code 72. Leave blank if code 72 is not entered.",
 					"instruction_text": "<a href='#po_1_race_asian_ff'>For details, see race of principal owner 1: free form text field for other Asian race (Field 53)</a>",
 					"examples": [
 					],
@@ -1659,11 +1659,11 @@
 				},
 				{
 					"field_number": 81,
-					"title": "Race of principal owner 4: Free form text field for other Black or African American race",
+					"title": "Race of principal owner 4: free form text field for other Black or African American race",
 					"citation": "",
 					"short_name": "po_4_race_baa_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 4 contains code 73. Leave blank if code 73 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 4' contains code 73. Leave blank if code 73 is not entered.",
 					"instruction_text": "<a href='#po_1_race_baa_ff'>For details, see race of principal owner 1: free form text field for other Black or African American race (Field 54)</a>",
 					"examples": [
 					],
@@ -1672,11 +1672,11 @@
 				},
 				{
 					"field_number": 82,
-					"title": "Race of principal owner 4: Free form text field for other Pacific Islander race",
+					"title": "Race of principal owner 4: free form text field for other Pacific Islander race",
 					"citation": "",
 					"short_name": "po_4_race_pi_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if race of principal owner 4 contains code 74. Leave blank if code 74 is not entered.",
+					"conditionality": "Conditionally required if 'race of principal owner 4' contains code 74. Leave blank if code 74 is not entered.",
 					"instruction_text": "<a href='#po_1_race_pi_ff'>For details, see race of principal owner 1: free form text field for other Pacific Islander race (Field 55)</a>",
 					"examples": [
 					],
@@ -1700,11 +1700,11 @@
 				},
 				{
 					"field_number": 84,
-					"title": "Sex/gender of principal owner 4: Free form text field for self-identified sex/gender",
+					"title": "Sex/gender of principal owner 4: free form text field for self-identified sex/gender",
 					"citation": "",
 					"short_name": "po_4_gender_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if sex/gender of principal owner 4 is code 1. Leave blank if code 1 is not entered.",
+					"conditionality": "Conditionally required if 'sex/gender of principal owner 4' is code 1. Leave blank if code 1 is not entered.",
 					"instruction_text": "<a href='#po_1_gender_ff'>For details, see sex/gender of principal owner 1: free form text field for self-identified sex/gender (Field 57)</a>",
 					"examples": [
 					],
