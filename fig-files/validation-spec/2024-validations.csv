@@ -1,72 +1,72 @@
 validation_id,primary_field,validation_category,type,scope,affected_fields,description,pseudocode
 uid.invalid_text_length,uid,invalid_text_length,Error,Field,uid,'Unique identifier' must be at least 21 characters in length and at most 45 characters in length.,NA
-uid.invalid_text_pattern,uid,invalid_text_pattern,Error,Field,uid,"Unique identifier' may contain any combination of numbers and/or uppercase letters (i.e., 0-9 and A-Z), and must not contain any other characters.",NA
-app_date.invalid_date_format,app_date,invalid_date_format,Error,Field,app_date,Application date' must be a real calendar date using YYYYMMDD format.,NA
-app_method.invalid_enum_value,app_method,invalid_enum_value,Error,Field,app_method,"Application method' must equal 1, 2, 3, or 4.",NA
-app_recipient.invalid_enum_value,app_recipient,invalid_enum_value,Error,Field,app_recipient,Application recipient' must equal 1 or 2.,NA
-ct_credit_product.invalid_enum_value,ct_credit_product,invalid_enum_value,Error,Field,ct_credit_product,"Credit product' must equal 1, 2, 3, 4, 5, 6, 7, 8, 77, or 88.",NA
-ct_credit_product_ff.invalid_text_length,ct_credit_product_ff,invalid_text_length,Error,Field,ct_credit_product_ff,Free form text field for other credit products' must not exceed 300 characters in length.,NA
+uid.invalid_text_pattern,uid,invalid_text_pattern,Error,Field,uid,"'Unique identifier' may contain any combination of numbers and/or uppercase letters (i.e., 0-9 and A-Z), and must not contain any other characters.",NA
+app_date.invalid_date_format,app_date,invalid_date_format,Error,Field,app_date,'Application date' must be a real calendar date using YYYYMMDD format.,NA
+app_method.invalid_enum_value,app_method,invalid_enum_value,Error,Field,app_method,"'Application method' must equal 1, 2, 3, or 4.",NA
+app_recipient.invalid_enum_value,app_recipient,invalid_enum_value,Error,Field,app_recipient,'Application recipient' must equal 1 or 2.,NA
+ct_credit_product.invalid_enum_value,ct_credit_product,invalid_enum_value,Error,Field,ct_credit_product,"'Credit product' must equal 1, 2, 3, 4, 5, 6, 7, 8, 77, or 88.",NA
+ct_credit_product_ff.invalid_text_length,ct_credit_product_ff,invalid_text_length,Error,Field,ct_credit_product_ff,'Free form text field for other credit products' must not exceed 300 characters in length.,NA
 ct_guarantee.invalid_enum_value,ct_guarantee,invalid_enum_value,Error,Field,ct_guarantee,"Each value in 'type of guarantee' (separated by semicolons) must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 77, or 99.",NA
-ct_guarantee.invalid_number_of_values,ct_guarantee,invalid_number_of_values,Error,Field,ct_guarantee,"Type of guarantee' must contain at least one and at most five values, separated by semicolons.",NA
-ct_guarantee_ff.invalid_text_length,ct_guarantee_ff,invalid_text_length,Error,Field,ct_guarantee_ff,Free form text field for other guarantee' must not exceed 300 characters in length.,NA
-ct_loan_term_flag.invalid_enum_value,ct_loan_term_flag,invalid_enum_value,Error,Field,ct_loan_term_flag,"Loan term: NA/NP flag' must equal 0, 88 or 99.",NA
+ct_guarantee.invalid_number_of_values,ct_guarantee,invalid_number_of_values,Error,Field,ct_guarantee,"'Type of guarantee' must contain at least one and at most five values, separated by semicolons.",NA
+ct_guarantee_ff.invalid_text_length,ct_guarantee_ff,invalid_text_length,Error,Field,ct_guarantee_ff,'Free form text field for other guarantee' must not exceed 300 characters in length.,NA
+ct_loan_term_flag.invalid_enum_value,ct_loan_term_flag,invalid_enum_value,Error,Field,ct_loan_term_flag,"'Loan term: NA/NP flag' must equal 0, 88, or 99.",NA
 ct_loan_term.invalid_numeric_format,ct_loan_term,invalid_numeric_format,Error,Field,ct_loan_term,"When present, 'loan term' must be a whole number.",NA
 ct_loan_term.invalid_numeric_value,ct_loan_term,invalid_numeric_value,Error,Field,ct_loan_term,"When present, 'loan term' must be greater than or equal to 1.",NA
 credit_purpose.invalid_enum_value,credit_purpose,invalid_enum_value,Error,Field,credit_purpose,"Each value in 'credit purpose' (separated by semicolons) must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 77, 88, or 99.",NA
-credit_purpose.invalid_number_of_values,credit_purpose,invalid_number_of_values,Error,Field,credit_purpose,"Credit purpose' must contain at least one and at most three values, separated by semicolons.",NA
-credit_purpose_ff.invalid_text_length,credit_purpose_ff,invalid_text_length,Error,Field,credit_purpose_ff,Free form text field for other credit purpose' must not exceed 300 characters in length.,NA
-amount_applied_for_flag.invalid_enum_value,amount_applied_for_flag,invalid_enum_value,Error,Field,amount_applied_for_flag,"Amount applied For: NA/NP flag' must equal 0, 88, or 99.",NA
+credit_purpose.invalid_number_of_values,credit_purpose,invalid_number_of_values,Error,Field,credit_purpose,"'Credit purpose' must contain at least one and at most three values, separated by semicolons.",NA
+credit_purpose_ff.invalid_text_length,credit_purpose_ff,invalid_text_length,Error,Field,credit_purpose_ff,'Free form text field for other credit purpose' must not exceed 300 characters in length.,NA
+amount_applied_for_flag.invalid_enum_value,amount_applied_for_flag,invalid_enum_value,Error,Field,amount_applied_for_flag,"'Amount applied For: NA/NP flag' must equal 0, 88, or 99.",NA
 amount_applied_for.invalid_numeric_format,amount_applied_for,invalid_numeric_format,Error,Field,amount_applied_for,"When present, 'amount applied for' must be a numeric value.",NA
 amount_applied_for.invalid_numeric_value,amount_applied_for,invalid_numeric_value,Error,Field,amount_applied_for,"When present, 'amount applied for' must be greater than 0.",NA
 amount_approved.invalid_numeric_format,amount_approved,invalid_numeric_format,Error,Field,amount_approved,"When present, 'amount approved or originated' must be a numeric value.",NA
 amount_approved.invalid_numeric_value,amount_approved,invalid_numeric_value,Error,Field,amount_approved,"When present, 'amount approved or originated' must be greater than 0.",NA
-action_taken.invalid_enum_value,action_taken,invalid_enum_value,Error,Field,action_taken,"Action taken' must equal 1, 2, 3, 4, or 5.",NA
-action_taken_date.invalid_date_format,action_taken_date,invalid_date_format,Error,Field,action_taken_date,Action taken date' must be a real calendar date using YYYYMMDD format.,NA
+action_taken.invalid_enum_value,action_taken,invalid_enum_value,Error,Field,action_taken,"'Action taken' must equal 1, 2, 3, 4, or 5.",NA
+action_taken_date.invalid_date_format,action_taken_date,invalid_date_format,Error,Field,action_taken_date,'Action taken date' must be a real calendar date using YYYYMMDD format.,NA
 action_taken_date.invalid_date_value,action_taken_date,invalid_date_value,Error,Field,action_taken_date,"The date indicated by 'action taken date' must be in the reporting year. The initial reporting year will contain partial year data collected between July 1, 2024 to December 31, 2024.",NA
 denial_reasons.invalid_enum_value,denial_reasons,invalid_enum_value,Error,Field,denial_reasons,"Each value in 'denial reason(s)' (separated by semicolons) must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 77, or 99.",NA
-denial_reasons.invalid_number_of_values,denial_reasons,invalid_number_of_values,Error,Field,denial_reasons,"Denial reason(s)' must contain at least one and at most four values, separated by semicolons.",NA
-denial_reasons_ff.invalid_text_length,denial_reasons_ff,invalid_text_length,Error,Field,denial_reasons_ff,Free form text field for other denial reason(s)' must not exceed 300 characters in length.,NA
-pricing_fixed_int_flag.invalid_enum_value,pricing_fixed_int_flag,invalid_enum_value,Error,Field,pricing_fixed_int_flag,Fixed rate: interest rate: NA flag' must equal 0 or 99.,NA
+denial_reasons.invalid_number_of_values,denial_reasons,invalid_number_of_values,Error,Field,denial_reasons,"'Denial reason(s)' must contain at least one and at most four values, separated by semicolons.",NA
+denial_reasons_ff.invalid_text_length,denial_reasons_ff,invalid_text_length,Error,Field,denial_reasons_ff,'Free form text field for other denial reason(s)' must not exceed 300 characters in length.,NA
+pricing_fixed_int_flag.invalid_enum_value,pricing_fixed_int_flag,invalid_enum_value,Error,Field,pricing_fixed_int_flag,'Fixed rate: interest rate: NA flag' must equal 0 or 99.,NA
 pricing_fixed_int.invalid_numeric_format,pricing_fixed_int,invalid_numeric_format,Error,Field, pricing_fixed_int,"When present, 'fixed rate: interest rate' must be a numeric value.",NA
-pricing_var_margin_flag.invalid_enum_value,pricing_var_margin_flag,invalid_enum_value,Error,Field,pricing_var_margin_flag,Variable rate transaction: margin: NA flag' must equal 0 or 99.,NA
+pricing_var_margin_flag.invalid_enum_value,pricing_var_margin_flag,invalid_enum_value,Error,Field,pricing_var_margin_flag,'Variable rate transaction: margin: NA flag' must equal 0 or 99.,NA
 pricing_var_margin.invalid_numeric_format,pricing_var_margin,invalid_numeric_format,Error,Field,pricing_var_margin,"When present, 'variable rate transaction: margin' must be a numeric value.",NA
-pricing_var_init_rate_period_flag.invalid_enum_value,pricing_var_init_rate_period_flag,invalid_enum_value,Error,Field,pricing_var_init_rate_period_flag,Variable rate transaction: initial rate period: NA flag' must equal 0 or 99.,NA
+pricing_var_init_rate_period_flag.invalid_enum_value,pricing_var_init_rate_period_flag,invalid_enum_value,Error,Field,pricing_var_init_rate_period_flag,'Variable rate transaction: initial rate period: NA flag' must equal 0 or 99.,NA
 pricing_var_init_rate_period.invalid_numeric_format,pricing_var_init_rate_period,invalid_numeric_format,Error,Field,pricing_var_init_rate_period,"When present, 'variable rate transaction: initial rate period' must be a whole number.",NA
 pricing_var_init_rate_period.invalid_numeric_value,pricing_var_init_rate_period,invalid_numeric_value,Error,Field,pricing_var_init_rate_period,"When present, 'variable rate transaction: initial rate period' must be greater than 0.",NA
-pricing_var_index.invalid_enum_value,pricing_var_index,invalid_enum_value,Error,Field,pricing_var_index,"Variable rate transaction: index name' must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 77, or 99.",NA
-pricing_var_index_ff.invalid_text_length,pricing_var_index_ff,invalid_text_length,Error,Field,pricing_var_index_ff,Variable rate transaction: index name: other' must not exceed 300 characters in length.,NA
+pricing_var_index.invalid_enum_value,pricing_var_index,invalid_enum_value,Error,Field,pricing_var_index,"'Variable rate transaction: index name' must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 77, or 99.",NA
+pricing_var_index_ff.invalid_text_length,pricing_var_index_ff,invalid_text_length,Error,Field,pricing_var_index_ff,'Variable rate transaction: index name: other' must not exceed 300 characters in length.,NA
 pricing_var_index_value.invalid_numeric_format,pricing_var_index_value,invalid_numeric_format,Error,Field,pricing_var_index_value,"When present, 'variable rate transaction: index value' must be a numeric value.",NA
-pricing_origination_charges.invalid_numeric_format,pricing_origination_charges,invalid_numeric_format,Error,Field,pricing_origination_charges,Total origination charges' must be a numeric value.,NA
-pricing_broker_fees.invalid_numeric_format,pricing_broker_fees,invalid_numeric_format,Error,Field,pricing_broker_fees,Amount of total broker fees' must be a numeric value.,NA
-pricing_initial_charges.invalid_numeric_format,pricing_initial_charges,invalid_numeric_format,Error,Field,pricing_initial_charges,Initial annual charges' must be a numeric value.,NA
-pricing_mca_addcost_flag.invalid_enum_value,pricing_mca_addcost_flag,invalid_enum_value,Error,Field,pricing_mca_addcost_flag,MCA/sales-based: additional cost for merchant cash advances or other sales-based financing: NA flag' must equal 0 or 99.,NA
+pricing_origination_charges.invalid_numeric_format,pricing_origination_charges,invalid_numeric_format,Error,Field,pricing_origination_charges,'Total origination charges' must be a numeric value.,NA
+pricing_broker_fees.invalid_numeric_format,pricing_broker_fees,invalid_numeric_format,Error,Field,pricing_broker_fees,'Amount of total broker fees' must be a numeric value.,NA
+pricing_initial_charges.invalid_numeric_format,pricing_initial_charges,invalid_numeric_format,Error,Field,pricing_initial_charges,'Initial annual charges' must be a numeric value.,NA
+pricing_mca_addcost_flag.invalid_enum_value,pricing_mca_addcost_flag,invalid_enum_value,Error,Field,pricing_mca_addcost_flag,'MCA/sales-based: additional cost for merchant cash advances or other sales-based financing: NA flag' must equal 0 or 99.,NA
 pricing_mca_addcost.invalid_numeric_format,pricing_mca_addcost,invalid_numeric_format,Error,Field,pricing_mca_addcost,"When present, 'MCA/sales-based: additional cost for merchant cash advances or other sales-based financing' must be a numeric value.",NA
-pricing_prepenalty_allowed.invalid_enum_value,pricing_prepenalty_allowed,invalid_enum_value,Error,Field,pricing_prepenalty_allowed,"Prepayment penalty could be imposed' must equal 1, 2, or 99.",NA
-pricing_prepenalty_exists.invalid_enum_value,pricing_prepenalty_exists,invalid_enum_value,Error,Field,pricing_prepenalty_exists,"Prepayment penalty exists' must equal 1, 2, or 99.",NA
-census_tract_adr_type.invalid_enum_value,census_tract_adr_type,invalid_enum_value,Error,Field,census_tract_adr_type,"Census tract: type of address' must equal 1, 2, 3, or 88.",NA
+pricing_prepenalty_allowed.invalid_enum_value,pricing_prepenalty_allowed,invalid_enum_value,Error,Field,pricing_prepenalty_allowed,"'Prepayment penalty could be imposed' must equal 1, 2, or 99.",NA
+pricing_prepenalty_exists.invalid_enum_value,pricing_prepenalty_exists,invalid_enum_value,Error,Field,pricing_prepenalty_exists,"'Prepayment penalty exists' must equal 1, 2, or 99.",NA
+census_tract_adr_type.invalid_enum_value,census_tract_adr_type,invalid_enum_value,Error,Field,census_tract_adr_type,"'Census tract: type of address' must equal 1, 2, 3, or 88.",NA
 census_tract_number.invalid_text_length,census_tract_number,invalid_text_length,Error,Field,census_tract_number,"When present, 'census tract: tract number' must be a GEOID with exactly 11 digits.",NA
-gross_annual_revenue_flag.invalid_enum_value,gross_annual_revenue_flag,invalid_enum_value,Error,Field,gross_annual_revenue_flag,Gross annual revenue: NP flag' must equal 0 or 88.,NA
+gross_annual_revenue_flag.invalid_enum_value,gross_annual_revenue_flag,invalid_enum_value,Error,Field,gross_annual_revenue_flag,'Gross annual revenue: NP flag' must equal 0 or 88.,NA
 gross_annual_revenue.invalid_numeric_format,gross_annual_revenue,invalid_numeric_format,Error,Field,gross_annual_revenue,"When present, 'gross annual revenue' must be a numeric value.",NA
-naics_code.invalid_text_length,naics_code,invalid_text_length,Error,Field,naics_code,North American Industry Classification System (NAICS) code' must be two or three digits in length.,NA
+naics_code.invalid_text_length,naics_code,invalid_text_length,Error,Field,naics_code,'North American Industry Classification System (NAICS) code' must be two or three digits in length.,NA
 naics_code.invalid_naics_format,naics_code,invalid_naics_format,Error,Field,naics_code,"When 'North American Industry Classification System (NAICS) code' is 2 digits, 'North American Industry Classification System (NAICS) code' must be 88.",NA
-number_of_workers.invalid_enum_value,number_of_workers,invalid_enum_value,Error,Field,number_of_workers,"Number of workers' must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, or 88.",NA
-time_in_business_type.invalid_enum_value,time_in_business_type,invalid_enum_value,Error,Field,time_in_business_type,"Time in business: type of response' must equal 1, 2, 3, or 88.",NA
+number_of_workers.invalid_enum_value,number_of_workers,invalid_enum_value,Error,Field,number_of_workers,"'Number of workers' must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, or 88.",NA
+time_in_business_type.invalid_enum_value,time_in_business_type,invalid_enum_value,Error,Field,time_in_business_type,"'Time in business: type of response' must equal 1, 2, 3, or 88.",NA
 time_in_business.invalid_numeric_format,time_in_business,invalid_numeric_format,Error,Field,time_in_business,"When present, 'time in business' must be a whole number.",NA
 time_in_business.invalid_numeric_value,time_in_business,invalid_numeric_value,Error,Field,time_in_business,"When present, 'time in business' must be greater than or equal to 0.",NA
-mob_status.invalid_enum_value,mob_status,invalid_enum_value,Error,Field,mob_status,"Minority-owned business status' must equal 1, 2, 3, or 88.",NA
-wob_status.invalid_enum_value,wob_status,invalid_enum_value,Error,Field,wob_status,"Women-owned business status' must equal 1, 2, 3, or 88.",NA
-lgbtqiob_status.invalid_enum_value,lgbtqiob_status,invalid_enum_value,Error,Field,lgbtqiob_status,"LGBTQI+-owned business status' must equal 1, 2, 3, or 88.",NA
-num_principal_owners_flag.invalid_enum_value,num_principal_owners_flag,invalid_enum_value,Error,Field,num_principal_owners_flag,Number of principal owners: NP flag' must equal 0 or 88.,NA
+mob_status.invalid_enum_value,mob_status,invalid_enum_value,Error,Field,mob_status,"'Minority-owned business status' must equal 1, 2, 3, or 88.",NA
+wob_status.invalid_enum_value,wob_status,invalid_enum_value,Error,Field,wob_status,"'Women-owned business status' must equal 1, 2, 3, or 88.",NA
+lgbtqiob_status.invalid_enum_value,lgbtqiob_status,invalid_enum_value,Error,Field,lgbtqiob_status,"'LGBTQI+-owned business status' must equal 1, 2, 3, or 88.",NA
+num_principal_owners_flag.invalid_enum_value,num_principal_owners_flag,invalid_enum_value,Error,Field,num_principal_owners_flag,'Number of principal owners: NP flag' must equal 0 or 88.,NA
 num_principal_owners.invalid_enum_value,num_principal_owners,invalid_enum_value,Error,Field,num_principal_owners,"When present, 'number of principal owners' must equal 0, 1, 2, 3, or 4.",NA
 po_X_ethnicity.invalid_enum_value,po_X_ethnicity,invalid_enum_value,Error,Field,po_X_ethnicity,"When present, each value in 'ethnicity of principal owner X' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 3, 77, or 88.",NA
-po_X_ethnicity_ff.invalid_text_length,po_X_ethnicity_ff,invalid_text_length,Error,Field,po_X_ethnicity_ff,Ethnicity of principal owner X: free form text field for other Hispanic or Latino' must not exceed 300 characters in length.,NA
+po_X_ethnicity_ff.invalid_text_length,po_X_ethnicity_ff,invalid_text_length,Error,Field,po_X_ethnicity_ff,'Ethnicity of principal owner X: free form text field for other Hispanic or Latino' must not exceed 300 characters in length.,NA
 po_X_race.invalid_enum_value,po_X_race,invalid_enum_value,Error,Field,po_X_race,"When present, each value in 'race of principal owner X' (separated by semicolons) must equal 1, 2, 21, 22, 23, 24, 25, 26, 27, 3, 31, 32, 33, 34, 35, 36, 37, 4, 41, 42, 43, 44, 5, 6, 71, 72, 73, 74, or 88.",NA
-po_X_race_anai_ff.invalid_text_length,po_X_race_anai_ff,invalid_text_length,Error,Field,po_X_race_anai_ff,Race of principal owner X: free form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not exceed 300 characters in length.,NA
-po_X_race_asian_ff.invalid_text_length,po_X_race_asian_ff,invalid_text_length,Error,Field,po_X_race_asian_ff,Race of principal owner X: free form text field for other Asian' must not exceed 300 characters in length.,NA
-po_X_race_baa_ff.invalid_text_length,po_X_race_baa_ff,invalid_text_length,Error,Field,po_X_race_baa_ff,Race of principal owner X: free form text field for other Black or African American' must not exceed 300 characters in length.,NA
-po_X_race_pi_ff.invalid_text_length,po_X_race_pi_ff,invalid_text_length,Error,Field,po_X_race_pi_ff,Race of principal owner X: free form text field for other Pacific Islander race' must not exceed 300 characters in length.,NA
+po_X_race_anai_ff.invalid_text_length,po_X_race_anai_ff,invalid_text_length,Error,Field,po_X_race_anai_ff,'Race of principal owner X: free form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not exceed 300 characters in length.,NA
+po_X_race_asian_ff.invalid_text_length,po_X_race_asian_ff,invalid_text_length,Error,Field,po_X_race_asian_ff,'Race of principal owner X: free form text field for other Asian' must not exceed 300 characters in length.,NA
+po_X_race_baa_ff.invalid_text_length,po_X_race_baa_ff,invalid_text_length,Error,Field,po_X_race_baa_ff,'Race of principal owner X: free form text field for other Black or African American' must not exceed 300 characters in length.,NA
+po_X_race_pi_ff.invalid_text_length,po_X_race_pi_ff,invalid_text_length,Error,Field,po_X_race_pi_ff,'Race of principal owner X: free form text field for other Pacific Islander race' must not exceed 300 characters in length.,NA
 po_X_gender_flag.invalid_enum_value,po_X_gender_flag,invalid_enum_value,Error,Field,po_X_gender_flag,"When present, 'sex/gender of orincipal owner X: NP flag' must equal 1, 2, or 88.",NA
-po_X_gender_ff.invalid_text_length,po_X_gender_ff,invalid_text_length,Error,Field,po_X_gender_ff,Sex/gender of principal owner X: free form text field for self-identified sex/gender' must not exceed 300 characters in length.,NA
+po_X_gender_ff.invalid_text_length,po_X_gender_ff,invalid_text_length,Error,Field,po_X_gender_ff,'Sex/gender of principal owner X: free form text field for self-identified sex/gender' must not exceed 300 characters in length.,NA
 ct_credit_product_ff.conditional_field_conflict,ct_credit_product_ff,conditional_field_conflict,Error,Row,ct_credit_product; ct_credit_product_ff,"When 'credit product' does not equal 77 (other), 'free form text field for other credit products' must be blank. When 'credit product' equals 77 (other), 'free form text field for other credit products' must not be blank.","IF ct_credit_product is not equal to 77 THEN
     IF ct_credit_ff is not blank THEN
         Error
@@ -161,15 +161,15 @@ and the following fields must all equal 0:
 - 'Amount of total broker fees'
 - 'Initial annual charges'","IF action_taken is equal to 3, 4, or 5 THEN
     IF (pricing_fixed_int_flag is not equal to 99 OR
-        pricing_var_margin_flag  is not equal to 99 OR
-        pricing_var_init_rate_period_flag  is not equal to 99 OR
-        pricing_var_index  is not equal to 99 OR
-        pricing_mca_addcost_flag  is not equal to 99 OR
-        pricing_prepenalty_allowed  is not equal to 99 OR
-        pricing_prepenalty_exists  is not equal to 99 OR
-        pricing_origination_charges  is not equal to 0 OR
-        pricing_broker_fees  is not equal to 0 OR
-        pricing_initial_charges  is not equal to 0) THEN
+        pricing_var_margin_flag is not equal to 99 OR
+        pricing_var_init_rate_period_flag is not equal to 99 OR
+        pricing_var_index is not equal to 99 OR
+        pricing_mca_addcost_flag is not equal to 99 OR
+        pricing_prepenalty_allowed is not equal to 99 OR
+        pricing_prepenalty_exists is not equal to 99 OR
+        pricing_origination_charges is not equal to 0 OR
+        pricing_broker_fees is not equal to 0 OR
+        pricing_initial_charges is not equal to 0) THEN
             Error
     ENDIF
 ENDIF"
@@ -182,7 +182,7 @@ ELSEIF pricing_fixed_int_flag is equal to 0 THEN
         Error
     ENDIF
 ENDIF"
-pricing_var_margin.conditional_field_conflict,pricing_var_margin,conditional_field_conflict,Error,Row,pricing_var_margin_flag; pricing_var_margin,"When 'variable rate transaction: margin: NA flag' does not equal 0 (not applicable), 'variable rate transaction: margin' must be blank. When 'variable rate transaction: margin: NA flag' does equal 0 (not applicable), 'variable rate transaction: margin' must not be blank.","IF pricing_var_margin_flag is not equal to 0 THEN
+pricing_var_margin.conditional_field_conflict,pricing_var_margin,conditional_field_conflict,Error,Row,pricing_var_margin_flag; pricing_var_margin,"When 'variable rate transaction: margin: NA flag' does not equal 0 (applicable), 'variable rate transaction: margin' must be blank. When 'variable rate transaction: margin: NA flag' does equal 0 (applicable), 'variable rate transaction: margin' must not be blank.","IF pricing_var_margin_flag is not equal to 0 THEN
     IF pricing_var_margin is not blank THEN
         Error
     ENDIF
@@ -352,19 +352,19 @@ uid.invalid_uid_lei,uid,invalid_uid_lei,Warning,Field + FI identifying info,uid,
     Warning
 ENDIF"
 ct_guarantee.multi_value_field_restriction,ct_guarantee,multi_value_field_restriction,Warning,Field,ct_guarantee,"When 'type of guarantee' contains 99 (no guarantee), 'type of guarantee' should not contain more than one value.",NA
-ct_guarantee.duplicates_in_field,ct_guarantee,duplicates_in_field,Warning,Field,ct_guarantee,Type of guarantee' should not contain duplicated values.,NA
+ct_guarantee.duplicates_in_field,ct_guarantee,duplicates_in_field,Warning,Field,ct_guarantee,'Type of guarantee' should not contain duplicated values.,NA
 ct_loan_term.unreasonable_numeric_value,ct_loan_term,unreasonable_numeric_value,Warning,Field,ct_loan_term,"When present, 'loan term' should be less than 1200 (100 years).",NA
 credit_purpose.multi_value_field_restriction,credit_purpose,multi_value_field_restriction,Warning,Field,credit_purpose,"When 'credit purpose' contains 88 (not provided by applicant and otherwise undetermined) or 99 (not applicable), 'credit purpose' should not contain more than one value.",NA
-credit_purpose.duplicates_in_field,credit_purpose,duplicates_in_field,Warning,Field,credit_purpose,Credit purpose' should not contain duplicated values.,NA
+credit_purpose.duplicates_in_field,credit_purpose,duplicates_in_field,Warning,Field,credit_purpose,'Credit purpose' should not contain duplicated values.,NA
 denial_reasons.multi_value_field_restriction,denial_reasons,multi_value_field_restriction,Warning,Field,denial_reasons,"When 'denial reason(s)' contains 99 (not applicable), 'denial reason(s)' should not contain more than 1 value.",NA
-denial_reasons.duplicates_in_field,denial_reasons,duplicates_in_field,Warning,Field,denial_reasons,Denial reason(s)' should not contain duplicated values.,NA
+denial_reasons.duplicates_in_field,denial_reasons,duplicates_in_field,Warning,Field,denial_reasons,'Denial reason(s)' should not contain duplicated values.,NA
 pricing_fixed_int.unreasonable_numeric_value,pricing_fixed_int,unreasonable_numeric_value,Warning,Field, pricing_fixed_int,"When present, 'fixed rate: interest rate' should generally be greater than 0.1.",NA
 pricing_var_margin.unreasonable_numeric_value,pricing_var_margin,unreasonable_numeric_value,Warning,Field,pricing_var_margin,"When present, 'variable rate transaction: margin' should generally be greater than 0.1.",NA
 census_tract_number.invalid_geoid,census_tract_number,invalid_geoid,Warning,Field,census_tract_number,"When present, 'census tract: tract number' should be a valid census tract GEOID as defined by the U.S. Census Bureau.",NA
 naics_code.invalid_naics_value,naics_code,invalid_naics_value,Warning,Field,naics_code,"When 'North American Industry Classification System (NAICS) code' is 3 digits, 'North American Industry Classification System (NAICS) code' should be a valid NAICS code.",NA
-po_X_ethnicity.duplicates_in_field,po_X_ethnicity,duplicates_in_field,Warning,Field,po_X_ethnicity,Ethnicity of principal owner X' should not contain duplicated values.,NA
+po_X_ethnicity.duplicates_in_field,po_X_ethnicity,duplicates_in_field,Warning,Field,po_X_ethnicity,'Ethnicity of principal owner X' should not contain duplicated values.,NA
 po_X_ethnicity.multi_value_field_restriction,po_X_ethnicity,multi_value_field_restriction,Warning,Field,po_X_ethnicity,"When 'ethnicity of principal owner X' contains 88 (not provided by applicant), 'ethnicity of principal owner: X' should not contain more than one value.",NA
-po_X_race.duplicates_in_field,po_X_race,duplicates_in_field,Warning,Field,po_X_race,Race of principal owner X' should not contain duplicated values.,NA
+po_X_race.duplicates_in_field,po_X_race,duplicates_in_field,Warning,Field,po_X_race,'Race of principal owner X' should not contain duplicated values.,NA
 po_X_race.multi_value_field_restriction,po_X_race,multi_value_field_restriction,Warning,Field,po_X_race,"When 'race of principal owner X' contains 88 (not provided by applicant), 'race of principal owner: X' should not contain more than one value.",NA
 app_date.unreasonable_date_value,app_date,unreasonable_date_value,Warning,Row,action_taken_date; app_date,The date indicated by 'application date' should generally be less than two years (730 days) before 'action taken date'.,"IF action_taken_date is greater than (app_date plus 730 days) THEN
     Warning
