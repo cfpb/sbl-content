@@ -1,17 +1,17 @@
-# SBL content files
+# Content files for the small business lending data collection guide
 
-**Description**: Content supporting CFPB's information about the Small Business Lending rule.
-This repo is a place for CFPB to host files to supplement the information published on consumerfinance.gov.
+**Description**: Content supporting CFPB's information about the small business lending data collection.
+This repository is a place for CFPB to host files to supplement the information published on consumerfinance.gov.
 
-All versions of the Filing Instructions Guide (FIG) for the Small Business Lending Rule (SBL) can be accessed at this link:
+All versions of the filing instructions guide for the small business lending rule can be accessed at this link:
 http://www.consumerfinance.gov/data-research/small-business-lending/filing-instructions-guide/
 
-## Finding SBL content files
+## Finding the content files
 
-If you are looking for the SBL FIG content, the easiest way to find it is to use the [Filing Instructions Guide archive page](http://www.consumerfinance.gov/data-research/small-business-lending/filing-instructions-guide/)
-to find the version of the FIG you need, and follow the links on the page to the specific supplementary file you need.
+If you are looking for the filing instructions for small business lending data, the easiest way to find it is to use the [filing instructions guide archive page](http://www.consumerfinance.gov/data-research/small-business-lending/filing-instructions-guide/)
+to find the version of the guide you need, and follow the links on the page to the specific supplementary file you need.
 For instance, the filing instructions for the 2024 filing year are located [here](http://www.consumerfinance.gov/data-research/small-business-lending/filing-instructions-guide/2024-guide/).
-The FIG webpage contains links to the supplemental files contained in this repository.
+The guide webpage contains links to the supplemental files contained in this repository.
 
 However, you can also use this repository to find all published versions of these files.
 If you want the latest version of the file specification and validation specification for the SBL data collection,
@@ -25,8 +25,8 @@ The releases use tags that include the filing year and version number, such as `
 ## Getting help
 
 If you have questions, concerns, corrections, etc., please follow the instructions
-in the "Where to get help" section of the [Filing Instructions Guide](http://www.consumerfinance.gov/data-research/small-business-lending/filing-instructions-guide/)
-for contacting CFPB's SBL Help team.
+in the "Where to get help" section of the [filing instructions guide](http://www.consumerfinance.gov/data-research/small-business-lending/filing-instructions-guide/)
+for contacting CFPB's small business lending Help team.
 
 ----
 
