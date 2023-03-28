@@ -369,7 +369,7 @@ ELSEIF po_X_gender_flag contains 1 THEN
         Error
     ENDIF
 ENDIF"
-uid.duplicates_in_dataset,uid,duplicates_in_dataset,Error,SBLAR,uid,Any 'unique identifier' may not be used in more than one record within a SBLAR.,"IF uid is duplicated within this filing THEN
+uid.duplicates_in_dataset,uid,duplicates_in_dataset,Error,SBLAR,uid,Any 'unique identifier' may not be used in more than one record within a small business lending application register.,"IF uid is duplicated within this filing THEN
     Error
 ENDIF"
 uid.invalid_uid_lei,uid,invalid_uid_lei,Warning,Field + FI identifying info,uid,The first 20 characters of the 'unique identifier' should match the Legal Entity Identifier (LEI) for the financial institution.,NA
