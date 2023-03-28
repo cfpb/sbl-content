@@ -22,7 +22,7 @@
 					"validations": [
 						"Must be at least 21 characters in length and at most 45 characters in length",
 						"May contain any combination of numbers and/or uppercase letters (i.e., 0-9 and A-Z), and must not contain any other characters",
-						"May not be used in more than one record within a SBLAR",
+						"May not be used in more than one record within a small business lending application register",
 						"The first 20 characters should match the Legal Entity Identifier (LEI) for the financial institution"
 					]
 				}
