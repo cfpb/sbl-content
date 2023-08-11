@@ -499,16 +499,16 @@
 					"short_name": "pricing_interest_rate_type",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
-					"instruction_text": "Indicate the type of interest rate relevant to this transaction by entering one of the specified codes. If any code besides 999 is reported, use the subsequent fields to report the initial rate period, fixed rate transaction information, and variable rate transaction information, as applicable.",
+					"instruction_text": "Indicate the type of interest rate relevant to this transaction by entering one of the specified codes. If any code besides 999 is reported, use the subsequent fields to report the initial rate period, fixed rate transaction information, and adjustable rate transaction information, as applicable.",
 					"examples": [
 					],
 					"valid_values": [
 						["Valid values", "Codes", "Instructions"],
-						[1, "Code 1 - The transaction has a variable interest rate and <b>does not</b> have an initial rate period"],
+						[1, "Code 1 - The transaction has a adjustable interest rate and <b>does not</b> have an initial rate period"],
 						[2, "Code 2 - The transaction has a fixed interest rate and <b>does not</b> have an initial rate period"],
-						[3, "Code 3 - The transaction has an initial rate period greater than 12 months, during which the interest rate is variable"],
+						[3, "Code 3 - The transaction has an initial rate period greater than 12 months, during which the interest rate is adjustable"],
 						[4, "Code 4 - The transaction has an initial rate period greater than 12 months, during which the interest rate is fixed"],
-						[5, "Code 5 - The transaction has an initial rate period less than or equal to 12 months, after which the interest rate is variable"],
+						[5, "Code 5 - The transaction has an initial rate period less than or equal to 12 months, after which the interest rate is adjustable"],
 						[6, "Code 6 - The transaction has an initial rate period less than or equal to 12 months, after which the interest rate is fixed"],
 						[999, "Code 999 - Not applicable", "Enter code 999 if any of the following conditions apply:<ul><li>The application is denied, withdrawn, or incomplete</li><li>The originated or approved but not accepted transaction has no interest rate</li></ul>"]
 					],
@@ -551,12 +551,12 @@
 				},
 				{
 					"field_number": 23,
-					"title": "Variable rate transaction: margin",
+					"title": "Adjustable rate transaction: margin",
 					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
-					"short_name": "pricing_var_margin",
+					"short_name": "pricing_adj_margin",
 					"type": "Numeric",
 					"conditionality": "Conditionally required if 'interest rate type' is code 1, 3, or 5. Leave blank if codes 1, 3, or 5 are not entered.",
-					"instruction_text": "For originated credit and credit that is approved but not accepted, that has a covered variable rate component, enter the margin rate, as a percentage, to at least three (3) decimal places. Numbers calculated to beyond three (3) decimal places may either be reported beyond three (3) decimal places or rounded or truncated to three (3) decimal places. Decimal place trailing zeros may be either included or omitted.",
+					"instruction_text": "For originated credit and credit that is approved but not accepted, that has a covered adjustable rate component, enter the margin rate, as a percentage, to at least three (3) decimal places. Numbers calculated to beyond three (3) decimal places may either be reported beyond three (3) decimal places or rounded or truncated to three (3) decimal places. Decimal place trailing zeros may be either included or omitted.",
 					"examples": [
 						"If 2.525%, enter 2.525",
 						"If 2.500%, enter 2.5, 2.50, or 2.500"
@@ -568,12 +568,12 @@
 				},
 				{
 					"field_number": 24,
-					"title": "Variable rate transaction: index name",
+					"title": "Adjujstable rate transaction: index name",
 					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
-					"short_name": "pricing_var_index_name",
+					"short_name": "pricing_adj_index_name",
 					"type": "Single response",
 					"conditionality": "Required for all application records",
-					"instruction_text": "For originated credit and credit that is approved but not accepted, that has a covered variable rate component, indicate the index name by entering one of the specified codes.",
+					"instruction_text": "For originated credit and credit that is approved but not accepted, that has a covered adjustable rate component, indicate the index name by entering one of the specified codes.",
 					"examples": [
 					],
 					"valid_values": [
@@ -597,11 +597,11 @@
 				},
 				{
 					"field_number": 25,
-					"title": "Variable rate transaction: index name: other",
+					"title": "Adjustable rate transaction: index name: other",
 					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
-					"short_name": "pricing_var_index_name_ff",
+					"short_name": "pricing_adj_index_name_ff",
 					"type": "Text (width up to 300 characters)",
-					"conditionality": "Conditionally required if 'variable rate transaction: index name' is code 977. Leave blank if code 977 is not entered.",
+					"conditionality": "Conditionally required if 'adjustable rate transaction: index name' is code 977. Leave blank if code 977 is not entered.",
 					"instruction_text": "Specify in text the other index name if code 977 is entered.",
 					"examples": [
 					],
@@ -611,12 +611,12 @@
 				},
 				{
 					"field_number": 26,
-					"title": "Variable rate transaction: index value",
+					"title": "Adjustable rate transaction: index value",
 					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
-					"short_name": "pricing_var_index_value",
+					"short_name": "pricing_adj_index_value",
 					"type": "Numeric",
 					"conditionality": "Conditionally required if 'interest rate type' is code 1 or 3. Leave blank if codes 1 or 3 are not entered.",
-					"instruction_text": "For originated credit and credit that is approved but not accepted, that has a covered variable rate component, enter the index value used to set the rate that is or would be applicable to the covered transaction, as a percentage, to at least three (3) decimal places. Numbers calculated to beyond three (3) decimal places may either be reported beyond three (3) decimal places or rounded or truncated to three (3) decimal places. Decimal place trailing zeros may be either included or omitted.",
+					"instruction_text": "For originated credit and credit that is approved but not accepted, that has a covered adjustable rate component, enter the index value used to set the rate that is or would be applicable to the covered transaction, as a percentage, to at least three (3) decimal places. Numbers calculated to beyond three (3) decimal places may either be reported beyond three (3) decimal places or rounded or truncated to three (3) decimal places. Decimal place trailing zeros may be either included or omitted.",
 					"examples": [
 						"If 1.025%, enter 1.025",
 						"If 3.100%, enter 3.1, 3.10, or 3.100"
@@ -1070,17 +1070,17 @@
 					"instruction_text": "Indicate the ethnicity of the applicant's principal owner 1 by entering, as appropriate, from the specified codes. Use the codes below to report the selections that the applicant made (such as on the demographic data collection form), except where otherwise noted in 'Instructions'. If the applicant selects more than one ethnicity for a principal owner, enter each, in any order, separated by a semicolon. If the applicant selects an ethnicity for a principal owner or responds in the free-form text field but also responds that they do not wish to provide this information, enter the ethnicity codes (1, 11, 12, 13, 14, 2, and/or 977) as appropriate. Do not report code 966 if any other codes apply. If an applicant responds in the free-form text field, but does not select Other Hispanic or Latino, you are permitted, but not required, to report Other Hispanic or Latino.",
 
 					"examples": [
-						"If Mexican, enter 12",
-						"If Mexican and Puerto Rican, enter 12;13 or 13;12",
-						"If Mexican and the applicant responded that they did not wish to provide this information, enter 12",
+						"If Mexican, enter 11",
+						"If Mexican and Puerto Rican, enter 11;12 or 12;11",
+						"If Mexican and the applicant responded that they did not wish to provide this information, enter 11",
 						"If responded Argentinean in the free form-text field but the applicant did not select Other Hispanic or Latino ethnicity, enter 977. May also enter 14."
 					],
 					"valid_values": [
 						["Valid values", "Codes", "Instructions"],
 						[1, "Code 1 - Hispanic or Latino"],
-						[11, "Code 11 - Cuban"],
-						[12, "Code 12 - Mexican"],
-						[13, "Code 13 - Puerto Rican"],
+						[11, "Code 11 - Mexican"],
+						[12, "Code 12 - Puerto Rican"],
+						[13, "Code 13 - Cuban"],
 						[14, "Code 14 - Other Hispanic or Latino Ethnicity"],
 						[2, "Code 2 - Not Hispanic or Latino"],
 						[966, "Code 966 - The applicant responded that they did not wish to provide this information", "Do not enter code 966 if the applicant selected any of the ethnicity response options."],
@@ -1142,8 +1142,8 @@
 						[36, "Code 36 - Somali"],
 						[37, "Code 37 - Other Black or African American Race"],
 						[4, "Code 4 - Native Hawaiian or Other Pacific Islander"],
-						[41, "Code 41 - Guamanian or Chamorro"],
-						[42, "Code 42 - Native Hawaiian"],
+						[41, "Code 41 - Native Hawaiian"],
+						[42, "Code 42 - Guamanian or Chamorro"],
 						[43, "Code 43 - Samoan"],
 						[44, "Code 44 - Other Pacific Islander Race"],
 						[5, "Code 5 - White"],
