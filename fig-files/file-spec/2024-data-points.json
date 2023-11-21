@@ -568,7 +568,7 @@
 				},
 				{
 					"field_number": 24,
-					"title": "Adjujstable rate transaction: index name",
+					"title": "Adjustable rate transaction: index name",
 					"citation": "12 CFR 1002.107(a)(12)(i)(B)",
 					"short_name": "pricing_adj_index_name",
 					"type": "Single response",
