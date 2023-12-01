@@ -100,15 +100,7 @@ W0941,po_1_race.duplicates_in_field,po_1_race,duplicates_in_field,Warning,Field,
 E0940,po_1_race.invalid_enum_value,po_1_race,invalid_enum_value,Error,Field,po_1_race,"When present, each value in 'race of principal owner 1' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
 W0942,po_1_race.multi_value_field_restriction,po_1_race,multi_value_field_restriction,Warning,Field,po_1_race,"When 'race of principal owner 1' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'race of principal owner: 1' should not contain more than one value.",NA
 E2060,po_1_race_anai_ff.conditional_field_conflict,po_1_race_anai_ff,conditional_field_conflict,Error,Row,"po_1_race;
-po_1_race_anai_ff","IF po_1_race does not contain 971 THEN
-    IF po_1_race_anai_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_1_race contains 971 THEN
-    IF po_1_race_anai_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_1_race does not contain 971 THEN
+po_1_race_anai_ff","When 'race of principal owner 1' does not contain 971 (the applicant responded in the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 'race of principal owner 1: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must be blank. When 'race of principal owner 1' contains 971, 'race of principal owner 1: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not be blank.","IF po_1_race does not contain 971 THEN
     IF po_1_race_anai_ff is not blank THEN
         Error
     ENDIF
@@ -119,15 +111,7 @@ ELSEIF po_1_race contains 971 THEN
 ENDIF"
 E0960,po_1_race_anai_ff.invalid_text_length,po_1_race_anai_ff,invalid_text_length,Error,Field,po_1_race_anai_ff,'Race of principal owner 1: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not exceed 300 characters in length.,NA
 E2080,po_1_race_asian_ff.conditional_field_conflict,po_1_race_asian_ff,conditional_field_conflict,Error,Row,"po_1_race;
-po_1_race_asian_ff","IF po_1_race does not contain 972 THEN
-    IF po_1_race_asian_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_1_race contains 972 THEN
-    IF po_1_race_asian_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_1_race does not contain 972 THEN
+po_1_race_asian_ff","When 'race of principal owner 1' does not contain 972 (the applicant responded in the free-form text field for other Asian race), 'race of principal owner 1: free-form text field for other Asian' must be blank. When 'race of principal owner 1' contains 972, 'race of principal owner 1: free-form text field for other Asian' must not be blank.","IF po_1_race does not contain 972 THEN
     IF po_1_race_asian_ff is not blank THEN
         Error
     ENDIF
@@ -138,15 +122,7 @@ ELSEIF po_1_race contains 972 THEN
 ENDIF"
 E0980,po_1_race_asian_ff.invalid_text_length,po_1_race_asian_ff,invalid_text_length,Error,Field,po_1_race_asian_ff,'Race of principal owner 1: free-form text field for other Asian' must not exceed 300 characters in length.,NA
 E2100,po_1_race_baa_ff.conditional_field_conflict,po_1_race_baa_ff,conditional_field_conflict,Error,Row,"po_1_race;
-po_1_race_baa_ff","IF po_1_race does not contain 973 THEN
-    IF po_1_race_baa_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_1_race contains 973 THEN
-    IF po_1_race_baa_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_1_race does not contain 973 THEN
+po_1_race_baa_ff","When 'race of principal owner 1' does not contain 973 (the applicant responded in the free-form text field for other Black or African race), 'race of principal owner 1: free-form text field for other Black or African American' must be blank. When 'race of principal owner 1' contains 973, 'race of principal owner 1: free-form text field for other Black or African American' must not be blank.","IF po_1_race does not contain 973 THEN
     IF po_1_race_baa_ff is not blank THEN
         Error
     ENDIF
@@ -157,15 +133,7 @@ ELSEIF po_1_race contains 973 THEN
 ENDIF"
 E1000,po_1_race_baa_ff.invalid_text_length,po_1_race_baa_ff,invalid_text_length,Error,Field,po_1_race_baa_ff,'Race of principal owner 1: free-form text field for other Black or African American' must not exceed 300 characters in length.,NA
 E2120,po_1_race_pi_ff.conditional_field_conflict,po_1_race_pi_ff,conditional_field_conflict,Error,Row,"po_1_race;
-po_1_race_pi_ff","IF po_1_race does not contain 974 THEN
-    IF po_1_race_pi_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_1_race contains 974 THEN
-    IF po_1_race_pi_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_1_race does not contain 974 THEN
+po_1_race_pi_ff","When 'race of principal owner 1' does not contain 974 (the applicant responded in the free-form text field for other Pacific Islander race), 'race of principal owner 1: free-form text field for other Pacific Islander race' must be blank. When 'race of principal owner 1' contains 974, 'Race of Principal Owner 1: Free-form Text Field for Other Pacific Islander race' must not be blank.","IF po_1_race does not contain 974 THEN
     IF po_1_race_pi_ff is not blank THEN
         Error
     ENDIF
@@ -205,15 +173,7 @@ W1121,po_2_race.duplicates_in_field,po_2_race,duplicates_in_field,Warning,Field,
 E1120,po_2_race.invalid_enum_value,po_2_race,invalid_enum_value,Error,Field,po_2_race,"When present, each value in 'race of principal owner 2' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
 W1122,po_2_race.multi_value_field_restriction,po_2_race,multi_value_field_restriction,Warning,Field,po_2_race,"When 'race of principal owner 2' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'race of principal owner: 2' should not contain more than one value.",NA
 E2061,po_2_race_anai_ff.conditional_field_conflict,po_2_race_anai_ff,conditional_field_conflict,Error,Row,"po_2_race;
-po_2_race_anai_ff","IF po_2_race does not contain 971 THEN
-    IF po_2_race_anai_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_2_race contains 971 THEN
-    IF po_2_race_anai_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_2_race does not contain 971 THEN
+po_2_race_anai_ff","When 'race of principal owner 2' does not contain 971 (the applicant responded in the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 'race of principal owner 2: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must be blank. When 'race of principal owner 2' contains 971, 'race of principal owner 2: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not be blank.","IF po_2_race does not contain 971 THEN
     IF po_2_race_anai_ff is not blank THEN
         Error
     ENDIF
@@ -224,15 +184,7 @@ ELSEIF po_2_race contains 971 THEN
 ENDIF"
 E1140,po_2_race_anai_ff.invalid_text_length,po_2_race_anai_ff,invalid_text_length,Error,Field,po_2_race_anai_ff,'Race of principal owner 2: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not exceed 300 characters in length.,NA
 E2081,po_2_race_asian_ff.conditional_field_conflict,po_2_race_asian_ff,conditional_field_conflict,Error,Row,"po_2_race;
-po_2_race_asian_ff","IF po_2_race does not contain 972 THEN
-    IF po_2_race_asian_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_2_race contains 972 THEN
-    IF po_2_race_asian_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_2_race does not contain 972 THEN
+po_2_race_asian_ff","When 'race of principal owner 2' does not contain 972 (the applicant responded in the free-form text field for other Asian race), 'race of principal owner 2: free-form text field for other Asian' must be blank. When 'race of principal owner 2' contains 972, 'race of principal owner 2: free-form text field for other Asian' must not be blank.","IF po_2_race does not contain 972 THEN
     IF po_2_race_asian_ff is not blank THEN
         Error
     ENDIF
@@ -243,15 +195,7 @@ ELSEIF po_2_race contains 972 THEN
 ENDIF"
 E1160,po_2_race_asian_ff.invalid_text_length,po_2_race_asian_ff,invalid_text_length,Error,Field,po_2_race_asian_ff,'Race of principal owner 2: free-form text field for other Asian' must not exceed 300 characters in length.,NA
 E2101,po_2_race_baa_ff.conditional_field_conflict,po_2_race_baa_ff,conditional_field_conflict,Error,Row,"po_2_race;
-po_2_race_baa_ff","IF po_2_race does not contain 973 THEN
-    IF po_2_race_baa_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_2_race contains 973 THEN
-    IF po_2_race_baa_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_2_race does not contain 973 THEN
+po_2_race_baa_ff","When 'race of principal owner 2' does not contain 973 (the applicant responded in the free-form text field for other Black or African race), 'race of principal owner 2: free-form text field for other Black or African American' must be blank. When 'race of principal owner 2' contains 973, 'race of principal owner 2: free-form text field for other Black or African American' must not be blank.","IF po_2_race does not contain 973 THEN
     IF po_2_race_baa_ff is not blank THEN
         Error
     ENDIF
@@ -262,15 +206,7 @@ ELSEIF po_2_race contains 973 THEN
 ENDIF"
 E1180,po_2_race_baa_ff.invalid_text_length,po_2_race_baa_ff,invalid_text_length,Error,Field,po_2_race_baa_ff,'Race of principal owner 2: free-form text field for other Black or African American' must not exceed 300 characters in length.,NA
 E2121,po_2_race_pi_ff.conditional_field_conflict,po_2_race_pi_ff,conditional_field_conflict,Error,Row,"po_2_race;
-po_2_race_pi_ff","IF po_2_race does not contain 974 THEN
-    IF po_2_race_pi_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_2_race contains 974 THEN
-    IF po_2_race_pi_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_2_race does not contain 974 THEN
+po_2_race_pi_ff","When 'race of principal owner 2' does not contain 974 (the applicant responded in the free-form text field for other Pacific Islander race), 'race of principal owner 2: free-form text field for other Pacific Islander race' must be blank. When 'race of principal owner 2' contains 974, 'Race of Principal Owner 2: Free-form Text Field for Other Pacific Islander race' must not be blank.","IF po_2_race does not contain 974 THEN
     IF po_2_race_pi_ff is not blank THEN
         Error
     ENDIF
@@ -310,15 +246,7 @@ W1301,po_3_race.duplicates_in_field,po_3_race,duplicates_in_field,Warning,Field,
 E1300,po_3_race.invalid_enum_value,po_3_race,invalid_enum_value,Error,Field,po_3_race,"When present, each value in 'race of principal owner 3' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
 W1302,po_3_race.multi_value_field_restriction,po_3_race,multi_value_field_restriction,Warning,Field,po_3_race,"When 'race of principal owner 3' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'race of principal owner: 3' should not contain more than one value.",NA
 E2062,po_3_race_anai_ff.conditional_field_conflict,po_3_race_anai_ff,conditional_field_conflict,Error,Row,"po_3_race;
-po_3_race_anai_ff","IF po_3_race does not contain 971 THEN
-    IF po_3_race_anai_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_3_race contains 971 THEN
-    IF po_3_race_anai_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_3_race does not contain 971 THEN
+po_3_race_anai_ff","When 'race of principal owner 3' does not contain 971 (the applicant responded in the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 'race of principal owner 3: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must be blank. When 'race of principal owner 3' contains 971, 'race of principal owner 3: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not be blank.","IF po_3_race does not contain 971 THEN
     IF po_3_race_anai_ff is not blank THEN
         Error
     ENDIF
@@ -329,15 +257,7 @@ ELSEIF po_3_race contains 971 THEN
 ENDIF"
 E1320,po_3_race_anai_ff.invalid_text_length,po_3_race_anai_ff,invalid_text_length,Error,Field,po_3_race_anai_ff,'Race of principal owner 3: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not exceed 300 characters in length.,NA
 E2082,po_3_race_asian_ff.conditional_field_conflict,po_3_race_asian_ff,conditional_field_conflict,Error,Row,"po_3_race;
-po_3_race_asian_ff","IF po_3_race does not contain 972 THEN
-    IF po_3_race_asian_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_3_race contains 972 THEN
-    IF po_3_race_asian_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_3_race does not contain 972 THEN
+po_3_race_asian_ff","When 'race of principal owner 3' does not contain 972 (the applicant responded in the free-form text field for other Asian race), 'race of principal owner 3: free-form text field for other Asian' must be blank. When 'race of principal owner 3' contains 972, 'race of principal owner 3: free-form text field for other Asian' must not be blank.","IF po_3_race does not contain 972 THEN
     IF po_3_race_asian_ff is not blank THEN
         Error
     ENDIF
@@ -348,15 +268,7 @@ ELSEIF po_3_race contains 972 THEN
 ENDIF"
 E1340,po_3_race_asian_ff.invalid_text_length,po_3_race_asian_ff,invalid_text_length,Error,Field,po_3_race_asian_ff,'Race of principal owner 3: free-form text field for other Asian' must not exceed 300 characters in length.,NA
 E2102,po_3_race_baa_ff.conditional_field_conflict,po_3_race_baa_ff,conditional_field_conflict,Error,Row,"po_3_race;
-po_3_race_baa_ff","IF po_3_race does not contain 973 THEN
-    IF po_3_race_baa_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_3_race contains 973 THEN
-    IF po_3_race_baa_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_3_race does not contain 973 THEN
+po_3_race_baa_ff","When 'race of principal owner 3' does not contain 973 (the applicant responded in the free-form text field for other Black or African race), 'race of principal owner 3: free-form text field for other Black or African American' must be blank. When 'race of principal owner 3' contains 973, 'race of principal owner 3: free-form text field for other Black or African American' must not be blank.","IF po_3_race does not contain 973 THEN
     IF po_3_race_baa_ff is not blank THEN
         Error
     ENDIF
@@ -367,15 +279,7 @@ ELSEIF po_3_race contains 973 THEN
 ENDIF"
 E1360,po_3_race_baa_ff.invalid_text_length,po_3_race_baa_ff,invalid_text_length,Error,Field,po_3_race_baa_ff,'Race of principal owner 3: free-form text field for other Black or African American' must not exceed 300 characters in length.,NA
 E2122,po_3_race_pi_ff.conditional_field_conflict,po_3_race_pi_ff,conditional_field_conflict,Error,Row,"po_3_race;
-po_3_race_pi_ff","IF po_3_race does not contain 974 THEN
-    IF po_3_race_pi_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_3_race contains 974 THEN
-    IF po_3_race_pi_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_3_race does not contain 974 THEN
+po_3_race_pi_ff","When 'race of principal owner 3' does not contain 974 (the applicant responded in the free-form text field for other Pacific Islander race), 'race of principal owner 3: free-form text field for other Pacific Islander race' must be blank. When 'race of principal owner 3' contains 974, 'Race of Principal Owner 3: Free-form Text Field for Other Pacific Islander race' must not be blank.","IF po_3_race does not contain 974 THEN
     IF po_3_race_pi_ff is not blank THEN
         Error
     ENDIF
@@ -685,15 +589,7 @@ W1481,po_4_race.duplicates_in_field,po_4_race,duplicates_in_field,Warning,Field,
 E1480,po_4_race.invalid_enum_value,po_4_race,invalid_enum_value,Error,Field,po_4_race,"When present, each value in 'race of principal owner 4' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
 W1482,po_4_race.multi_value_field_restriction,po_4_race,multi_value_field_restriction,Warning,Field,po_4_race,"When 'race of principal owner 4' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'race of principal owner: 4' should not contain more than one value.",NA
 E2063,po_4_race_anai_ff.conditional_field_conflict,po_4_race_anai_ff,conditional_field_conflict,Error,Row,"po_4_race;
-po_4_race_anai_ff","IF po_4_race does not contain 971 THEN
-    IF po_4_race_anai_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_4_race contains 971 THEN
-    IF po_4_race_anai_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_4_race does not contain 971 THEN
+po_4_race_anai_ff","When 'race of principal owner 3' does not contain 974 (the applicant responded in the free-form text field for other Pacific Islander race), 'race of principal owner 3: free-form text field for other Pacific Islander race' must be blank. When 'race of principal owner 3' contains 974, 'Race of Principal Owner 3: Free-form Text Field for Other Pacific Islander race' must not be blank.","IF po_4_race does not contain 971 THEN
     IF po_4_race_anai_ff is not blank THEN
         Error
     ENDIF
@@ -704,15 +600,7 @@ ELSEIF po_4_race contains 971 THEN
 ENDIF"
 E1500,po_4_race_anai_ff.invalid_text_length,po_4_race_anai_ff,invalid_text_length,Error,Field,po_4_race_anai_ff,'Race of principal owner 4: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not exceed 300 characters in length.,NA
 E2083,po_4_race_asian_ff.conditional_field_conflict,po_4_race_asian_ff,conditional_field_conflict,Error,Row,"po_4_race;
-po_4_race_asian_ff","IF po_4_race does not contain 972 THEN
-    IF po_4_race_asian_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_4_race contains 972 THEN
-    IF po_4_race_asian_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_4_race does not contain 972 THEN
+po_4_race_asian_ff","When 'race of principal owner 4' does not contain 972 (the applicant responded in the free-form text field for other Asian race), 'race of principal owner 4: free-form text field for other Asian' must be blank. When 'race of principal owner 4' contains 972, 'race of principal owner 4: free-form text field for other Asian' must not be blank.","IF po_4_race does not contain 972 THEN
     IF po_4_race_asian_ff is not blank THEN
         Error
     ENDIF
@@ -723,15 +611,7 @@ ELSEIF po_4_race contains 972 THEN
 ENDIF"
 E1520,po_4_race_asian_ff.invalid_text_length,po_4_race_asian_ff,invalid_text_length,Error,Field,po_4_race_asian_ff,'Race of principal owner 4: free-form text field for other Asian' must not exceed 300 characters in length.,NA
 E2103,po_4_race_baa_ff.conditional_field_conflict,po_4_race_baa_ff,conditional_field_conflict,Error,Row,"po_4_race;
-po_4_race_baa_ff","IF po_4_race does not contain 973 THEN
-    IF po_4_race_baa_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_4_race contains 973 THEN
-    IF po_4_race_baa_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_4_race does not contain 973 THEN
+po_4_race_baa_ff","When 'race of principal owner 4' does not contain 973 (the applicant responded in the free-form text field for other Black or African race), 'race of principal owner 4: free-form text field for other Black or African American' must be blank. When 'race of principal owner 4' contains 973, 'race of principal owner 4: free-form text field for other Black or African American' must not be blank.","IF po_4_race does not contain 973 THEN
     IF po_4_race_baa_ff is not blank THEN
         Error
     ENDIF
@@ -742,15 +622,7 @@ ELSEIF po_4_race contains 973 THEN
 ENDIF"
 E1540,po_4_race_baa_ff.invalid_text_length,po_4_race_baa_ff,invalid_text_length,Error,Field,po_4_race_baa_ff,'Race of principal owner 4: free-form text field for other Black or African American' must not exceed 300 characters in length.,NA
 E2123,po_4_race_pi_ff.conditional_field_conflict,po_4_race_pi_ff,conditional_field_conflict,Error,Row,"po_4_race;
-po_4_race_pi_ff","IF po_4_race does not contain 974 THEN
-    IF po_4_race_pi_ff is not blank THEN
-        Error
-    ENDIF
-ELSEIF po_4_race contains 974 THEN
-    IF po_4_race_pi_ff is blank THEN
-        Error
-    ENDIF
-ENDIF","IF po_4_race does not contain 974 THEN
+po_4_race_pi_ff","When 'race of principal owner 4' does not contain 974 (the applicant responded in the free-form text field for other Pacific Islander race), 'race of principal owner 4: free-form text field for other Pacific Islander race' must be blank. When 'race of principal owner 4' contains 974, 'Race of Principal Owner 4: Free-form Text Field for Other Pacific Islander race' must not be blank.","IF po_4_race does not contain 974 THEN
     IF po_4_race_pi_ff is not blank THEN
         Error
     ENDIF
