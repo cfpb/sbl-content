@@ -28,7 +28,7 @@ E0280,amount_approved.invalid_numeric_format,amount_approved,invalid_numeric_for
 E0281,amount_approved.invalid_numeric_value,amount_approved,invalid_numeric_value,Error,Field,amount_approved,"When present, 'amount approved or originated' must be greater than 0.",NA
 E0300,action_taken.invalid_enum_value,action_taken,invalid_enum_value,Error,Field,action_taken,"'Action taken' must equal 1, 2, 3, 4, or 5.",NA
 E0320,action_taken_date.invalid_date_format,action_taken_date,invalid_date_format,Error,Field,action_taken_date,'Action taken date' must be a real calendar date using YYYYMMDD format.,NA
-E0321,action_taken_date.invalid_date_value,action_taken_date,invalid_date_value,Error,Field,action_taken_date,"The date indicated by 'action taken date' must occur within the current reporting period: October 1, 2024 to December 31, 2024",NA
+E0321,action_taken_date.invalid_date_value,action_taken_date,invalid_date_value,Error,Field,action_taken_date,"The date indicated by 'action taken date' must occur within the current reporting period: October 1, 2024 to December 31, 2024.",NA
 E0340,denial_reasons.invalid_enum_value,denial_reasons,invalid_enum_value,Error,Field,denial_reasons,"Each value in 'denial reason(s)' (separated by semicolons) must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 977, or 999.",NA
 E0341,denial_reasons.invalid_number_of_values,denial_reasons,invalid_number_of_values,Error,Field,denial_reasons,"'Denial reason(s)' must contain at least one and at most four values, separated by semicolons.",NA
 W0340,denial_reasons.multi_value_field_restriction,denial_reasons,multi_value_field_restriction,Warning,Field,denial_reasons,"When 'denial reason(s)' contains 999 (not applicable), 'denial reason(s)' should not contain more than one value.",NA
@@ -97,7 +97,7 @@ ENDIF"
 E1060,po_1_gender_ff.invalid_text_length,po_1_gender_ff,invalid_text_length,Error,Field,po_1_gender_ff,'Sex/gender of principal owner 1: free-form text field for self-identified sex/gender' must not exceed 300 characters in length.,NA
 E1040,po_1_gender_flag.invalid_enum_value,po_1_gender_flag,invalid_enum_value,Error,Field,po_1_gender_flag,"When present, 'sex/gender of principal owner 1: NP flag' must equal 1, 966, or 988.",NA
 W0941,po_1_race.duplicates_in_field,po_1_race,duplicates_in_field,Warning,Field,po_1_race,Race of principal owner 1' should not contain duplicated values.,NA
-E0940,po_1_race.invalid_enum_value,po_1_race,invalid_enum_value,Error,Field,po_1_race,"When present, each value in 'race of principal owner 1' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
+E0940,po_1_race.invalid_enum_value,po_1_race,invalid_enum_value,Error,Field,po_1_race,"When present, each value in 'race of principal owner 1' (separated by semicolons) must equal 1, 2, 21, 22, 23, 24, 25, 26, 27, 3, 31, 32, 33, 34, 35, 36, 37, 4, 41, 42, 43, 44, 5, 966, 971, 972, 973, 974, or 988.",NA
 W0942,po_1_race.multi_value_field_restriction,po_1_race,multi_value_field_restriction,Warning,Field,po_1_race,"When 'race of principal owner 1' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'race of principal owner: 1' should not contain more than one value.",NA
 E2060,po_1_race_anai_ff.conditional_field_conflict,po_1_race_anai_ff,conditional_field_conflict,Error,Row,"po_1_race;
 po_1_race_anai_ff","When 'race of principal owner 1' does not contain 971 (the applicant responded in the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 'race of principal owner 1: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must be blank. When 'race of principal owner 1' contains 971, 'race of principal owner 1: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not be blank.","IF po_1_race does not contain 971 THEN
@@ -145,7 +145,7 @@ ENDIF"
 E1020,po_1_race_pi_ff.invalid_text_length,po_1_race_pi_ff,invalid_text_length,Error,Field,po_1_race_pi_ff,'Race of principal owner 1: free-form text field for other Pacific Islander race' must not exceed 300 characters in length.,NA
 W1081,po_2_ethnicity.duplicates_in_field,po_2_ethnicity,duplicates_in_field,Warning,Field,po_2_ethnicity,Ethnicity of principal owner 2' should not contain duplicated values.,NA
 E1080,po_2_ethnicity.invalid_enum_value,po_2_ethnicity,invalid_enum_value,Error,Field,po_2_ethnicity,"When present, each value in 'ethnicity of principal owner 2' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
-W1082,po_2_ethnicity.multi_value_field_restriction,po_2_ethnicity,multi_value_field_restriction,Warning,Field,po_2_ethnicity,"When 'ethnicity of principal owner 2' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'ethnicity of principal owner: X' should not contain more than one value.",NA
+W1082,po_2_ethnicity.multi_value_field_restriction,po_2_ethnicity,multi_value_field_restriction,Warning,Field,po_2_ethnicity,"When 'ethnicity of principal owner 2' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'ethnicity of principal owner: 2' should not contain more than one value.",NA
 E2041,po_2_ethnicity_ff.conditional_field_conflict,po_2_ethnicity_ff,conditional_field_conflict,Error,Row,"po_2_ethnicity;
 po_2_ethnicity_ff","When 'ethnicity of principal owner 2' does not contain 977 (the applicant responded in the free-form text field), 'ethnicity of principal owner 2: free-form text field for other Hispanic or Latino' must be blank. When 'ethnicity of principal owner 2' contains 977, 'ethnicity of principal owner 2: free-form text field for other Hispanic or Latino' must not be blank.","IF po_2_ethnicity does not contain 977 THEN
     IF po_2_ethnicity_ff is not blank THEN
@@ -170,7 +170,7 @@ ENDIF"
 E1240,po_2_gender_ff.invalid_text_length,po_2_gender_ff,invalid_text_length,Error,Field,po_2_gender_ff,'Sex/gender of principal owner 2: free-form text field for self-identified sex/gender' must not exceed 300 characters in length.,NA
 E1220,po_2_gender_flag.invalid_enum_value,po_2_gender_flag,invalid_enum_value,Error,Field,po_2_gender_flag,"When present, 'sex/gender of principal owner 2: NP flag' must equal 1, 966, or 988.",NA
 W1121,po_2_race.duplicates_in_field,po_2_race,duplicates_in_field,Warning,Field,po_2_race,Race of principal owner 2' should not contain duplicated values.,NA
-E1120,po_2_race.invalid_enum_value,po_2_race,invalid_enum_value,Error,Field,po_2_race,"When present, each value in 'race of principal owner 2' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
+E1120,po_2_race.invalid_enum_value,po_2_race,invalid_enum_value,Error,Field,po_2_race,"When present, each value in 'race of principal owner 2' (separated by semicolons) must equal 1, 2, 21, 22, 23, 24, 25, 26, 27, 3, 31, 32, 33, 34, 35, 36, 37, 4, 41, 42, 43, 44, 5, 966, 971, 972, 973, 974, or 988.",NA
 W1122,po_2_race.multi_value_field_restriction,po_2_race,multi_value_field_restriction,Warning,Field,po_2_race,"When 'race of principal owner 2' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'race of principal owner: 2' should not contain more than one value.",NA
 E2061,po_2_race_anai_ff.conditional_field_conflict,po_2_race_anai_ff,conditional_field_conflict,Error,Row,"po_2_race;
 po_2_race_anai_ff","When 'race of principal owner 2' does not contain 971 (the applicant responded in the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 'race of principal owner 2: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must be blank. When 'race of principal owner 2' contains 971, 'race of principal owner 2: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not be blank.","IF po_2_race does not contain 971 THEN
@@ -243,7 +243,7 @@ ENDIF"
 E1420,po_3_gender_ff.invalid_text_length,po_3_gender_ff,invalid_text_length,Error,Field,po_3_gender_ff,'Sex/gender of principal owner 3: free-form text field for self-identified sex/gender' must not exceed 300 characters in length.,NA
 E1400,po_3_gender_flag.invalid_enum_value,po_3_gender_flag,invalid_enum_value,Error,Field,po_3_gender_flag,"When present, 'sex/gender of principal owner 3: NP flag' must equal 1, 966, or 988.",NA
 W1301,po_3_race.duplicates_in_field,po_3_race,duplicates_in_field,Warning,Field,po_3_race,Race of principal owner 3' should not contain duplicated values.,NA
-E1300,po_3_race.invalid_enum_value,po_3_race,invalid_enum_value,Error,Field,po_3_race,"When present, each value in 'race of principal owner 3' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
+E1300,po_3_race.invalid_enum_value,po_3_race,invalid_enum_value,Error,Field,po_3_race,"When present, each value in 'race of principal owner 3' (separated by semicolons) must equal 1, 2, 21, 22, 23, 24, 25, 26, 27, 3, 31, 32, 33, 34, 35, 36, 37, 4, 41, 42, 43, 44, 5, 966, 971, 972, 973, 974, or 988.",NA
 W1302,po_3_race.multi_value_field_restriction,po_3_race,multi_value_field_restriction,Warning,Field,po_3_race,"When 'race of principal owner 3' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'race of principal owner: 3' should not contain more than one value.",NA
 E2062,po_3_race_anai_ff.conditional_field_conflict,po_3_race_anai_ff,conditional_field_conflict,Error,Row,"po_3_race;
 po_3_race_anai_ff","When 'race of principal owner 3' does not contain 971 (the applicant responded in the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 'race of principal owner 3: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must be blank. When 'race of principal owner 3' contains 971, 'race of principal owner 3: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not be blank.","IF po_3_race does not contain 971 THEN
@@ -414,9 +414,7 @@ W2013,denial_reasons_ff.multi_invalid_number_of_values,denial_reasons_ff,multi_i
         Warning
     ENDIF
 ENDWHERE"
-E2014,pricing_all.conditional_fieldset_conflict,pricing_all,conditional_fieldset_conflict,Error,Row,action_taken; pricing_interest_rate_type; pricing_mca_addcost_flag; pricing_prepenalty_allowed; pricing_prepenalty_exists; pricing_origination_charges; pricing_broker_fees; pricing_initial_charges,"When 'action taken' equals 3 (denied), 4 (withdrawn by applicant), or 5 (incomplete),
-
-the following fields must all equal 999 (not applicable):
+E2014,pricing_all.conditional_fieldset_conflict,pricing_all,conditional_fieldset_conflict,Error,Row,action_taken; pricing_interest_rate_type; pricing_mca_addcost_flag; pricing_prepenalty_allowed; pricing_prepenalty_exists; pricing_origination_charges; pricing_broker_fees; pricing_initial_charges,"When 'action taken' equals 3 (denied), 4 (withdrawn by applicant), or 5 (incomplete), the following fields must all equal 999 (not applicable):
 - 'Interest rate type'
 - 'MCA/sales-based: additional cost for merchant cash advances or other sales-based financing: NA flag'
 - 'Prepayment penalty could be imposed'
@@ -437,12 +435,13 @@ and the following fields must all be blank:
     ENDIF
 ENDIF"
 E2015,pricing_charges.conditional_fieldset_conflict,pricing_charges,conditional_fieldset_conflict,Error,Row,action_taken; pricing_origination_charges; pricing_broker_fees; pricing_initial_charges; pricing_prepenalty_allowed; pricing_prepenalty_exists,"When 'action taken' equals 1 (originated) or 2 (approved but not accepted), the following fields all must not be blank:
-- 'total origination charges'
-- 'amount of total broker fees'
-- 'initial annual charges'
-And the following fields must not equal 999 (not applicable):
-- 'prepayment penalty could be imposed'
-- 'prepayment penalty exists'","IF action_taken is equal to 1 or 2 THEN
+- 'Total origination charges'
+- 'Amount of total broker fees'
+- 'Initial annual charges'
+
+and the following fields must not equal 999 (not applicable):
+- 'Prepayment penalty could be imposed'
+- 'Prepayment penalty exists'","IF action_taken is equal to 1 or 2 THEN
     IF (pricing_origination_charges is blank OR
         pricing_broker_fees is blank OR
         pricing_initial_charges is blank OR
@@ -586,10 +585,10 @@ ENDIF"
 E1600,po_4_gender_ff.invalid_text_length,po_4_gender_ff,invalid_text_length,Error,Field,po_4_gender_ff,'Sex/gender of principal owner 4: free-form text field for self-identified sex/gender' must not exceed 300 characters in length.,NA
 E1580,po_4_gender_flag.invalid_enum_value,po_4_gender_flag,invalid_enum_value,Error,Field,po_4_gender_flag,"When present, 'sex/gender of principal owner 4: NP flag' must equal 1, 966, or 988.",NA
 W1481,po_4_race.duplicates_in_field,po_4_race,duplicates_in_field,Warning,Field,po_4_race,Race of principal owner 4' should not contain duplicated values.,NA
-E1480,po_4_race.invalid_enum_value,po_4_race,invalid_enum_value,Error,Field,po_4_race,"When present, each value in 'race of principal owner 4' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
+E1480,po_4_race.invalid_enum_value,po_4_race,invalid_enum_value,Error,Field,po_4_race,"When present, each value in 'race of principal owner 4' (separated by semicolons) must equal 1, 2, 21, 22, 23, 24, 25, 26, 27, 3, 31, 32, 33, 34, 35, 36, 37, 4, 41, 42, 43, 44, 5, 966, 971, 972, 973, 974, or 988.",NA
 W1482,po_4_race.multi_value_field_restriction,po_4_race,multi_value_field_restriction,Warning,Field,po_4_race,"When 'race of principal owner 4' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'race of principal owner: 4' should not contain more than one value.",NA
 E2063,po_4_race_anai_ff.conditional_field_conflict,po_4_race_anai_ff,conditional_field_conflict,Error,Row,"po_4_race;
-po_4_race_anai_ff","When 'race of principal owner 3' does not contain 974 (the applicant responded in the free-form text field for other Pacific Islander race), 'race of principal owner 3: free-form text field for other Pacific Islander race' must be blank. When 'race of principal owner 3' contains 974, 'Race of Principal Owner 3: Free-form Text Field for Other Pacific Islander race' must not be blank.","IF po_4_race does not contain 971 THEN
+po_4_race_anai_ff","When 'race of principal owner 4' does not contain 971 (the applicant responded in the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 'race of principal owner 4: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must be blank. When 'race of principal owner 4' contains 971, 'race of principal owner 4: free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe' must not be blank.","IF po_4_race does not contain 971 THEN
     IF po_4_race_anai_ff is not blank THEN
         Error
     ENDIF
