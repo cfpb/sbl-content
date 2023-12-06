@@ -289,7 +289,7 @@ ELSEIF po_3_race contains 974 THEN
     ENDIF
 ENDIF"
 E1380,po_3_race_pi_ff.invalid_text_length,po_3_race_pi_ff,invalid_text_length,Error,Field,po_3_race_pi_ff,'Race of principal owner 3: free-form text field for other Pacific Islander race' must not exceed 300 characters in length.,NA
-W1441,po_4_ethnicity.duplicates_in_field,po_4_ethnicity,duplicates_in_field,Warning,Field,po_4_ethnicity,Ethnicity of principal owner 4' should not contain duplicated values.,NA
+W1441,po_4_ethnicity.duplicates_in_field,po_4_ethnicity,duplicates_in_field,Warning,Field,po_4_ethnicity,'Ethnicity of principal owner 4' should not contain duplicated values.,NA
 E1440,po_4_ethnicity.invalid_enum_value,po_4_ethnicity,invalid_enum_value,Error,Field,po_4_ethnicity,"When present, each value in 'ethnicity of principal owner 4' (separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.",NA
 W1442,po_4_ethnicity.multi_value_field_restriction,po_4_ethnicity,multi_value_field_restriction,Warning,Field,po_4_ethnicity,"When 'ethnicity of principal owner 4' contains 966 (the applicant responded that they did not wish to provide this information) or 988 (not provided by applicant), 'ethnicity of principal owner: 4' should not contain more than one value.",NA
 E2043,po_4_ethnicity_ff.conditional_field_conflict,po_4_ethnicity_ff,conditional_field_conflict,Error,Row,"po_4_ethnicity;
