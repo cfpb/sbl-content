@@ -1,8 +1,8 @@
 ﻿validation_id,validation_name,primary_field,validation_category,type,scope,affected_fields,description,pseudocode
 E0001,uid.invalid_text_length,uid,invalid_text_length,Error,Field,uid,'Unique identifier' must be at least 21 characters in length and at most 45 characters in length.,NA
+E1234,uid.invalid_text_length,uid,invalid_text_length,Error,Field,uid,'Unique identifier' must be at least 21 characters in length and at most 45 characters in length.,NA
 E0002,uid.invalid_text_pattern,uid,invalid_text_pattern,Error,Field,uid,"'Unique identifier' may contain any combination of numbers and/or uppercase letters (i.e., 0-9 and A-Z), and must not contain any other characters.",NA
 W0003,uid.invalid_uid_lei,uid,invalid_uid_lei,Warning,Field + FI identifying info,uid,The first 20 characters of the 'unique identifier' should match the Legal Entity Identifier (LEI) for the financial institution.,NA
-E0020,app_date.invalid_date_format,app_date,invalid_date_format,Error,Field,app_date,'Application date' must be a real calendar date using YYYYMMDD format.,NA
 E0040,app_method.invalid_enum_value,app_method,invalid_enum_value,Error,Field,app_method,"'Application method' must equal 1, 2, 3, or 4.",NA
 E0060,app_recipient.invalid_enum_value,app_recipient,invalid_enum_value,Error,Field,app_recipient,'Application recipient' must equal 1 or 2.,NA
 E0080,ct_credit_product.invalid_enum_value,ct_credit_product,invalid_enum_value,Error,Field,ct_credit_product,"'Credit product' must equal 1, 2, 3, 4, 5, 6, 7, 8, 977, or 988.",NA
@@ -13,13 +13,13 @@ W0122,ct_guarantee.multi_value_field_restriction,ct_guarantee,multi_value_field_
 W0123,ct_guarantee.duplicates_in_field,ct_guarantee,duplicates_in_field,Warning,Field,ct_guarantee,'Type of guarantee' should not contain duplicated values.,NA
 E0140,ct_guarantee_ff.invalid_text_length,ct_guarantee_ff,invalid_text_length,Error,Field,ct_guarantee_ff,'Free-form text field for other guarantee' must not exceed 300 characters in length.,NA
 E0160,ct_loan_term_flag.invalid_enum_value,ct_loan_term_flag,invalid_enum_value,Error,Field,ct_loan_term_flag,"'Loan term: NA/NP flag' must equal 900, 988, or 999.",NA
-E0180,ct_loan_term.invalid_numeric_format,ct_loan_term,invalid_numeric_format,Error,Field,ct_loan_term,"When present, 'loan term' must be a whole number.",NA
+E0180,ct_loan_term.invalid_numeric_format,ct_loan_term,invalid_numeric_format,Error,Field,ct_loan_term,"When present, 'loan agreement terms' must be a whole number.",NA
 E0181,ct_loan_term.invalid_numeric_value,ct_loan_term,invalid_numeric_value,Error,Field,ct_loan_term,"When present, 'loan term' must be greater than or equal to 1.",NA
 W0182,ct_loan_term.unreasonable_numeric_value,ct_loan_term,unreasonable_numeric_value,Warning,Field,ct_loan_term,"When present, 'loan term' should be less than 1200 (100 years).",NA
 E0200,credit_purpose.invalid_enum_value,credit_purpose,invalid_enum_value,Error,Field,credit_purpose,"Each value in 'credit purpose' (separated by semicolons) must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 977, 988, or 999.",NA
 E0201,credit_purpose.invalid_number_of_values,credit_purpose,invalid_number_of_values,Error,Field,credit_purpose,"'Credit purpose' must contain at least one and at most three values, separated by semicolons.",NA
 W0202,credit_purpose.multi_value_field_restriction,credit_purpose,multi_value_field_restriction,Warning,Field,credit_purpose,"When 'credit purpose' contains 988 (not provided by applicant and otherwise undetermined) or 999 (not applicable), 'credit purpose' should not contain more than one value.",NA
-W0203,credit_purpose.duplicates_in_field,credit_purpose,duplicates_in_field,Warning,Field,credit_purpose,'Credit purpose' should not contain duplicated values.,NA
+W0203,credit_purpose.duplicates_in_field,credit_purpose,duplicates_in_field,Warning,Field,credit_purpose,'Credit purpose' should not contain duplicated values,NA
 E0220,credit_purpose_ff.invalid_text_length,credit_purpose_ff,invalid_text_length,Error,Field,credit_purpose_ff,'Free-form text field for other credit purpose' must not exceed 300 characters in length.,NA
 E0240,amount_applied_for_flag.invalid_enum_value,amount_applied_for_flag,invalid_enum_value,Error,Field,amount_applied_for_flag,"'Amount applied For: NA/NP flag' must equal 900, 988, or 999.",NA
 E0260,amount_applied_for.invalid_numeric_format,amount_applied_for,invalid_numeric_format,Error,Field,amount_applied_for,"When present, 'amount applied for' must be a numeric value.",NA
