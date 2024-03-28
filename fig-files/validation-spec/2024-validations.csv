@@ -76,12 +76,12 @@ E0401,pricing_init_rate_period.invalid_numeric_value,pricing_init_rate_period,in
 E0420,pricing_fixed_rate.invalid_numeric_format,pricing_fixed_rate,invalid_numeric_format,Error,Field, pricing_fixed_rate,"* When present, 'fixed rate: interest rate' must be a numeric value.",NA
 W0420,pricing_fixed_rate.unreasonable_numeric_value,pricing_fixed_rate,unreasonable_numeric_value,Warning,Field,pricing_fixed_rate,"* When present, 'fixed rate: interest rate' should generally be greater than 0.1.",NA
 E0440,pricing_adj_margin.invalid_numeric_format,pricing_adj_margin,invalid_numeric_format,Error,Field,pricing_adj_margin,"* When present, 'adjustable rate transaction: margin' must be a numeric value.",NA
-W0441,pricing_adj_margin.unreasonable_numeric_value,pricing_adj_margin,unreasonable_numeric_value,Warning,Field,pricing_adj_margin,"""* When present, 'adjustable rate transaction: margin' should generally be greater than 0.1.""
+W0441,pricing_adj_margin.unreasonable_numeric_value,pricing_adj_margin,unreasonable_numeric_value,Warning,Field,pricing_adj_margin,"* When present, 'adjustable rate transaction: margin' should generally be greater than 0.1.
 ",NA
-E0460,pricing_adj_index_name.invalid_enum_value,pricing_adj_index_name,invalid_enum_value,Error,Field,pricing_adj_index_name,"""* 'Adjustable rate transaction: index name' must equal ""
-""1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 977, or 999.""
+E0460,pricing_adj_index_name.invalid_enum_value,pricing_adj_index_name,invalid_enum_value,Error,Field,pricing_adj_index_name,"* 'Adjustable rate transaction: index name' must equal 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 977, or 999.
 ",NA
-E0480,pricing_adj_index_name_ff.invalid_text_length,pricing_adj_index_name_ff,invalid_text_length,Error,Field,pricing_adj_index_name_ff,"""* 'Adjustable rate transaction: index name: other' must **not** exceed 300 characters in length.""
+E0480,pricing_adj_index_name_ff.invalid_text_length,pricing_adj_index_name_ff,invalid_text_length,Error,Field,pricing_adj_index_name_ff,"* 'Adjustable rate transaction: index name: other' must **not** exceed 300 characters in length.
 ",NA
 E0500,pricing_adj_index_value.invalid_numeric_format,pricing_adj_index_value,invalid_numeric_format,Error,Field,pricing_adj_index_value,"* When present, 'adjustable rate transaction: index value' must be a numeric value.",NA
 E0520,pricing_origination_charges.invalid_numeric_format,pricing_origination_charges,invalid_numeric_format,Error,Field,pricing_origination_charges,"* When present, 'total origination charges' must be a numeric value.",NA
