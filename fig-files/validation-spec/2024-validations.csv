@@ -1,6 +1,6 @@
 ﻿validation_id,validation_name,primary_field,validation_category,type,scope,affected_fields,description,pseudocode
 E0001,uid.invalid_text_length,uid,invalid_text_length,Error,Field,uid,"* 'Unique identifier' must be at least 21 characters in 
-length and at most 45 characters in length.""
+length and at most 45 characters in length.
 ",NA
 E0002,uid.invalid_text_pattern,uid,invalid_text_pattern,Error,Field,uid,"* 'Unique identifier' may contain any combination of numbers 
 and/or uppercase letters (i.e., 0-9 and A-Z), and must **not** 
@@ -56,7 +56,7 @@ E0321,action_taken_date.invalid_date_value,action_taken_date,invalid_date_value,
 current reporting period: October 1, 2024 to December 31, 2024.
 ",NA
 E0340,denial_reasons.invalid_enum_value,denial_reasons,invalid_enum_value,Error,Field,denial_reasons,"* Each value in 'denial reason(s)' (separated by semicolons) 
-must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 977, or 999.""
+must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 977, or 999.
 ",NA
 E0341,denial_reasons.invalid_number_of_values,denial_reasons,invalid_number_of_values,Error,Field,denial_reasons,"* 'Denial reason(s)' must contain at least one and 
 at most four values, separated by semicolons.
@@ -184,7 +184,7 @@ E0940,po_1_race.invalid_enum_value,po_1_race,invalid_enum_value,Error,Field,po_1
 ",NA
 W0942,po_1_race.multi_value_field_restriction,po_1_race,multi_value_field_restriction,Warning,Field,po_1_race,"* When 'race of principal owner 1' contains 966 (the applicant responded that 
 they did not wish to provide this information) or 988 (not provided by applicant), 
-'race of principal owner: 1' should **not** contain more than one value.""
+'race of principal owner: 1' should **not** contain more than one value.
 ",NA
 E2060,po_1_race_anai_ff.conditional_field_conflict,po_1_race_anai_ff,conditional_field_conflict,Error,Row,"po_1_race;
 po_1_race_anai_ff","* When 'race of principal owner 1' does **not** contain 971 (the applicant responded in 
@@ -671,7 +671,7 @@ E2009,action_taken_date.date_value_conflict,action_taken_date,date_value_conflic
 ENDIF"
 W2010,action_taken_date.unreasonable_date_value,action_taken_date,unreasonable_date_value,Warning,Row,action_taken_date; app_date,"* The date indicated by 'application date' should
 generally be less than two years (730 days) before 
-'action taken date'.""
+'action taken date'.
 ","IF action_taken_date is greater than (app_date plus 730 days) THEN
     Warning
 ENDIF"
@@ -703,7 +703,7 @@ W2013,denial_reasons_ff.multi_invalid_number_of_values,denial_reasons_ff,multi_i
 denial reason(s)' combined should **not** contain more than 
 four values. Code 977 (other), within 'Denial reason(s)', 
 does **not** count toward the maximum number of values for 
-the purpose of this validation check.""
+the purpose of this validation check.
 ","WHERE denial_reasons_length = number of entries in denial_reasons excluding 977 AND
       denial_reasons_ff_length = number of entries in denial_reasons_ff
     IF denial_reasons_length + denial_reasons_ff_length is greater than 4 THEN
