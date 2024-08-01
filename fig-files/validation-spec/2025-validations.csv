@@ -1,0 +1,1111 @@
+validation_id,validation_name,primary_field,validation_category,type,scope,affected_fields,description,pseudocode
+E0001,uid.invalid_text_length,uid,invalid_text_length,Error,Field,uid,"* 'Unique identifier' must be at least 21 characters in 
+length and at most 45 characters in length.
+",NA
+E0002,uid.invalid_text_pattern,uid,invalid_text_pattern,Error,Field,uid,"* 'Unique identifier' may contain any combination of numbers 
+and/or uppercase letters (i.e., 0-9 and A-Z), and must **not** 
+contain any other characters.
+",NA
+W0003,uid.invalid_uid_lei,uid,invalid_uid_lei,Warning,Field + FI identifying info,uid,"* The first 20 characters of the 'unique identifier' should
+match the Legal Entity Identifier (LEI) for the financial institution.
+",NA
+E0020,app_date.invalid_date_format,app_date,invalid_date_format,Error,Field,app_date,* 'Application date' must be a real calendar date using YYYYMMDD format.,NA
+E0040,app_method.invalid_enum_value,app_method,invalid_enum_value,Error,Field,app_method,"* 'Application method' must equal 1, 2, 3, or 4.",NA
+E0060,app_recipient.invalid_enum_value,app_recipient,invalid_enum_value,Error,Field,app_recipient,* 'Application recipient' must equal 1 or 2.,NA
+E0080,ct_credit_product.invalid_enum_value,ct_credit_product,invalid_enum_value,Error,Field,ct_credit_product,"* 'Credit product' must equal 1, 2, 3, 4, 5, 6, 7, 8, 977, or 988.",NA
+E0100,ct_credit_product_ff.invalid_text_length,ct_credit_product_ff,invalid_text_length,Error,Field,ct_credit_product_ff,"* 'Free-form text field for other credit products' must **not** 
+exceed 300 characters in length.
+",NA
+E0120,ct_guarantee.invalid_enum_value,ct_guarantee,invalid_enum_value,Error,Field,ct_guarantee,"* Each value in 'type of guarantee' (separated by semicolons) 
+must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 977, or 999.
+",NA
+E0121,ct_guarantee.invalid_number_of_values,ct_guarantee,invalid_number_of_values,Error,Field,ct_guarantee,"* 'Type of guarantee' must contain at least one and 
+at most five values, separated by semicolons.
+",NA
+W0122,ct_guarantee.multi_value_field_restriction,ct_guarantee,multi_value_field_restriction,Warning,Field,ct_guarantee,"* When 'type of guarantee' contains 999 (no guarantee), 
+'type of guarantee' should **not** contain more than one value.
+",NA
+W0123,ct_guarantee.duplicates_in_field,ct_guarantee,duplicates_in_field,Warning,Field,ct_guarantee,* 'Type of guarantee' should **not** contain duplicated values.,NA
+E0140,ct_guarantee_ff.invalid_text_length,ct_guarantee_ff,invalid_text_length,Error,Field,ct_guarantee_ff,* 'Free-form text field for other guarantee' must **not** exceed 300 characters in length.,NA
+E0160,ct_loan_term_flag.invalid_enum_value,ct_loan_term_flag,invalid_enum_value,Error,Field,ct_loan_term_flag,"* 'Loan term: NA/NP flag' must equal 900, 988, or 999.",NA
+E0180,ct_loan_term.invalid_numeric_format,ct_loan_term,invalid_numeric_format,Error,Field,ct_loan_term,"* When present, 'loan term' must be a whole number.",NA
+E0181,ct_loan_term.invalid_numeric_value,ct_loan_term,invalid_numeric_value,Error,Field,ct_loan_term,"* When present, 'loan term' must be greater than or equal to 1.",NA
+W0182,ct_loan_term.unreasonable_numeric_value,ct_loan_term,unreasonable_numeric_value,Warning,Field,ct_loan_term,"* When present, 'loan term' should be less than 1200 (100 years).",NA
+E0200,credit_purpose.invalid_enum_value,credit_purpose,invalid_enum_value,Error,Field,credit_purpose,"* Each value in 'credit purpose' (separated by semicolons) 
+must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 977, 988, or 999.
+",NA
+E0201,credit_purpose.invalid_number_of_values,credit_purpose,invalid_number_of_values,Error,Field,credit_purpose,"* 'Credit purpose' must contain at least one and 
+at most three values, separated by semicolons.
+",NA
+W0202,credit_purpose.multi_value_field_restriction,credit_purpose,multi_value_field_restriction,Warning,Field,credit_purpose,"* When 'credit purpose' contains 988 (not provided by applicant and 
+otherwise undetermined) or 999 (not applicable), 'credit purpose' 
+should **not** contain more than one value.
+",NA
+W0203,credit_purpose.duplicates_in_field,credit_purpose,duplicates_in_field,Warning,Field,credit_purpose,* 'Credit purpose' should **not** contain duplicated values.,NA
+E0220,credit_purpose_ff.invalid_text_length,credit_purpose_ff,invalid_text_length,Error,Field,credit_purpose_ff,"* 'Free-form text field for other credit purpose' must 
+**not** exceed 300 characters in length.
+",NA
+E0240,amount_applied_for_flag.invalid_enum_value,amount_applied_for_flag,invalid_enum_value,Error,Field,amount_applied_for_flag,"* 'Amount applied For: NA/NP flag' must equal 900, 988, or 999.",NA
+E0260,amount_applied_for.invalid_numeric_format,amount_applied_for,invalid_numeric_format,Error,Field,amount_applied_for,"* When present, 'amount applied for' must be a numeric value.",NA
+E0261,amount_applied_for.invalid_numeric_value,amount_applied_for,invalid_numeric_value,Error,Field,amount_applied_for,"* When present, 'amount applied for' must be greater than 0.",NA
+E0280,amount_approved.invalid_numeric_format,amount_approved,invalid_numeric_format,Error,Field,amount_approved,"* When present, 'amount approved or originated' must be a numeric value.",NA
+E0281,amount_approved.invalid_numeric_value,amount_approved,invalid_numeric_value,Error,Field,amount_approved,"* When present, 'amount approved or originated' must be greater than 0.",NA
+E0300,action_taken.invalid_enum_value,action_taken,invalid_enum_value,Error,Field,action_taken,"* 'Action taken' must equal 1, 2, 3, 4, or 5.",NA
+E0320,action_taken_date.invalid_date_format,action_taken_date,invalid_date_format,Error,Field,action_taken_date,* 'Action taken date' must be a real calendar date using YYYYMMDD format.,NA
+E0321,action_taken_date.invalid_date_value,action_taken_date,invalid_date_value,Error,Field,action_taken_date,"* The date indicated by 'action taken date' must occur within the 
+current reporting period: July 18, 2025 to December 31, 2025.
+",NA
+E0340,denial_reasons.invalid_enum_value,denial_reasons,invalid_enum_value,Error,Field,denial_reasons,"* Each value in 'denial reason(s)' (separated by semicolons) 
+must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, 977, or 999.
+",NA
+E0341,denial_reasons.invalid_number_of_values,denial_reasons,invalid_number_of_values,Error,Field,denial_reasons,"* 'Denial reason(s)' must contain at least one and 
+at most four values, separated by semicolons.
+",NA
+W0340,denial_reasons.multi_value_field_restriction,denial_reasons,multi_value_field_restriction,Warning,Field,denial_reasons,"* When 'denial reason(s)' contains 999 (not applicable), 
+'denial reason(s)' should **not** contain more than one value.
+",NA
+W0341,denial_reasons.duplicates_in_field,denial_reasons,duplicates_in_field,Warning,Field,denial_reasons,* 'Denial reason(s)' should **not** contain duplicated values.,NA
+E0360,denial_reasons_ff.invalid_text_length,denial_reasons_ff,invalid_text_length,Error,Field,denial_reasons_ff,"* 'Free-form text field for other denial reason(s)' must 
+**not** exceed 300 characters in length.
+",NA
+E0380,pricing_interest_rate_type.invalid_enum_value,pricing_interest_rate_type,invalid_enum_value,Error,Field,pricing_interest_rate_type,"* 'Interest rate type' must equal 1, 2, 3, 4, 5, 6, or 999.",NA
+E0400,pricing_init_rate_period.invalid_numeric_format,pricing_init_rate_period,invalid_numeric_format,Error,Field,pricing_init_rate_period,"* When present, 'adjustable rate transaction: initial rate period' must be a whole number.
+",NA
+E0401,pricing_init_rate_period.invalid_numeric_value,pricing_init_rate_period,invalid_numeric_value,Error,Field,pricing_init_rate_period,"* When present, 'adjustable rate transaction: initial rate period' must be greater than 0.
+",NA
+E0420,pricing_fixed_rate.invalid_numeric_format,pricing_fixed_rate,invalid_numeric_format,Error,Field, pricing_fixed_rate,"* When present, 'fixed rate: interest rate' must be a numeric value.",NA
+W0420,pricing_fixed_rate.unreasonable_numeric_value,pricing_fixed_rate,unreasonable_numeric_value,Warning,Field,pricing_fixed_rate,"* When present, 'fixed rate: interest rate' should generally be greater than 0.1.",NA
+E0440,pricing_adj_margin.invalid_numeric_format,pricing_adj_margin,invalid_numeric_format,Error,Field,pricing_adj_margin,"* When present, 'adjustable rate transaction: margin' must be a numeric value.",NA
+W0441,pricing_adj_margin.unreasonable_numeric_value,pricing_adj_margin,unreasonable_numeric_value,Warning,Field,pricing_adj_margin,"* When present, 'adjustable rate transaction: margin' should generally be greater than 0.1.
+",NA
+E0460,pricing_adj_index_name.invalid_enum_value,pricing_adj_index_name,invalid_enum_value,Error,Field,pricing_adj_index_name,"* 'Adjustable rate transaction: index name' must equal 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 977, or 999.
+",NA
+E0480,pricing_adj_index_name_ff.invalid_text_length,pricing_adj_index_name_ff,invalid_text_length,Error,Field,pricing_adj_index_name_ff,"* 'Adjustable rate transaction: index name: other' must **not** exceed 300 characters in length.
+",NA
+E0500,pricing_adj_index_value.invalid_numeric_format,pricing_adj_index_value,invalid_numeric_format,Error,Field,pricing_adj_index_value,"* When present, 'adjustable rate transaction: index value' must be a numeric value.",NA
+E0520,pricing_origination_charges.invalid_numeric_format,pricing_origination_charges,invalid_numeric_format,Error,Field,pricing_origination_charges,"* When present, 'total origination charges' must be a numeric value.",NA
+E0540,pricing_broker_fees.invalid_numeric_format,pricing_broker_fees,invalid_numeric_format,Error,Field,pricing_broker_fees,"* When present, 'amount of total broker fees' must be a numeric value.",NA
+E0560,pricing_initial_charges.invalid_numeric_format,pricing_initial_charges,invalid_numeric_format,Error,Field,pricing_initial_charges,"* When present, 'initial annual charges' must be a numeric value.",NA
+E0580,pricing_mca_addcost_flag.invalid_enum_value,pricing_mca_addcost_flag,invalid_enum_value,Error,Field,pricing_mca_addcost_flag,"* 'MCA/sales-based: additional cost for merchant cash advances or 
+other sales-based financing: NA flag' must equal 900 or 999.
+",NA
+E0600,pricing_mca_addcost.invalid_numeric_format,pricing_mca_addcost,invalid_numeric_format,Error,Field,pricing_mca_addcost,"* When present, 'MCA/sales-based: additional cost for merchant cash 
+advances or other sales-based financing' must be a numeric value.
+",NA
+E0620,pricing_prepenalty_allowed.invalid_enum_value,pricing_prepenalty_allowed,invalid_enum_value,Error,Field,pricing_prepenalty_allowed,"* Prepayment penalty could be imposed' must equal 1, 2, or 999.",NA
+E0640,pricing_prepenalty_exists.invalid_enum_value,pricing_prepenalty_exists,invalid_enum_value,Error,Field,pricing_prepenalty_exists,"* 'Prepayment penalty exists' must equal 1, 2, or 999.",NA
+E0660,census_tract_adr_type.invalid_enum_value,census_tract_adr_type,invalid_enum_value,Error,Field,census_tract_adr_type,"* 'Census tract: type of address' must equal 1, 2, 3, or 988.",NA
+E0680,census_tract_number.invalid_text_length,census_tract_number,invalid_text_length,Error,Field,census_tract_number,"* When present, 'census tract: tract number' must be a GEOID with exactly 11 digits.",NA
+W0680,census_tract_number.invalid_geoid,census_tract_number,invalid_geoid,Warning,Field,census_tract_number,"* When present, 'census tract: tract number' should be a valid 
+census tract GEOID as defined by the U.S. Census Bureau.
+",NA
+E0700,gross_annual_revenue_flag.invalid_enum_value,gross_annual_revenue_flag,invalid_enum_value,Error,Field,gross_annual_revenue_flag,* 'Gross annual revenue: NP flag' must equal 900 or 988.,NA
+E0720,gross_annual_revenue.invalid_numeric_format,gross_annual_revenue,invalid_numeric_format,Error,Field,gross_annual_revenue,"* When present, 'gross annual revenue' must be a numeric value.",NA
+E0740,naics_code_flag.invalid_enum_value,naics_code_flag,invalid_enum_value,Error,Field,naics_code_flag,"* 'North American Industry Classification System (NAICS) code: NP flag' 
+must equal 900 or 988.
+",NA
+E0760,naics_code.invalid_text_length,naics_code,invalid_text_length,Error,Field,naics_code,"* When present, 'North American Industry Classification System (NAICS) code' 
+must be three digits in length.
+",NA
+E0761,naics_code.invalid_naics_format,naics_code,invalid_naics_format,Error,Field,naics_code,"* 'North American Industry Classification System (NAICS) code' 
+may only contain numeric characters.
+",NA
+W0762,naics_code.invalid_naics_value,naics_code,invalid_naics_value,Warning,Field,naics_code,"* When present, 'North American Industry Classification System (NAICS) code' 
+should be a valid NAICS code.
+",NA
+E0780,number_of_workers.invalid_enum_value,number_of_workers,invalid_enum_value,Error,Field,number_of_workers,"* 'Number of workers' must equal 1, 2, 3, 4, 5, 6, 7, 8, 9, or 988.",NA
+E0800,time_in_business_type.invalid_enum_value,time_in_business_type,invalid_enum_value,Error,Field,time_in_business_type,"* 'Time in business: type of response' must equal 1, 2, 3, or 988.",NA
+E0820,time_in_business.invalid_numeric_format,time_in_business,invalid_numeric_format,Error,Field,time_in_business,"* When present, 'time in business' must be a whole number.",NA
+E0821,time_in_business.invalid_numeric_value,time_in_business,invalid_numeric_value,Error,Field,time_in_business,"* When present, 'time in business' must be greater than or equal to 0.",NA
+E0840,business_ownership_status.invalid_enum_value,business_ownership_status,invalid_enum_value,Error,Field,business_ownership_status,"* Each value in 'business ownership status' (separated by semicolons) 
+must equal 1, 2, 3, 955, 966, or 988.
+",NA
+E0841,business_ownership_status.invalid_number_of_values,business_ownership_status,invalid_number_of_values,Error,Field,business_ownership_status,* 'Business ownership status' must contain at least one value.,NA
+W0842,business_ownership_status.duplicates_in_field,business_ownership_status,duplicates_in_field,Warning,Field,business_ownership_status,* 'Business ownership status' should **not** contain duplicated values.,NA
+W0843,business_ownership_status.multi_value_field_restriction,business_ownership_status,multi_value_field_restriction,Warning,Field,business_ownership_status,"* When 'business ownership status' contains 966
+(the applicant responded that they did not wish to 
+provide this information) or 988 (not provided by applicant), 
+'business ownership status' should **not** contain more than one value.
+",NA
+E0860,num_principal_owners_flag.invalid_enum_value,num_principal_owners_flag,invalid_enum_value,Error,Field,num_principal_owners_flag,* 'Number of principal owners: NP flag' must equal 900 or 988.,NA
+E0880,num_principal_owners.invalid_enum_value,num_principal_owners,invalid_enum_value,Error,Field,num_principal_owners,"* When present, 'number of principal owners' must equal 0, 1, 2, 3, or 4.",NA
+W0901,po_1_ethnicity.duplicates_in_field,po_1_ethnicity,duplicates_in_field,Warning,Field,po_1_ethnicity,* 'Ethnicity of principal owner 1' should **not** contain duplicated values.,NA
+E0900,po_1_ethnicity.invalid_enum_value,po_1_ethnicity,invalid_enum_value,Error,Field,po_1_ethnicity,"* When present, each value in 'ethnicity of principal owner 1' 
+(separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.
+",NA
+W0902,po_1_ethnicity.multi_value_field_restriction,po_1_ethnicity,multi_value_field_restriction,Warning,Field,po_1_ethnicity,"* When 'ethnicity of principal owner 1' contains 966 
+(the applicant responded that they did not wish to provide this information) or 
+988 (not provided by applicant), 'ethnicity of principal owner: 1' should **not** 
+contain more than one value.
+",NA
+E2040,po_1_ethnicity_ff.conditional_field_conflict,po_1_ethnicity_ff,conditional_field_conflict,Error,Row,"po_1_ethnicity;
+po_1_ethnicity_ff","* When 'ethnicity of principal owner 1' does **not** contain 977 (the applicant responded in the 
+free-form text field), 'ethnicity of principal owner 1: free-form text field for other Hispanic 
+or Latino' must be blank.
+* When 'ethnicity of principal owner 1' contains 977, 'ethnicity of principal owner 1: free-form 
+text field for other Hispanic or Latino' must **not** be blank.
+","IF po_1_ethnicity does not contain 977 THEN
+    IF po_1_ethnicity_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_1_ethnicity contains 977 THEN
+    IF po_1_ethnicity_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E0920,po_1_ethnicity_ff.invalid_text_length,po_1_ethnicity_ff,invalid_text_length,Error,Field,po_1_ethnicity_ff,"* 'Ethnicity of principal owner 1: free-form text field for 
+other Hispanic or Latino' must **not** exceed 300 characters in length.
+",NA
+E2140,po_1_gender_ff.conditional_field_conflict,po_1_gender_ff,conditional_field_conflict,Error,Row,"po_1_gender_flag;
+po_1_gender_ff","* When 'sex/gender of principal owner 1: NP flag' does **not** equal 1 (the applicant responded in the 
+free-form text field), 'sex/gender of principal owner 1: free-form text field for self-identified 
+sex/gender' must be blank.
+* When 'sex/gender of principal owner 1: NP flag' equals 1, 'sex/gender of principal owner 1: free-form 
+text field for self-identified sex/gender' must **not** be blank.
+","IF po_1_gender_flag does not contain 1 THEN
+    IF po_1_gender_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_1_gender_flag contains 1 THEN
+    IF po_1_gender_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1060,po_1_gender_ff.invalid_text_length,po_1_gender_ff,invalid_text_length,Error,Field,po_1_gender_ff,"* 'Sex/gender of principal owner 1: free-form text field for 
+self-identified sex/gender' must **not** exceed 300 characters in length.
+",NA
+E1040,po_1_gender_flag.invalid_enum_value,po_1_gender_flag,invalid_enum_value,Error,Field,po_1_gender_flag,"* When present, 'sex/gender of principal owner 1: NP flag' must equal 1, 966, or 988.",NA
+W0941,po_1_race.duplicates_in_field,po_1_race,duplicates_in_field,Warning,Field,po_1_race,* 'Race of principal owner 1' should **not** contain duplicated values.,NA
+E0940,po_1_race.invalid_enum_value,po_1_race,invalid_enum_value,Error,Field,po_1_race,"* When present, each value in 'race of principal owner 1' 
+(separated by semicolons) must equal 1, 2, 21, 22, 23, 24, 
+25, 26, 27, 3, 31, 32, 33, 34, 35, 36, 37, 4, 41, 42, 43, 
+44, 5, 966, 971, 972, 973, 974, or 988.
+",NA
+W0942,po_1_race.multi_value_field_restriction,po_1_race,multi_value_field_restriction,Warning,Field,po_1_race,"* When 'race of principal owner 1' contains 966 (the applicant responded that 
+they did not wish to provide this information) or 988 (not provided by applicant), 
+'race of principal owner: 1' should **not** contain more than one value.
+",NA
+E2060,po_1_race_anai_ff.conditional_field_conflict,po_1_race_anai_ff,conditional_field_conflict,Error,Row,"po_1_race;
+po_1_race_anai_ff","* When 'race of principal owner 1' does **not** contain 971 (the applicant responded in 
+the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 
+'race of principal owner 1: free-form text field for American Indian or Alaska Native 
+Enrolled or Principal Tribe' must be blank.
+* When 'race of principal owner 1' contains 971, 'race of principal owner 1: free-form text field 
+for American Indian or Alaska Native Enrolled or Principal Tribe' must **not** be blank.
+","IF po_1_race does not contain 971 THEN
+    IF po_1_race_anai_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_1_race contains 971 THEN
+    IF po_1_race_anai_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E0960,po_1_race_anai_ff.invalid_text_length,po_1_race_anai_ff,invalid_text_length,Error,Field,po_1_race_anai_ff,"* 'Race of principal owner 1: free-form text field for 
+American Indian or Alaska Native Enrolled or Principal Tribe' 
+must **not** exceed 300 characters in length.
+",NA
+E2080,po_1_race_asian_ff.conditional_field_conflict,po_1_race_asian_ff,conditional_field_conflict,Error,Row,"po_1_race;
+po_1_race_asian_ff","* When 'race of principal owner 1' does **not** contain 972 (the applicant responded in the free-form text 
+field for other Asian race), 'race of principal owner 1: free-form text field for other Asian' must be blank.
+* When 'race of principal owner 1' contains 972, 'race of principal owner 1: free-form text field 
+for other Asian' must **not** be blank.
+","IF po_1_race does not contain 972 THEN
+    IF po_1_race_asian_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_1_race contains 972 THEN
+    IF po_1_race_asian_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E0980,po_1_race_asian_ff.invalid_text_length,po_1_race_asian_ff,invalid_text_length,Error,Field,po_1_race_asian_ff,"* 'Race of principal owner 1: free-form text field for 
+other Asian' must **not** exceed 300 characters in length.
+",NA
+E2100,po_1_race_baa_ff.conditional_field_conflict,po_1_race_baa_ff,conditional_field_conflict,Error,Row,"po_1_race;
+po_1_race_baa_ff","* When 'race of principal owner 1' does **not** contain 973 (the applicant 
+responded in the free-form text field for other Black or African race), 
+'race of principal owner 1: free-form text field for other Black or African 
+American' must be blank.
+* When 'race of principal owner 1' contains 973, 'race of principal owner 1: 
+free-form text field for other Black or African American' must **not** be blank.
+","IF po_1_race does not contain 973 THEN
+    IF po_1_race_baa_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_1_race contains 973 THEN
+    IF po_1_race_baa_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1000,po_1_race_baa_ff.invalid_text_length,po_1_race_baa_ff,invalid_text_length,Error,Field,po_1_race_baa_ff,"* 'Race of principal owner 1: free-form text field for other 
+Black or African American' must **not** exceed 300 characters in length.
+",NA
+E2120,po_1_race_pi_ff.conditional_field_conflict,po_1_race_pi_ff,conditional_field_conflict,Error,Row,"po_1_race;
+po_1_race_pi_ff","* When 'race of principal owner 1' does **not** contain 974 (the applicant 
+responded in the free-form text field for other Pacific Islander race), 
+'race of principal owner 1: free-form text field for other Pacific Islander race' 
+must be blank.
+* When 'race of principal owner 1' contains 974, 'Race of Principal Owner 1: 
+Free-form Text Field for Other Pacific Islander race' must **not** be blank.
+","IF po_1_race does not contain 974 THEN
+    IF po_1_race_pi_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_1_race contains 974 THEN
+    IF po_1_race_pi_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1020,po_1_race_pi_ff.invalid_text_length,po_1_race_pi_ff,invalid_text_length,Error,Field,po_1_race_pi_ff,"* 'Race of principal owner 1: free-form text field for 
+other Pacific Islander race' must **not** exceed 300 characters in length.
+",NA
+W1081,po_2_ethnicity.duplicates_in_field,po_2_ethnicity,duplicates_in_field,Warning,Field,po_2_ethnicity,* 'Ethnicity of principal owner 2' should **not** contain duplicated values.,NA
+E1080,po_2_ethnicity.invalid_enum_value,po_2_ethnicity,invalid_enum_value,Error,Field,po_2_ethnicity,"* When present, each value in 'ethnicity of principal owner 2' 
+(separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.
+",NA
+W1082,po_2_ethnicity.multi_value_field_restriction,po_2_ethnicity,multi_value_field_restriction,Warning,Field,po_2_ethnicity,"* When 'ethnicity of principal owner 2' contains 966 (the applicant 
+responded that they did not wish to provide this information) or 988 
+(not provided by applicant), 'ethnicity of principal owner: 2' should 
+**not** contain more than one value.
+",NA
+E2041,po_2_ethnicity_ff.conditional_field_conflict,po_2_ethnicity_ff,conditional_field_conflict,Error,Row,"po_2_ethnicity;
+po_2_ethnicity_ff","* When 'ethnicity of principal owner 2' does **not** contain 977 (the applicant responded in the 
+free-form text field), 'ethnicity of principal owner 2: free-form text field for other Hispanic 
+or Latino' must be blank.
+* When 'ethnicity of principal owner 2' contains 977, 'ethnicity of principal owner 2: free-form 
+text field for other Hispanic or Latino' must **not** be blank.
+","IF po_2_ethnicity does not contain 977 THEN
+    IF po_2_ethnicity_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_2_ethnicity contains 977 THEN
+    IF po_2_ethnicity_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1100,po_2_ethnicity_ff.invalid_text_length,po_2_ethnicity_ff,invalid_text_length,Error,Field,po_2_ethnicity_ff,"* 'Ethnicity of principal owner 2: free-form text field for 
+other Hispanic or Latino' must **not** exceed 300 characters in length.
+",NA
+E2141,po_2_gender_ff.conditional_field_conflict,po_2_gender_ff,conditional_field_conflict,Error,Row,"po_2_gender_flag;
+po_2_gender_ff","* When 'sex/gender of principal owner 2: NP flag' does **not** 
+equal 1 (the applicant responded in the free-form text field), 
+'sex/gender of principal owner 2: free-form text field for 
+self-identified sex/gender' must be blank.
+* When 'sex/gender of principal owner 2: NP flag' equals 1, 'sex/gender 
+of principal owner 2: free-form text field for self-identified sex/gender' 
+must **not** be blank.
+","IF po_2_gender_flag does not contain 1 THEN
+    IF po_2_gender_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_2_gender_flag contains 1 THEN
+    IF po_2_gender_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1240,po_2_gender_ff.invalid_text_length,po_2_gender_ff,invalid_text_length,Error,Field,po_2_gender_ff,"* 'Sex/gender of principal owner 2: free-form text field for 
+self-identified sex/gender' must **not** exceed 300 characters in length.
+",NA
+E1220,po_2_gender_flag.invalid_enum_value,po_2_gender_flag,invalid_enum_value,Error,Field,po_2_gender_flag,"* When present, 'sex/gender of principal owner 2: NP flag' must equal 1, 966, or 988.",NA
+W1121,po_2_race.duplicates_in_field,po_2_race,duplicates_in_field,Warning,Field,po_2_race,* 'Race of principal owner 2' should **not** contain duplicated values.,NA
+E1120,po_2_race.invalid_enum_value,po_2_race,invalid_enum_value,Error,Field,po_2_race,"* When present, each value in 'race of principal owner 2' 
+(separated by semicolons) must equal 1, 2, 21, 22, 23, 24, 
+25, 26, 27, 3, 31, 32, 33, 34, 35, 36, 37, 4, 41, 42, 43, 44, 
+5, 966, 971, 972, 973, 974, or 988.
+",NA
+W1122,po_2_race.multi_value_field_restriction,po_2_race,multi_value_field_restriction,Warning,Field,po_2_race,"* When 'race of principal owner 2' contains 966 
+(the applicant responded that they did not wish 
+to provide this information) or 988 (not provided 
+by applicant), 'race of principal owner: 2' should 
+**not** contain more than one value.
+",NA
+E2061,po_2_race_anai_ff.conditional_field_conflict,po_2_race_anai_ff,conditional_field_conflict,Error,Row,"po_2_race;
+po_2_race_anai_ff","* When 'race of principal owner 2' does **not** contain 971 (the applicant responded in 
+the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 
+'race of principal owner 2: free-form text field for American Indian or Alaska Native Enrolled 
+or Principal Tribe' must be blank.
+* When 'race of principal owner 2' contains 971, 'race of principal owner 2: free-form text field 
+for American Indian or Alaska Native Enrolled or Principal Tribe' must **not** be blank.
+","IF po_2_race does not contain 971 THEN
+    IF po_2_race_anai_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_2_race contains 971 THEN
+    IF po_2_race_anai_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1140,po_2_race_anai_ff.invalid_text_length,po_2_race_anai_ff,invalid_text_length,Error,Field,po_2_race_anai_ff,"* 'Race of principal owner 2: free-form text field 
+for American Indian or Alaska Native Enrolled or Principal 
+Tribe' must **not** exceed 300 characters in length.
+",NA
+E2081,po_2_race_asian_ff.conditional_field_conflict,po_2_race_asian_ff,conditional_field_conflict,Error,Row,"po_2_race;
+po_2_race_asian_ff","* When 'race of principal owner 2' does **not** contain 972 (the applicant responded in the free-form text 
+field for other Asian race), 'race of principal owner 2: free-form text field for other Asian' must be blank.
+* When 'race of principal owner 2' contains 972, 'race of principal owner 2: free-form text field for other 
+Asian' must **not** be blank.
+","IF po_2_race does not contain 972 THEN
+    IF po_2_race_asian_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_2_race contains 972 THEN
+    IF po_2_race_asian_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1160,po_2_race_asian_ff.invalid_text_length,po_2_race_asian_ff,invalid_text_length,Error,Field,po_2_race_asian_ff,"* 'Race of principal owner 2: free-form text field for 
+other Asian' must **not** exceed 300 characters in length.
+",NA
+E2101,po_2_race_baa_ff.conditional_field_conflict,po_2_race_baa_ff,conditional_field_conflict,Error,Row,"po_2_race;
+po_2_race_baa_ff","* When 'race of principal owner 2' does **not** contain 973 (the applicant 
+responded in the free-form text field for other Black or African race), 
+'race of principal owner 2: free-form text field for other Black or African American' must be blank.
+* When 'race of principal owner 2' contains 973, 'race of principal owner 2: 
+free-form text field for other Black or African American' must **not** be blank.
+","IF po_2_race does not contain 973 THEN
+    IF po_2_race_baa_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_2_race contains 973 THEN
+    IF po_2_race_baa_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1180,po_2_race_baa_ff.invalid_text_length,po_2_race_baa_ff,invalid_text_length,Error,Field,po_2_race_baa_ff,"* 'Race of principal owner 2: free-form text field for other 
+Black or African American' must **not** exceed 300 characters in length.
+",NA
+E2121,po_2_race_pi_ff.conditional_field_conflict,po_2_race_pi_ff,conditional_field_conflict,Error,Row,"po_2_race;
+po_2_race_pi_ff","* When 'race of principal owner 2' does **not** contain 974 (the applicant responded in the 
+free-form text field for other Pacific Islander race), 'race of principal owner 2: free-form 
+text field for other Pacific Islander race' must be blank.
+* When 'race of principal owner 2' contains 974, 'Race of Principal Owner 2: Free-form Text 
+Field for Other Pacific Islander race' must **not** be blank.
+","IF po_2_race does not contain 974 THEN
+    IF po_2_race_pi_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_2_race contains 974 THEN
+    IF po_2_race_pi_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1200,po_2_race_pi_ff.invalid_text_length,po_2_race_pi_ff,invalid_text_length,Error,Field,po_2_race_pi_ff,"* 'Race of principal owner 2: free-form text field for 
+other Pacific Islander race' must **not** exceed 300 characters in length.
+",NA
+W1261,po_3_ethnicity.duplicates_in_field,po_3_ethnicity,duplicates_in_field,Warning,Field,po_3_ethnicity,* 'Ethnicity of principal owner 3' should **not** contain duplicated values.,NA
+E1260,po_3_ethnicity.invalid_enum_value,po_3_ethnicity,invalid_enum_value,Error,Field,po_3_ethnicity,"* When present, each value in 'ethnicity of principal 
+owner 3' (separated by semicolons) must equal 1, 11, 12, 
+13, 14, 2, 966, 977, or 988.
+",NA
+W1262,po_3_ethnicity.multi_value_field_restriction,po_3_ethnicity,multi_value_field_restriction,Warning,Field,po_3_ethnicity,"* When 'ethnicity of principal owner 3' contains 966 
+(the applicant responded that they did not wish to provide 
+this information) or 988 (not provided by applicant), 'ethnicity 
+of principal owner: 3' should **not** contain more than one value.
+",NA
+E2042,po_3_ethnicity_ff.conditional_field_conflict,po_3_ethnicity_ff,conditional_field_conflict,Error,Row,"po_3_ethnicity;
+po_3_ethnicity_ff","* When 'ethnicity of principal owner 3' does not contain 977 (the applicant responded in the 
+free-form text field), 'ethnicity of principal owner 3: free-form text field for other Hispanic 
+or Latino' must be blank.
+* When 'ethnicity of principal owner 3' contains 977, 'ethnicity of principal owner 3: free-form 
+text field for other Hispanic or Latino' must **not** be blank.
+","IF po_3_ethnicity does not contain 977 THEN
+    IF po_3_ethnicity_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_3_ethnicity contains 977 THEN
+    IF po_3_ethnicity_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1280,po_3_ethnicity_ff.invalid_text_length,po_3_ethnicity_ff,invalid_text_length,Error,Field,po_3_ethnicity_ff,"* 'Ethnicity of principal owner 3: free-form text field 
+for other Hispanic or Latino' must **not** exceed 300 characters in length.
+",NA
+E2142,po_3_gender_ff.conditional_field_conflict,po_3_gender_ff,conditional_field_conflict,Error,Row,"po_3_gender_flag;
+po_3_gender_ff","* When 'sex/gender of principal owner 3: NP flag' does **not** equal 1 
+(the applicant responded in the free-form text field), 'sex/gender of principal 
+owner 3: free-form text field for self-identified sex/gender' must be blank.
+* When 'sex/gender of principal owner 3: NP flag' equals 1, 'sex/gender of principal 
+owner 3: free-form text field for self-identified sex/gender' must **not** be blank.
+","IF po_3_gender_flag does not contain 1 THEN
+    IF po_3_gender_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_3_gender_flag contains 1 THEN
+    IF po_3_gender_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1420,po_3_gender_ff.invalid_text_length,po_3_gender_ff,invalid_text_length,Error,Field,po_3_gender_ff,"* 'Sex/gender of principal owner 3: free-form text field for 
+self-identified sex/gender' must **not** exceed 300 characters in length.
+",NA
+E1400,po_3_gender_flag.invalid_enum_value,po_3_gender_flag,invalid_enum_value,Error,Field,po_3_gender_flag,"* When present, 'sex/gender of principal owner 3: NP flag' must equal 1, 966, or 988.",NA
+W1301,po_3_race.duplicates_in_field,po_3_race,duplicates_in_field,Warning,Field,po_3_race,* 'Race of principal owner 3' should **not** contain duplicated values.,NA
+E1300,po_3_race.invalid_enum_value,po_3_race,invalid_enum_value,Error,Field,po_3_race,"* When present, each value in 'race of principal owner 3' 
+(separated by semicolons) must equal 1, 2, 21, 22, 23, 24, 
+25, 26, 27, 3, 31, 32, 33, 34, 35, 36, 37, 4, 41, 42, 43, 
+44, 5, 966, 971, 972, 973, 974, or 988.
+",NA
+W1302,po_3_race.multi_value_field_restriction,po_3_race,multi_value_field_restriction,Warning,Field,po_3_race,"* When 'race of principal owner 3' contains 966 
+(the applicant responded that they did not wish to 
+provide this information) or 988 (not provided by applicant), 
+'race of principal owner: 3' should **not** contain more than one value.
+",NA
+E2062,po_3_race_anai_ff.conditional_field_conflict,po_3_race_anai_ff,conditional_field_conflict,Error,Row,"po_3_race;
+po_3_race_anai_ff","* When 'race of principal owner 3' does **not** contain 971 (the applicant responded in 
+the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 
+'race of principal owner 3: free-form text field for American Indian or Alaska Native 
+Enrolled or Principal Tribe' must be blank.
+* When 'race of principal owner 3' contains 971, 'race of principal owner 3: free-form text 
+field for American Indian or Alaska Native Enrolled or Principal Tribe' must **not** be blank.
+","IF po_3_race does not contain 971 THEN
+    IF po_3_race_anai_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_3_race contains 971 THEN
+    IF po_3_race_anai_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1320,po_3_race_anai_ff.invalid_text_length,po_3_race_anai_ff,invalid_text_length,Error,Field,po_3_race_anai_ff,"* 'Race of principal owner 3: free-form text field for 
+American Indian or Alaska Native Enrolled or Principal Tribe' 
+must **not** exceed 300 characters in length.
+",NA
+E2082,po_3_race_asian_ff.conditional_field_conflict,po_3_race_asian_ff,conditional_field_conflict,Error,Row,"po_3_race;
+po_3_race_asian_ff","* When 'race of principal owner 3' does **not** contain 972 (the applicant responded in the 
+free-form text field for other Asian race), 'race of principal owner 3: free-form text field 
+for other Asian' must be blank.
+* When 'race of principal owner 3' contains 972, 'race of principal owner 3: free-form text 
+field for other Asian' must **not** be blank.
+","IF po_3_race does not contain 972 THEN
+    IF po_3_race_asian_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_3_race contains 972 THEN
+    IF po_3_race_asian_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1340,po_3_race_asian_ff.invalid_text_length,po_3_race_asian_ff,invalid_text_length,Error,Field,po_3_race_asian_ff,"* 'Race of principal owner 3: free-form text field for 
+other Asian' must **not** exceed 300 characters in length.
+",NA
+E2102,po_3_race_baa_ff.conditional_field_conflict,po_3_race_baa_ff,conditional_field_conflict,Error,Row,"po_3_race;
+po_3_race_baa_ff","* When 'race of principal owner 3' does **not** contain 973 (the applicant responded in 
+the free-form text field for other Black or African race), 'race of principal owner 3: 
+free-form text field for other Black or African American' must be blank.
+* When 'race of principal owner 3' contains 973, 'race of principal owner 3: free-form text 
+field for other Black or African American' must **not** be blank.
+","IF po_3_race does not contain 973 THEN
+    IF po_3_race_baa_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_3_race contains 973 THEN
+    IF po_3_race_baa_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1360,po_3_race_baa_ff.invalid_text_length,po_3_race_baa_ff,invalid_text_length,Error,Field,po_3_race_baa_ff,"* 'Race of principal owner 3: free-form text field for other 
+Black or African American' must **not** exceed 300 characters in length.
+",NA
+E2122,po_3_race_pi_ff.conditional_field_conflict,po_3_race_pi_ff,conditional_field_conflict,Error,Row,"po_3_race;
+po_3_race_pi_ff","* When 'race of principal owner 3' does **not** contain 974 (the applicant responded in 
+the free-form text field for other Pacific Islander race), 'race of principal owner 3: 
+free-form text field for other Pacific Islander race' must be blank.
+* When 'race of principal owner 3' contains 974, 'Race of Principal Owner 3: Free-form Text 
+Field for Other Pacific Islander race' must **not** be blank.
+","IF po_3_race does not contain 974 THEN
+    IF po_3_race_pi_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_3_race contains 974 THEN
+    IF po_3_race_pi_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1380,po_3_race_pi_ff.invalid_text_length,po_3_race_pi_ff,invalid_text_length,Error,Field,po_3_race_pi_ff,"* 'Race of principal owner 3: free-form text field for other 
+Pacific Islander race' must **not** exceed 300 characters in length.
+",NA
+W1441,po_4_ethnicity.duplicates_in_field,po_4_ethnicity,duplicates_in_field,Warning,Field,po_4_ethnicity,* 'Ethnicity of principal owner 4' should **not** contain duplicated values.,NA
+E1440,po_4_ethnicity.invalid_enum_value,po_4_ethnicity,invalid_enum_value,Error,Field,po_4_ethnicity,"* When present, each value in 'ethnicity of principal owner 4' 
+(separated by semicolons) must equal 1, 11, 12, 13, 14, 2, 966, 977, or 988.
+",NA
+W1442,po_4_ethnicity.multi_value_field_restriction,po_4_ethnicity,multi_value_field_restriction,Warning,Field,po_4_ethnicity,"* When 'ethnicity of principal owner 4' contains 966 (the applicant 
+responded that they did not wish to provide this information) or 988 
+(not provided by applicant), 'ethnicity of principal owner: 4' should 
+**not** contain more than one value.
+",NA
+E2043,po_4_ethnicity_ff.conditional_field_conflict,po_4_ethnicity_ff,conditional_field_conflict,Error,Row,"po_4_ethnicity;
+po_4_ethnicity_ff","* When 'ethnicity of principal owner 4' does **not** contain 977 (the applicant responded in the 
+free-form text field), 'ethnicity of principal owner 4: free-form text field for other Hispanic 
+or Latino' must be blank.
+* When 'ethnicity of principal owner 4' contains 977, 'ethnicity of principal owner 4: free-form 
+text field for other Hispanic or Latino' must **not** be blank.
+","IF po_4_ethnicity does not contain 977 THEN
+    IF po_4_ethnicity_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_4_ethnicity contains 977 THEN
+    IF po_4_ethnicity_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E3000,uid.duplicates_in_dataset,uid,duplicates_in_dataset,Error,SBLAR,uid,"* Any 'unique identifier' may **not** be used in more than one 
+record within a small business lending application register.
+","IF uid is duplicated within this filing THEN
+    Error
+ENDIF"
+E2000,ct_credit_product_ff.conditional_field_conflict,ct_credit_product_ff,conditional_field_conflict,Error,Row,ct_credit_product; ct_credit_product_ff,"* When 'credit product' does **not** equal 977 (other), 
+'free-form text field for other credit products' must be blank.
+* When 'credit product' equals 977, 'free-form text field for 
+other credit products' must **not** be blank.
+","IF ct_credit_product is not equal to 977 THEN
+    IF ct_credit_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF ct_credit_product is equal to 977 THEN
+    IF ct_credit_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2001,ct_guarantee_ff.conditional_field_conflict,ct_guarantee_ff,conditional_field_conflict,Error,Row,"ct_guarantee;
+ct_guarantee_ff","* When 'type of guarantee' does **not** contain 977 (other), 'free-form text field for other guarantee' must be blank.
+* When 'type of guarantee' contains 977, 'free-form text field for other guarantee' must **not** be blank.
+","IF ct_guarantee does not contain 977 THEN
+    IF ct_guarantee_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF ct_guarantee contains 977 THEN
+    IF ct_guarantee_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+W2002,ct_guarantee_ff.multi_invalid_number_of_values,ct_guarantee_ff,multi_invalid_number_of_values,Warning,Row,"ct_guarantee;
+ct_guarantee_ff","* 'Type of guarantee' and 'free-form text field for other guarantee' 
+combined should **not** contain more than five values. Code 977 (other), 
+within 'type of guarantee', does **not** count toward the maximum number 
+of values for the purpose of this validation check.
+","WHERE ct_guarantee_length = number of entries in ct_guarantee excluding 977 AND
+      ct_guarantee_ff_length = number of entries in ct_guarantee_ff
+    IF ct_guarantee_length + ct_guarantee_ff_length is greater than 5 THEN
+        Warning
+    ENDIF
+ENDWHERE"
+E2003,ct_loan_term_flag.enum_value_conflict,ct_loan_term_flag,enum_value_conflict,Error,Row,"ct_credit_product;
+ct_loan_term_flag","* When 'credit product' equals 1 (term loan - unsecured) or 2 (term loan - secured), 
+'loan term: NA/NP flag' must **not** equal 999 (not applicable).
+* When 'credit product' equals 988 (not provided by applicant and otherwise undetermined), 
+'loan term: NA/NP flag' must equal 999.
+","IF ct_credit_product is equal to 1 OR 2 THEN 
+    IF ct_loan_term_flag is equal to 999 THEN 
+        Error 
+    ENDIF 
+ELSEIF ct_credit_product is equal to 988 THEN 
+    IF ct_loan_term_flag is not equal to 999 THEN 
+        Error 
+    ENDIF 
+ENDIF "
+E2004,ct_loan_term.conditional_field_conflict,ct_loan_term,conditional_field_conflict,Error,Row,ct_loan_term_flag; ct_loan_term,"* When 'loan term: NA/NP flag' does **not** equal 900 (applicable and reported), 'loan term' must be blank.
+* When 'loan term: NA/NP flag' equals 900, 'loan term' must **not** be blank.
+","IF ct_loan_term_flag is not equal to 900 THEN
+    IF ct_loan_term is not blank THEN
+        Error
+    ENDIF
+ELSEIF  ct_loan_term_flag is equal to 900 THEN
+    IF ct_loan_term is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2005,credit_purpose_ff.conditional_field_conflict,credit_purpose_ff,conditional_field_conflict,Error,Row,credit_purpose; credit_purpose_ff,"* When 'credit purpose' does **not** contain 977 (other), 'free-form text 
+field for other credit purpose' must be blank.
+* When 'credit purpose' contains 977 (other), 'free-form text 
+field for other credit purpose' must **not** be blank.
+","IF credit_purpose does not contain 977 THEN
+    IF credit_purpose_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF credit_purpose contains 977 THEN
+    IF credit_purpose_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+W2006,credit_purpose_ff.multi_invalid_number_of_values,credit_purpose_ff,multi_invalid_number_of_values,Warning,Row,"credit_purpose;
+credit_purpose_ff","* 'Credit purpose' and 'free-form text field for other credit 
+purpose' combined should **not** contain more than three values. 
+Code 977 (other), within 'credit purpose', does **not** count 
+toward the maximum number of values for the purpose of 
+this validation check.
+","WHERE credit_purpose_length = number of entries in credit_purpose excluding 977 AND
+      credit_purpose_ff_length = number of entries in credit_purpose_ff
+    IF credit_purpose_length + credit_purpose_ff_length is greater than 3 THEN
+        Warning
+    ENDIF
+ENDWHERE"
+E2007,amount_applied_for.conditional_field_conflict,amount_applied_for,conditional_field_conflict,Error,Row,amount_applied_for_flag; amount_applied_for,"* When 'amount applied for: NA/NP flag' does **not** equal 
+900 (applicable and reported), 'amount applied for' must be blank.
+* When 'amount applied for: NA/NP flag' equals 900, 
+'amount applied for' must **not** be blank.
+","IF amount_applied_for_flag is not equal to 900 THEN
+    IF amount_applied_for is not blank THEN
+        Error
+    ENDIF
+ELSEIF amount_applied_for_flag is equal to 900 THEN
+    IF amount_applied_for is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2008,amount_approved.conditional_field_conflict,amount_approved,conditional_field_conflict,Error,Row,action_taken; amount_approved,"* When 'action taken' does **not** equal 1 (originated) or 
+2 (approved but not accepted), 'amount approved or originated' must be blank.
+* When 'action taken' equals 1 or 2, 'amount approved or originated' must **not** be blank.
+","IF action_taken is not equal to 1 or 2 THEN
+    IF amount_approved is not blank THEN
+        Error
+    ENDIF
+ELSEIF action_taken is equal to 1 or 2 THEN
+    IF amount_approved is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2009,action_taken_date.date_value_conflict,action_taken_date,date_value_conflict,Error,Row,action_taken_date; app_date,* The date indicated by 'action taken date' must occur on or after 'application date'.,"IF action_taken_date is less than app_date THEN
+    Error
+ENDIF"
+W2010,action_taken_date.unreasonable_date_value,action_taken_date,unreasonable_date_value,Warning,Row,action_taken_date; app_date,"* The date indicated by 'application date' should
+generally be less than two years (730 days) before 
+'action taken date'.
+","IF action_taken_date is greater than (app_date plus 730 days) THEN
+    Warning
+ENDIF"
+E2011,denial_reasons.enum_value_conflict,denial_reasons,enum_value_conflict,Error,Row,action_taken; denial_reasons,"* When 'action taken' equals 3, 'denial reason(s)' must **not** contain 999.
+* When 'action taken' does **not** equal 3 (denied), 'denial reason(s)' must equal 999 (not applicable).
+","If action_taken is equal to 3 THEN
+    IF denial_reasons contains 999 THEN
+        Error
+    ENDIF
+ELSEIF action_taken is not equal to 3 THEN
+    IF denial_reasons is not equal to 999 THEN
+        Error
+    ENDIF
+ENDIF"
+E2012,denial_reasons_ff.conditional_field_conflict,denial_reasons_ff,conditional_field_conflict,Error,Row,denial_reasons; denial_reasons_ff,"* When 'denial reason(s)' does **not** contain 977 (other), 
+field 'free-form text field for other denial reason(s)' must be blank.
+* When 'denial reason(s)' contains 977, 'free-form text field for other 
+denial reason(s)' must **not** be blank.
+","IF denial_reasons does not contain 977 THEN
+    IF denial_reasons_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF denial_reasons contains 977 THEN
+    IF denial_reasons_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+W2013,denial_reasons_ff.multi_invalid_number_of_values,denial_reasons_ff,multi_invalid_number_of_values,Warning,Row,denial_reasons; denial_reasons_ff,"* 'Denial reason(s)' and 'free-form text field for other 
+denial reason(s)' combined should **not** contain more than 
+four values. Code 977 (other), within 'Denial reason(s)', 
+does **not** count toward the maximum number of values for 
+the purpose of this validation check.
+","WHERE denial_reasons_length = number of entries in denial_reasons excluding 977 AND
+      denial_reasons_ff_length = number of entries in denial_reasons_ff
+    IF denial_reasons_length + denial_reasons_ff_length is greater than 4 THEN
+        Warning
+    ENDIF
+ENDWHERE"
+E2014,pricing_all.conditional_fieldset_conflict,pricing_all,conditional_fieldset_conflict,Error,Row,action_taken; pricing_interest_rate_type; pricing_mca_addcost_flag; pricing_prepenalty_allowed; pricing_prepenalty_exists; pricing_origination_charges; pricing_broker_fees; pricing_initial_charges,"When 'action taken' equals 3 (denied), 4 (withdrawn by applicant), or 5 (incomplete), the 
+following fields must all equal 999 (not applicable):
+* 'Interest rate type'
+* 'MCA/sales-based: additional cost for merchant cash advances or other sales-based financing: NA flag'
+* 'Prepayment penalty could be imposed'
+* 'Prepayment penalty exists'
+
+And the following fields must all be blank:
+
+* 'Total origination charges'
+* 'Amount of total broker fees'
+* 'Initial annual charges'
+","IF action_taken is equal to 3, 4, or 5 THEN
+    IF (pricing_interest_rate_type is not equal to 999 OR
+        pricing_mca_addcost_flag is not equal to 999 OR
+        pricing_prepenalty_allowed is not equal to 999 OR
+        pricing_prepenalty_exists is not equal to 999 OR
+        pricing_origination_charges is not blank OR
+        pricing_broker_fees is not blank OR
+        pricing_initial_charges is not blank) THEN
+            Error
+    ENDIF
+ENDIF"
+E2015,pricing_charges.conditional_fieldset_conflict,pricing_charges,conditional_fieldset_conflict,Error,Row,action_taken; pricing_origination_charges; pricing_broker_fees; pricing_initial_charges; pricing_prepenalty_allowed; pricing_prepenalty_exists,"When 'action taken' equals 1 (originated) or 2 (approved but not accepted), the following 
+fields all must **not** be blank:
+* 'Total origination charges'
+* 'Amount of total broker fees'
+* 'Initial annual charges'
+
+And the following fields must **not** equal 999 (not applicable):
+
+* 'Prepayment penalty could be imposed'
+* 'Prepayment penalty exists'""
+","IF action_taken is equal to 1 or 2 THEN
+    IF (pricing_origination_charges is blank OR
+        pricing_broker_fees is blank OR
+        pricing_initial_charges is blank OR
+        pricing_prepenalty_allowed is equal to 999 OR
+        pricing_prepenalty_exists is equal to 999) THEN
+            Error
+    ENDIF
+ENDIF"
+E2016,pricing_init_rate_period.conditional_field_conflict,pricing_init_rate_period,conditional_field_conflict,Error,Row,"pricing_interest_rate_type;
+pricing_init_rate_period","* When 'interest rate type' does **not** equal 3 (initial rate period > 12 months, adjustable interest),
+4 (initial rate period > 12 months, fixed interest), 5 (initial rate period <= 12 months, adjustable interest), 
+or 6 (initial rate period <= 12 months, fixed interest), 'initial rate period' must be blank.
+* When 'interest rate type' equals 3, 4, 5, or 6, 'initial rate period' must **not** be blank.
+","IF pricing_interest_rate_type is not equal to 3, 4, 5, or 6 THEN
+    IF pricing_init_rate_period is not blank THEN
+        Error
+    ENDIF
+ELSEIF pricing_interest_rate_type is equal to 3, 4, 5, or 6 THEN
+    IF pricing_init_rate_period is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2017,pricing_fixed_rate.conditional_field_conflict,pricing_fixed_rate,conditional_field_conflict,Error,Row,pricing_interest_rate_type; pricing_fixed_rate,"* When 'interest rate type' does **not** equal 2 (fixed interest rate, no initial rate period), 
+4 (initial rate period > 12 months, fixed interest rate), or 6 (initial rate period <= 12 months, fixed 
+interest rate), 'fixed rate: interest rate' must be blank.
+* When 'interest rate type' equals 2, 4, or 6, 'fixed rate: interest rate' must **not** be blank.
+","IF pricing_interest_rate_type is not equal to 2, 4, or 6 THEN
+    IF pricing_fixed_rate is not blank THEN
+        Error
+    ENDIF
+ELSEIF pricing_interest_rate_type is equal to 2, 4, or 6 THEN
+    IF pricing_fixed_rate is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2018,pricing_adj_margin.conditional_field_conflict,pricing_adj_margin,conditional_field_conflict,Error,Row,pricing_interest_rate_type; pricing_adj_margin,"* When 'interest rate type' does **not** equal 1 (adjustable interest rate, no initial rate period), 
+3 (initial rate period > 12 months, adjustable interest rate), or 
+5 (initial rate period <= 12 months, adjustable 
+interest rate), 'adjustable rate transaction: margin' must be blank.
+* When 'interest rate type' equals 1, 3, or 5, 'adjustable rate transaction: margin' must **not** be blank.
+","IF pricing_interest_rate_type is not equal to 1, 3, or 5 THEN
+    IF pricing_adj_margin is not blank THEN
+        Error
+    ENDIF
+ELSEIF pricing_interest_rate_type is equal to 1, 3, or 5 THEN
+    IF pricing_adj_margin is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2019,pricing_adj_index_name.enum_value_conflict,pricing_adj_index_name,enum_value_conflict,Error,Row,pricing_interest_rate_type; pricing_adj_index_name,"* When 'interest rate type' does **not** equal 1 (adjustable interest rate, no initial rate period), 
+3 (initial rate period > 12 months, adjustable interest rate), or 5 (initial rate period <= 12 months, 
+adjustable interest rate), 'adjustable rate transaction: index name' must equal 999.
+* When 'interest rate type' equals 1, 3, or 5, 'adjustable rate transaction: index name' must 
+**not** equal 999.
+","IF pricing_interest_rate_type is not equal to 1, 3, or 5 THEN
+    IF pricing_adj_index_name is not equal to 999 THEN
+        Error
+    ENDIF
+ELSEIF pricing_interest_rate_type is equal to 1, 3, or 5 THEN
+    IF pricing_adj_index_name is equal to 999 THEN
+        Error
+    ENDIF
+ENDIF"
+E2020,pricing_adj_index_name_ff.conditional_field_conflict,pricing_adj_index_name_ff,conditional_field_conflict,Error,Row,"pricing_adj_index_name;
+pricing_adj_index_name_ff","* When 'adjustable rate transaction: index name' does **not** equal 977 (other), 
+'adjustable rate transaction: index name: other' must be blank.
+* When 'adjustable rate transaction: index name' equals 977, 'adjustable rate transaction: 
+index name: other' must **not** be blank.
+","IF pricing_adj_index_name is not equal to 977 THEN
+    IF pricing_adj_index_name_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF pricing_adj_index_name is equal to 977 THEN
+    IF pricing_adj_index_name_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2021,pricing_adj_index_value.conditional_field_conflict,pricing_adj_index_value,conditional_field_conflict,Error,Row,pricing_interest_rate_type;  pricing_adj_index_value,"* When 'interest rate type' does **not** equal 1 (adjustable interest rate, no initial rate period), 
+or 3 (initial rate period > 12 months, adjustable interest rate), 'adjustable rate transaction: index value' 
+must be blank.
+* When 'interest rate type' equals 1 or 3, 'adjustable rate transaction: index value' must **not** be blank.
+","IF pricing_interest_rate_type is not equal to 1 or 3 THEN
+    IF pricing_adj_index_value is not blank THEN
+        Error
+    ENDIF
+ELSEIF pricing_interest_rate_type is equal to 1 or 3 THEN
+    IF pricing_adj_index_value is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2022,pricing_mca_addcost_flag.enum_value_conflict,pricing_mca_addcost_flag,enum_value_conflict,Error,Row,"ct_credit_product;
+pricing_mca_addcost_flag","* When 'credit product' does **not** equal 7 (merchant cash 
+advance), 8 (other sales-based financing transaction) 
+or 977 (other), 'MCA/sales-based: additional cost for 
+merchant cash advances or other sales-based financing: 
+NA flag' must be 999 (not applicable).
+","IF ct_credit_product is not equal to 7, 8, or 977 THEN
+    IF pricing_mca_addcost_flag is not equal to 999 THEN
+        Error
+    ENDIF
+ENDIF
+"
+E2023,pricing_mca_addcost.conditional_field_conflict,pricing_mca_addcost,conditional_field_conflict,Error,Row,"pricing_mca_addcost_flag;
+pricing_mca_addcost","* When 'MCA/sales-based: additional cost for merchant cash advances or 
+other sales-based financing: NA flag' does **not** equal 900 (applicable), 
+'MCA/sales-based: additional cost for merchant cash advances or other sales-based financing' 
+must be blank.
+* When 'MCA/sales-based: additional cost for merchant cash advances or 
+other sales-based financing: NA flag' equals 900, 'MCA/sales-based: additional cost for 
+merchant cash advances or other sales-based financing' must **not** be blank.
+","IF pricing_mca_addcost_flag is not equal to 900 THEN
+    IF pricing_mca_addcost is not blank THEN
+        Error
+    ENDIF
+ELSEIF IF pricing_mca_addcost_flag is equal to 900 THEN
+    IF pricing_mca_addcost is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2024,census_tract_number.conditional_field_conflict,census_tract_number,conditional_field_conflict,Error,Row,census_tract_adr_type; census_tract_number,"* When 'census tract: type of address' equals 988 (not provided by applicant 
+and otherwise undetermined), 'census tract: tract number' must be blank. 
+* When 'census tract: type of address' equals 1 (address or location where 
+the loan proceeds will principally be applied), 2 (address or location of 
+borrower's main office or headquarters), or 3 (another address or location 
+associated with the applicant), 'census tract: tract number' must **not** be blank.
+","IF census_tract_adr_type is equal to 988 THEN
+    IF census_tract_number is not blank THEN
+        Error
+    ENDIF
+ELSEIF census_tract_adr_type is equal to 1, 2, or 3 THEN
+    IF census_tract_number is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2025,gross_annual_revenue.conditional_field_conflict,gross_annual_revenue,conditional_field_conflict,Error,Row,"gross_annual_revenue_flag;
+gross_annual_revenue","* When 'gross annual revenue: NP flag' does **not** equal 900 (reported), 
+'gross annual revenue' must be blank.
+* When 'gross annual revenue: NP flag' equals 900, 'gross annual revenue' 
+must **not** be blank.
+","IF gross_annual_revenue_flag is not equal to 900 THEN
+    IF gross_annual_revenue is not blank THEN
+        Error
+    ENDIF
+ELSEIF gross_annual_revenue_flag is equal to 900 THEN
+    IF gross_annual_revenue is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2026,naics_code.conditional_field_conflict,naics_code,conditional_field_conflict,Error,Row,naics_code_flag; naics_code,"* When 'North American Industry Classification System (NAICS) code: NP flag' 
+does **not** equal 900 (reported), 'North American Industry Classification 
+System (NAICS) code' must be blank.
+* When 'North American Industry Classification System (NAICS) code: NP flag' 
+equals 900, 'North American Industry Classification System (NAICS) code' 
+must **not** be blank.
+","IF naics_code_flag is not equal to 900 THEN
+    IF naics_code is not blank THEN
+        Error
+    ENDIF
+ELSEIF naics_code_flag is equal to 900 THEN
+    IF naics_code is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2027,time_in_business.conditional_field_conflict,time_in_business,conditional_field_conflict,Error,Row,"time_in_business_type;
+time_in_business","* When 'time in business: type of response' does **not** equal 1 (the number of years an applicant has been 
+in business is collected or obtained by the financial institution), 'time in business' must be blank.
+* When 'time in business: type of response' equals 1, 'time in business' must **not** be blank.
+","IF time_in_business_type is not equal to 1 THEN
+    IF time_in_business is not blank THEN
+        Error
+    ENDIF
+ELSEIF time_in_business_type is equal to 1 THEN
+    IF time_in_business is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E2028,num_principal_owners.conditional_field_conflict,num_principal_owners,conditional_field_conflict,Error,Row,"num_principal_owners_flag;
+num_principal_owners","* When 'number of principal owners: NP flag' does **not** equal 900 (reported), 
+'number of principal owners' must be blank.
+* When 'number of principal owners: NP flag' equals 900, 'number of principal 
+owners' must **not** be blank.
+","IF num_principal_owners_flag is not equal to 900 THEN
+    IF num_principal_owners is not blank THEN
+        Error
+    ENDIF
+ELSEIF num_principal_owners_flag is equal to 900 THEN
+    IF num_principal_owners is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1460,po_4_ethnicity_ff.invalid_text_length,po_4_ethnicity_ff,invalid_text_length,Error,Field,po_4_ethnicity_ff,"* 'Ethnicity of principal owner 4: free-form text field for 
+other Hispanic or Latino' must **not** exceed 300 characters in length.
+",NA
+E2143,po_4_gender_ff.conditional_field_conflict,po_4_gender_ff,conditional_field_conflict,Error,Row,"po_4_gender_flag;
+po_4_gender_ff","* When 'sex/gender of principal owner 4: NP flag' does **not** equal 1 
+(the applicant responded in the free-form text field), 'sex/gender of 
+principal owner 4: free-form text field for self-identified sex/gender' 
+must be blank.
+* When 'sex/gender of principal owner 4: NP flag' equals 1, 'sex/gender 
+of principal owner 4: free-form text field for self-identified sex/gender' 
+must **not** be blank.
+","IF po_4_gender_flag does not contain 1 THEN
+    IF po_4_gender_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_4_gender_flag contains 1 THEN
+    IF po_4_gender_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1600,po_4_gender_ff.invalid_text_length,po_4_gender_ff,invalid_text_length,Error,Field,po_4_gender_ff,"* 'Sex/gender of principal owner 4: free-form text field for 
+self-identified sex/gender' must **not** exceed 300 characters in length.
+",NA
+E1580,po_4_gender_flag.invalid_enum_value,po_4_gender_flag,invalid_enum_value,Error,Field,po_4_gender_flag,"* When present, 'sex/gender of principal owner 4: NP flag' must equal 1, 966, or 988.",NA
+W1481,po_4_race.duplicates_in_field,po_4_race,duplicates_in_field,Warning,Field,po_4_race,* 'Race of principal owner 4' should **not** contain duplicated values.,NA
+E1480,po_4_race.invalid_enum_value,po_4_race,invalid_enum_value,Error,Field,po_4_race,"* When present, each value in 'race of principal owner 4' 
+(separated by semicolons) must equal 1, 2, 21, 22, 23, 24, 
+25, 26, 27, 3, 31, 32, 33, 34, 35, 36, 37, 4, 41, 42, 43, 
+44, 5, 966, 971, 972, 973, 974, or 988.
+",NA
+W1482,po_4_race.multi_value_field_restriction,po_4_race,multi_value_field_restriction,Warning,Field,po_4_race,"* When 'race of principal owner 4' contains 966 (the applicant 
+responded that they did not wish to provide this information) or 
+988 (not provided by applicant), 'race of principal owner: 4' 
+should **not** contain more than one value.
+",NA
+E2063,po_4_race_anai_ff.conditional_field_conflict,po_4_race_anai_ff,conditional_field_conflict,Error,Row,"po_4_race;
+po_4_race_anai_ff","* When 'race of principal owner 4' does **not** contain 971 (the applicant responded in 
+the free-form text field for American Indian or Alaska Native Enrolled or Principal Tribe), 
+'race of principal owner 4: free-form text field for American Indian or Alaska Native Enrolled 
+or Principal Tribe' must be blank.
+* When 'race of principal owner 4' contains 971, 'race of principal owner 4: free-form text field 
+for American Indian or Alaska Native Enrolled or Principal Tribe' must **not** be blank.
+","IF po_4_race does not contain 971 THEN
+    IF po_4_race_anai_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_4_race contains 971 THEN
+    IF po_4_race_anai_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1500,po_4_race_anai_ff.invalid_text_length,po_4_race_anai_ff,invalid_text_length,Error,Field,po_4_race_anai_ff,"* 'Race of principal owner 4: free-form text field for 
+American Indian or Alaska Native Enrolled or Principal Tribe' 
+must **not** exceed 300 characters in length.
+",NA
+E2083,po_4_race_asian_ff.conditional_field_conflict,po_4_race_asian_ff,conditional_field_conflict,Error,Row,"po_4_race;
+po_4_race_asian_ff","* When 'race of principal owner 4' does **not** contain 972 (the applicant 
+responded in the free-form text field for other Asian race), 'race of principal 
+owner 4: free-form text field for other Asian' must be blank.
+* When 'race of principal owner 4' contains 972, 'race of principal owner 4: 
+free-form text field for other Asian' must **not** be blank.
+","IF po_4_race does not contain 972 THEN
+    IF po_4_race_asian_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_4_race contains 972 THEN
+    IF po_4_race_asian_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1520,po_4_race_asian_ff.invalid_text_length,po_4_race_asian_ff,invalid_text_length,Error,Field,po_4_race_asian_ff,"* 'Race of principal owner 4: free-form text field for other 
+Asian' must **not** exceed 300 characters in length.
+",NA
+E2103,po_4_race_baa_ff.conditional_field_conflict,po_4_race_baa_ff,conditional_field_conflict,Error,Row,"po_4_race;
+po_4_race_baa_ff","* When 'race of principal owner 4' does **not** contain 973 (the applicant 
+responded in the free-form text field for other Black or African race), 
+'race of principal owner 4: free-form text field for other Black or African 
+American' must be blank.
+* When 'race of principal owner 4' contains 973, 'race of principal owner 4: 
+free-form text field for other Black or African American' must **not** be blank.
+","IF po_4_race does not contain 973 THEN
+    IF po_4_race_baa_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_4_race contains 973 THEN
+    IF po_4_race_baa_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1540,po_4_race_baa_ff.invalid_text_length,po_4_race_baa_ff,invalid_text_length,Error,Field,po_4_race_baa_ff,"* 'Race of principal owner 4: free-form text field for other 
+Black or African American' must **not** exceed 300 characters in length.
+",NA
+E2123,po_4_race_pi_ff.conditional_field_conflict,po_4_race_pi_ff,conditional_field_conflict,Error,Row,"po_4_race;
+po_4_race_pi_ff","* When 'race of principal owner 4' does **not** contain 974 (the applicant 
+responded in the free-form text field for other Pacific Islander race), 
+'race of principal owner 4: free-form text field for other Pacific Islander 
+race' must be blank.
+* When 'race of principal owner 4' contains 974, 'Race of Principal Owner 4: 
+Free-form Text Field for Other Pacific Islander race' must **not** be blank.
+","IF po_4_race does not contain 974 THEN
+    IF po_4_race_pi_ff is not blank THEN
+        Error
+    ENDIF
+ELSEIF po_4_race contains 974 THEN
+    IF po_4_race_pi_ff is blank THEN
+        Error
+    ENDIF
+ENDIF"
+E1560,po_4_race_pi_ff.invalid_text_length,po_4_race_pi_ff,invalid_text_length,Error,Field,po_4_race_pi_ff,"* 'Race of principal owner 4: free-form text field for other 
+Pacific Islander race' must **not** exceed 300 characters in length.
+",NA
+W2035,po_demographics_0.conditional_fieldset_conflict,po_demographics_0,conditional_fieldset_conflict,Warning,Row,num_principal_owners; po_1_ethnicity; po_1_race; po_1_gender_flag; po_2_ethnicity; po_2_race; po_2_gender_flag; po_3_ethnicity; po_3_race; po_3_gender_flag; po_4_ethnicity; po_4_race; po_4_gender_flag,"* When 'number of principal owners' equals 0 or is blank, 
+demographic fields for principal owners 1, 2, 3, and 4 
+should be blank.
+","IF num_principal_owners is equal to 0 or is blank THEN
+    IF (po_1_ethnicity, po_1_race, po_1_gender_flag,
+        po_2_ethnicity, po_2_race, po_2_gender_flag,
+        po_3_ethnicity, po_3_race, po_3_gender_flag,
+        po_4_ethnicity, po_4_race, or po_4_gender_flag) is not blank THEN
+            Warning
+    ENDIF
+ENDIF"
+W2036,po_demographics_1.conditional_fieldset_conflict,po_demographics_1,conditional_fieldset_conflict,Warning,Row,num_principal_owners; po_1_ethnicity; po_1_race; po_1_gender_flag; po_2_ethnicity; po_2_race; po_2_gender_flag; po_3_ethnicity; po_3_race; po_3_gender_flag; po_4_ethnicity; po_4_race; po_4_gender_flag,"* When 'number of principal owners' equals 1, 'ethnicity of principal owner 1', 
+'race of principal owner 1', and 'sex/gender of principal owner 1: NP flag' 
+should **not** be blank.
+* Demographic fields for principal owners 2, 3, and 4 should be blank.
+","IF num_principal_owners is equal to 1 THEN
+    IF (po_1_ethnicity, po_1_race, or po_1_gender_flag) is blank THEN
+            Warning
+    ENDIF
+    IF (po_2_ethnicity, po_2_race, po_2_gender_flag,
+         po_3_ethnicity, po_3_race, po_3_gender_flag,
+         po_4_ethnicity, po_4_race, or po_4_gender_flag) is not blank THEN
+            Warning
+    ENDIF
+ENDIF"
+W2037,po_demographics_2.conditional_fieldset_conflict,po_demographics_2,conditional_fieldset_conflict,Warning,Row,num_principal_owners; po_1_ethnicity; po_1_race; po_1_gender_flag; po_2_ethnicity; po_2_race; po_2_gender_flag; po_3_ethnicity; po_3_race; po_3_gender_flag; po_4_ethnicity; po_4_race; po_4_gender_flag,"* When 'number of principal owners' equals 2, 'ethnicity of principal owner 1 and 2', 
+'race of principal owner 1 and 2', and 'sex/gender of principal owner 1 and 2: 
+NP flag' should **not** be blank.
+* Demographic fields for principal owners 3 and 4 should be blank.
+","IF num_principal_owners is equal to 2 THEN
+    IF (po_1_ethnicity, po_1_race, po_1_gender_flag,
+        po_2_ethnicity, po_2_race, or po_2_gender_flag) is blank THEN
+            WARNING
+    ENDIF
+    IF (po_3_ethnicity, po_3_race, po_3_gender_flag,
+        po_4_ethnicity, po_4_race, or po_4_gender_flag) is not blank THEN
+            WARNING
+    ENDIF
+ENDIF"
+W2038,po_demographics_3.conditional_fieldset_conflict,po_demographics_3,conditional_fieldset_conflict,Warning,Row,num_principal_owners; po_1_ethnicity; po_1_race; po_1_gender_flag; po_2_ethnicity; po_2_race; po_2_gender_flag; po_3_ethnicity; po_3_race; po_3_gender_flag; po_4_ethnicity; po_4_race; po_4_gender_flag,"* When 'number of principal owners' equals 3, 'ethnicity of principal owner 1, 2, and 3', 
+'race of principal owner 1, 2, and 3', and 'sex/gender of principal owner 1, 2, 
+and 3: NP flag' should **not** be blank.
+* Demographic fields for principal owner 4 should be blank.
+","IF num_principal_owners is equal to 3 THEN
+    IF (po_1_ethnicity, po_1_race, po_1_gender_flag,
+        po_2_ethnicity, po_2_race, po_2_gender_flag
+        po_3_ethnicity, po_3_race, or po_3_gender_flag) is blank THEN
+            Warning
+    ENDIF
+    IF (po_4_ethnicity, po_4_race, or po_4_gender_flag) is not blank THEN
+            Warning
+    ENDIF
+ENDIF"
+W2039,po_demographics_4.conditional_fieldset_conflict,po_demographics_4,conditional_fieldset_conflict,Warning,Row,num_principal_owners; po_1_ethnicity; po_1_race; po_1_gender_flag; po_2_ethnicity; po_2_race; po_2_gender_flag; po_3_ethnicity; po_3_race; po_3_gender_flag; po_4_ethnicity; po_4_race; po_4_gender_flag,"* When 'number of principal owners' equals 4, 'ethnicity of principal owner 1, 2, 3, and 4', 
+'race of principal owner 1, 2, 3, and 4', and 'sex/gender of principal owner 1, 2, 3, and 4: NP flag' 
+should **not** be blank.
+","IF num_principal_owners is equal to 4 THEN
+    IF (po_1_ethnicity, po_1_race, po_1_gender_flag,
+        po_2_ethnicity, po_2_race, po_2_gender_flag,
+        po_3_ethnicity, po_3_race, po_3_gender_flag,
+        po_4_ethnicity, po_4_race, or po_4_gender_flag) is blank THEN
+            Warning
+    ENDIF
+ENDIF"
